@@ -25,7 +25,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
   try {
     await conn.groupSettingUpdate(m.chat, isClose)
     await conn.sendMessage(m.chat, {
-      text: '✅ *Configurado correctamente*',
+      text: '✅ 𝐂𝐨𝐧𝐟𝐢𝐠𝐮𝐫𝐚𝐝𝐨 𝐂𝐨𝐫𝐫𝐞𝐜𝐭𝐚𝐦𝐞𝐧𝐭𝐞.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
@@ -41,7 +41,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
   } catch (error) {
     console.error(error)
     await conn.sendMessage(m.chat, {
-      text: '⚠️ *Error al configurar el grupo. Asegúrate de que el bot es administrador y tiene los permisos necesarios.*',
+      text: '⚠️ 𝐄𝐥 𝐁𝐨𝐭 𝐧𝐨 𝐞𝐬 𝐀𝐝𝐦𝐢𝐧 𝐨 𝐎𝐜𝐮𝐫𝐫𝐢𝐨 𝐮𝐧 𝐄𝐫𝐫𝐨𝐫.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
