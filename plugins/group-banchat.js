@@ -3,7 +3,7 @@ let handler = async (m, { conn, isAdmin, isROwner }) => {
   global.db.data.chats[m.chat].isBanned = true
 
   await conn.sendMessage(m.chat, {
-    text: '🚫 𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 fue desactivado en este chat',
+    text: '🚫 𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐅𝐮𝐞 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨 𝐞𝐧 𝐞𝐬𝐭𝐞 𝐜𝐡𝐚𝐭.',
     contextInfo: {
       externalAdReply: {
         title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲 ',
