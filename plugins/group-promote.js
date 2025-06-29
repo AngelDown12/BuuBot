@@ -79,7 +79,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   } catch (e) {
     console.error(e)
     await conn.sendMessage(m.chat, {
-      text: '❌ No se pudo promover al usuario.',
+      text: '❌ 𝐍𝐨 𝐬𝐞 𝐩𝐮𝐝𝐨 𝐩𝐫𝐨𝐦𝐨𝐯𝐞𝐫 𝐀𝐥 𝐔𝐬𝐮𝐚𝐫𝐢𝐨.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
