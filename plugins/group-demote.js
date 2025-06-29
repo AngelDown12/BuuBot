@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
   if (!text && !m.quoted) {
     return conn.sendMessage(m.chat, {
-      text: `🚩 Menciona a una persona.`,
+      text: `🚩 𝐌𝐞𝐧𝐜𝐢𝐨𝐧𝐚 𝐚 𝐮𝐧𝐚 𝐏𝐞𝐫𝐬𝐨𝐧𝐚.`,
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
