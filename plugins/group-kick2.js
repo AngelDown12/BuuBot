@@ -23,7 +23,20 @@ const handler = (m, { conn }) => {
     }
 
     const target = m.quoted?.sender || m.mentionedJid?.[0]
-    if (!target) return conn.reply(m.chat, '⚠️ Menciona o responde a alguien.', m)
+    if (!target) {
+      return conn.sendMessage(m.chat, {
+        text: '⚠️ Menciona o responde a alguien para expulsar.',
+        contextInfo: {
+          externalAdReply: {
+            title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+            body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+            thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+            renderLargerThumbnail: false,
+            sourceUrl: ''
+          }
+        }
+      }, { quoted: m })
+    }
 
     conn.groupParticipantsUpdate(m.chat, [target], 'remove')
       .then(() => {
