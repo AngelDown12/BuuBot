@@ -18,4 +18,4 @@ handler.command = ['apk2','dapk2']
 handler.group = false;
 handler.help = ['apk2']
 handler.tags = ['descargas']
-module.exports = handler;
+export default handler

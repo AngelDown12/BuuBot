@@ -8,4 +8,4 @@ handler.help = ['prefix'];
 handler.tags = ['owner'];
 handler.command = /^(prefix)$/i;
 handler.rowner = true;
-module.exports = handler;;
+export default handler;

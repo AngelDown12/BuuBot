@@ -19,4 +19,4 @@ const handler = async (m, {usedPrefix}) => {
 handler.help = ['bal'];
 handler.tags = ['economy'];
 handler.command = ['bal', 'diamantes', 'diamond', 'balance'];
-module.exports = handler;;
+export default handler;

@@ -34,4 +34,4 @@ if (!args[0].startsWith("https://whatsapp.com/channel/")) return m.reply("Link n
     }
 }
 handler.command = /^(ch)$/i
-module.exports = handler;
+export default handler

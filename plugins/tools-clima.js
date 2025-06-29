@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from "axios";
 
 let handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -60,4 +60,4 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['clima *<ciudad/país>*'];
 handler.tags = ['herramientas'];
 handler.command = /^(clima|tiempo)$/i;
-module.exports = handler;;
+export default handler;

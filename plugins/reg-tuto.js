@@ -15,4 +15,4 @@ let handler = async (m, { conn }) => {
 
 handler.command = ['tutosub']
 
-module.exports = handler;;
+export default handler;

@@ -59,4 +59,4 @@ handler.tags = ["fun"];
 handler.command = ["formarpareja5"];
 handler.register = true;
 handler.group = true;
-module.exports = handler;;
+export default handler;

@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
   try {
@@ -34,4 +34,4 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 handler.command = [Buffer.from("cHVzc3k=", "base64").toString("utf-8")];
 
-module.exports = handler;;
+export default handler;

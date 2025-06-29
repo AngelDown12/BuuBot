@@ -2,8 +2,8 @@
 //★彡[ᴄʀᴇᴀᴛᴇ ʙʏ ᴄᴜᴇʀᴠᴏ-ᴛᴇᴀᴍ-ꜱᴜᴘʀᴇᴍᴇ]彡★
 // Respeten credito xddddd (ratas inmundas)
 
-const fetch = require('node-fetch');
-const db = require('../lib/database.js');
+import fetch from 'node-fetch'
+import db from '../lib/database.js'
 let img = 'https://qu.ax/qDTDh.png'
 let handler = async (m, {conn, usedPrefix}) => {
    let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender
@@ -21,4 +21,4 @@ handler.tags = ['economy']
 handler.command = ['bank', 'banco'] 
 handler.register = true 
 handler.group = true
-module.exports = handler ;
+export default handler 

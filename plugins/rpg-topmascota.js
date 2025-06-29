@@ -25,4 +25,4 @@ handler.help = ['topmascota'];
 handler.tags = ['juegos'];
 handler.command = ['topmascota'];
 
-module.exports = handler;;
+export default handler;

@@ -15,4 +15,4 @@ handler.tags = ['owner']
 handler.command = handler.help =['reunion','reunionstaff']
 handler.rowner = true
 
-module.exports = handler;
+export default handler

@@ -27,4 +27,4 @@ handler.help = ['perra']
 handler.tags = ['fun']
 handler.command = /^(perra)$/i
 
-module.exports = handler;;
+export default handler;

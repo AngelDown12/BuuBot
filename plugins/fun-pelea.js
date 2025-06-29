@@ -73,7 +73,7 @@ let handler = async (m, {
   handler.tags = ['game']
   handler.command = ['pelea', 'pelear']
 
-  module.exports = handler;;
+  export default handler;
 
   function getRandom(min, max) {
     min = Math.ceil(min)

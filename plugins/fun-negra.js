@@ -22,4 +22,4 @@ handler.help = ['negra @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['negra'];
 
-module.exports = handler;;
+export default handler;

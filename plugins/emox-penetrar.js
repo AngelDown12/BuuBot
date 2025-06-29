@@ -25,4 +25,4 @@ handler.register = true;
 handler.group = true;
 handler.fail = null;
 
-module.exports = handler;;
+export default handler;

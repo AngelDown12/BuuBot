@@ -89,4 +89,4 @@ const handler = async (m, { conn, args }) => {
 handler.help = ['interna4']
 handler.tags = ['freefire']
 handler.command = /^(interno4|invs4|interna4)$/i;
-module.exports = handler;;
+export default handler;

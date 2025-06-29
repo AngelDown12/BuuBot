@@ -1,7 +1,7 @@
 //Codígo creado por Destroy wa.me/584120346669
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who;
@@ -52,4 +52,4 @@ handler.tags = ['emox'];
 handler.command = ['kill','matar'];
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

@@ -55,4 +55,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["carrera"];
-module.exports = handler;;
+export default handler;

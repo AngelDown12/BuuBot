@@ -67,4 +67,4 @@ handler.help = ['batalla @usuario'];
 handler.tags = ['rpg'];
 handler.command = ['batalla'];
 
-module.exports = handler;;
+export default handler;

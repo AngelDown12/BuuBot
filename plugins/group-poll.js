@@ -13,4 +13,4 @@ handler.command = ['encuesta', 'poll']
 handler.group = true
 handler.register = true 
 
-module.exports = handler;
+export default handler

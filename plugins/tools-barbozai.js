@@ -1,5 +1,5 @@
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -39,4 +39,4 @@ handler.command = ['barbozai'];
 handler.help = ['barbozai <texto>'];
 handler.tags = ['image'];
 
-module.exports = handler;;
+export default handler;

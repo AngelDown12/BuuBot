@@ -19,7 +19,7 @@ handler.tags = ['rpg']
 handler.command = ['daily', 'claim']
 handler.register = true 
 
-module.exports = handler;
+export default handler
 
 function segundosAHMS(segundos) {
   const horas = Math.floor(segundos / 3600)

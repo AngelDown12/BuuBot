@@ -2,7 +2,7 @@ const handler = async (m, {conn}) => {
   m.reply(global.ComprarBot);
 };
 handler.command ='comprarbot',/^(ComprarBot|Comprar|comprar|ComprarBot)$/i;
-module.exports = handler;;
+export default handler;
 
 global.ComprarBot = `
 〔 *Bot zzz- Ai* 〕

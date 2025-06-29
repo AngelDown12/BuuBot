@@ -11,4 +11,4 @@ handler.tags = ['tools'];
 handler.command = ['setmoneda'];
 handler.rowner = true;
 
-module.exports = handler;;
+export default handler;

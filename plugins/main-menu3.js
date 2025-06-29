@@ -67,7 +67,7 @@ global.db.data.users[m.sender].lastcofre = new Date * 1
 handler.help = ['menu3']
 handler.tags = ['main', 'logo']
 handler.command = ['menulogos', 'logos', 'menu3'] 
-module.exports = handler;
+export default handler
 
 function msToTime(duration) {
   var milliseconds = parseInt((duration % 1000) / 100),

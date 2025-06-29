@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+import axios from 'axios';
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) return conn.reply(m.chat, `🚩 Ingrese un título de película para buscar\n\nEjemplo:\n> *${usedPrefix + command}* diablo`, m, );
@@ -38,4 +38,4 @@ handler.tags = ['search'];
 handler.command = ['pelisplussearch', 'pelisplus'];
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

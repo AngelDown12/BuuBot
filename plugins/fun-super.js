@@ -65,4 +65,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["supervivencia"];
-module.exports = handler;;
+export default handler;

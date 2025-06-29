@@ -51,4 +51,4 @@ handler.help = ['meme'];
 handler.tags = ['diversión'];
 handler.command = ['meme'];
 
-module.exports = handler;;
+export default handler;

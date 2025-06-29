@@ -1,5 +1,5 @@
-const fetch = require('node-fetch'); 
-const axios = require('axios');
+import fetch from 'node-fetch' 
+import axios from "axios"
 const handler = async (m, {conn, text, args, usedPrefix, isPrems}) => {   
 if (!args[0]) return conn.reply(m.chat, '*Por favor ingresa una url de la página a la que se le tomará captura 🔎*', m)  
 let user = global.db.data.users[m.sender]
@@ -24,7 +24,7 @@ await conn.sendMessage(m.chat, { image: { url: krt.result }, caption: `Tu imagen
 m.reply("Error.")
 }}}
 handler.command = /^ss(web)?f?$/i  
-module.exports = handler;
+export default handler
 
 async function ssweb(url, device = 'desktop') {
      return new Promise((resolve, reject) => {

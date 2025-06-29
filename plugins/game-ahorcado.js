@@ -79,4 +79,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["ahorcado"];
-module.exports = handler;;
+export default handler;

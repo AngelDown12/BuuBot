@@ -28,7 +28,7 @@ handler.help = ['weekly'];
 handler.tags = ['rpg'];
 handler.command = ['semanal', 'weekly'];
 
-module.exports = handler;;
+export default handler;
 
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)];

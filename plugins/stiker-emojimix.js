@@ -1,7 +1,7 @@
-const MessageType = require('@whiskeysockets/baileys');
-const fetch = require('node-fetch');
-const { sticker } = require('../lib/sticker.js');
-const fs = require('fs');
+import MessageType from '@whiskeysockets/baileys'
+import fetch from 'node-fetch'
+import { sticker } from '../lib/sticker.js'
+import fs from "fs"
 const fetchJson = (url, options) => new Promise(async (resolve, reject) => {
 fetch(url, options)
 .then(response => response.json())
@@ -25,4 +25,4 @@ handler.command = ['emojimix']
 //handler.limit = 1
 handler.register = true 
 
-module.exports = handler;
+export default handler

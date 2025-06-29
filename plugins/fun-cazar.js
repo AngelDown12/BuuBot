@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'
 
 const animales = [
   { name: 'conejo', size: 'small' },
@@ -23,7 +23,7 @@ const animales = [
   { name: 'quimera', size: 'rare' }
 ]
 
-const handler = async (m, { conn, usedPrefix, command }) => {
+export const handler = async (m, { conn, usedPrefix, command }) => {
   await conn.sendMessage(m.chat, { react: { text: '🏹', key: m.key } })
   
   const tiempoCaza = Math.floor(Math.random() * (40 - 10 + 1)) + 10
@@ -71,4 +71,4 @@ const handler = async (m, { conn, usedPrefix, command }) => {
 }
 
 handler.command = /^cazar$/i
-module.exports = handler;
+export default handler

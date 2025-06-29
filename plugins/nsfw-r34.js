@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 const handler = async (m, { conn, args, usedPrefix }) => {
 if (!args[0]) {
 if (!db.data.chats[m.chat].nsfw && m.isGroup) {
@@ -35,4 +35,4 @@ handler.command = ['r34', 'rule34'];
 handler.tags = ['nsfw'];
 handler.register = true;
 // handler.estrellas = 2;
-module.exports = handler;;
+export default handler;

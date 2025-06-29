@@ -1,6 +1,6 @@
-const { unlinkSync, readFileSync } = require('fs');
-const { join } = require('path');
-const { exec } = require('child_process');
+import { unlinkSync, readFileSync } from 'fs'
+import { join } from 'path'
+import { exec } from 'child_process'
 
 let handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
     try {
@@ -54,7 +54,7 @@ handler.help = ['bass', 'blown', 'deep', 'earrape', 'fast', 'fat', 'nightcore', 
 handler.tags = ['audio']
 handler.command = /^(bass|blown|deep|earrape|fas?t|nightcore|reverse|robot|slow|smooth|tupai|squirrel|chipmunk|reverb|chorus|flanger|distortion|pitch|highpass|lowpass|underwater)$/i
 handler.register = true 
-module.exports = handler;
+export default handler
 
 const getRandom = (ext) => {
     return `${Math.floor(Math.random() * 10000)}${ext}`

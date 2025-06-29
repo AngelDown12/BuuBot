@@ -1,6 +1,6 @@
-const axios = require('axios');
-const FormData = require('form-data');
-const cheerio = require('cheerio');
+import axios from "axios";
+import FormData from "form-data";
+import cheerio from "cheerio";
 
 let handler = async (m, { conn, usedPrefix, command, text, args }) => {
   if (!text) return conn.reply(m.chat, '*\`Ingresa El link Del vídeo a descargar 🤍\`*', m, )
@@ -37,7 +37,7 @@ handler.help = ['tiktokhd *<url>*']
 handler.tags = ['dl']
 handler.command = /^(tiktokhd)$/i;
 
-module.exports = handler;
+export default handler
 
 async function tiktokdl(url) {
     let result = {};

@@ -1,7 +1,7 @@
 
 //Creado por https://github.com/DIEGO-OFC/DORRAT-BOT-MD
 
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 let handler = async (m, {text, usedPrefix, command, conn}) => {
   if (!text) throw `*[❕] Ingrese el nombre de una película*\n\n*❍ EJEMPLO: ${usedPrefix + command} Batman*`;
@@ -40,4 +40,4 @@ let handler = async (m, {text, usedPrefix, command, conn}) => {
 
 handler.command = /^(película|pelicula|peli)$/i;
 handler.limit = true;
-module.exports = handler;;
+export default handler;

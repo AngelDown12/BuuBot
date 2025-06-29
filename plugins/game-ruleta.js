@@ -18,5 +18,5 @@ const handler = async (m, { conn, participants }) => {
 };
 
 handler.command = ['ruleta'];
-module.exports = handler;;
+export default handler;
 

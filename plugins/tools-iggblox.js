@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args}) => {
   if (!args.length) {
@@ -23,4 +23,4 @@ const handler = async (m, { conn, args}) => {
 };
 
 handler.command = ['imggblox'];
-module.exports = handler;;
+export default handler;

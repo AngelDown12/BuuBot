@@ -1,4 +1,4 @@
-const { addExif } = require('../lib/sticker.js');
+import { addExif } from '../lib/sticker.js'
 let handler = async (m, { conn, text }) => {
   if (!m.quoted) return conn.reply(m.chat, `🚩 Responde a a un *Sticker.*`, m, )
   let stiker = false
@@ -22,4 +22,4 @@ handler.help = ['wm *<nombre>|<autor>*']
 handler.tags = ['sticker']
 handler.command = ['take', 'robar', 'wm'] 
 
-module.exports = handler;
+export default handler

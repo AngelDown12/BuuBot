@@ -1,4 +1,4 @@
-const {performance} = require('perf_hooks');
+import {performance} from 'perf_hooks';
 const handler = async (m, {conn, text}) => {
   const start = `*☠ ¡¡𝙸𝙽𝙸𝙲𝙸𝙰𝙽𝙳𝙾 𝙳𝙾𝚇𝚇𝙴𝙾!! ☠*`;
   const boost = `*${pickRandom(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'])}%*`;
@@ -58,7 +58,7 @@ Sof02s32inf14.1e100.net
 handler.help = ['doxear <nombre> | <@tag>'];
 handler.tags = ['fun'];
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
-module.exports = handler;;
+export default handler;
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)];

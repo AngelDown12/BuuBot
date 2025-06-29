@@ -9,7 +9,7 @@ const handler = async (m, {conn}) => {
 handler.help = ['verdad'];
 handler.tags = ['fun'];
 handler.command = /^verdad/i;
-module.exports = handler;;
+export default handler;
 
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())];

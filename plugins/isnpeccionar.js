@@ -100,4 +100,4 @@ handler.command = ["inspeccionar", "channelinfo", "canalinfo", "groupinfo", "com
 handler.help = ["infocanal <link>", "infogrupo <link>", "infocomunidad <link>"];
 handler.tags = ["tools"];
 
-module.exports = handler;;
+export default handler;

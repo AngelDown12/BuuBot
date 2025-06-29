@@ -1,6 +1,6 @@
 
-const db = require('../lib/database.js');
-const moment = require('moment-timezone');
+import db from '../lib/database.js';
+import moment from 'moment-timezone';
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
@@ -44,4 +44,4 @@ handler.tags = ['rpg'];
 handler.command = ['inventario', 'inv']; 
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

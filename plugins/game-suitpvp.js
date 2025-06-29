@@ -91,7 +91,7 @@ tijera\n𝙶𝙰𝙽𝙰𝙳𝙾𝚁 +${room.poin}𝚇𝙿\n𝙿𝙴𝚁𝙳𝙴
   return !0;
 };
 handler.exp = 0;
-module.exports = handler;;
+export default handler;
 function random(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }

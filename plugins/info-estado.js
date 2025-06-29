@@ -34,7 +34,7 @@ handler.help = ['status'];
 handler.tags = ['info'];
 handler.command = /^(estado|info|estate|state|stado|stats)$/i;
 handler.register = true;
-module.exports = handler;;
+export default handler;
 
 function clockString(ms) {
     let h = Math.floor(ms / 3600000);

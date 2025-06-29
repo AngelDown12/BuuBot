@@ -1,5 +1,5 @@
 
-const db = require('../lib/database.js');
+import db from '../lib/database.js';
 
 let handler = async (m, { conn }) => {
     let users = global.db.data.users;
@@ -28,4 +28,4 @@ handler.help = ['claim2'];
 handler.tags = ['rpg'];
 handler.command = ['claim2'];
 
-module.exports = handler;;
+export default handler;

@@ -15,4 +15,4 @@ handler.command = ['setbye', 'despedida']
 handler.botAdmin = true
 handler.admin = true
 handler.group = true
-module.exports = handler;
+export default handler

@@ -21,4 +21,4 @@ handler.help = ['peruano @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['peruano'];
 
-module.exports = handler;;
+export default handler;

@@ -24,4 +24,4 @@ handler.command = /^(verfantasmas|fantasmas|sider)$/i
 handler.admin = true
 handler.botAdmin = true
 handler.register = true
-module.exports = handler;
+export default handler

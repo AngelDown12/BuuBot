@@ -13,4 +13,4 @@ handler.tags = ['fun']
 handler.command = ['amigorandom','amistad']
 handler.group = true
 handler.register = true
-module.exports = handler;
+export default handler

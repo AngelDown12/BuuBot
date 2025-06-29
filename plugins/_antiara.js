@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 // Mensajes predefinidos para reutilización
 const mssg = {
@@ -118,4 +118,4 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 // Comando para activar la función de descarga desde Mediafire
 handler.command = /^(mediafire|mfire)$/i;
 
-module.exports = handler;;
+export default handler;

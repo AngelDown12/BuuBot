@@ -1,6 +1,6 @@
 
-const { File } = require('megajs');
-const path = require('path');
+import { File } from "megajs";
+import path from "path";
 
 const botName = 'Descarga de MEGA';
 
@@ -45,7 +45,7 @@ handler.help = ["mega"];
 handler.tags = ["descargas"];
 handler.command = /^(mega)$/i;
 
-module.exports = handler;;
+export default handler;
 
 function formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes';

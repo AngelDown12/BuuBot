@@ -61,4 +61,4 @@ handler.help = ['cpf *<numero>*'];
 handler.command = ['cpf', 'consultacpf'];
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

@@ -1,5 +1,5 @@
-const axios = require('axios');
-const fetch = require('node-fetch');
+import axios from 'axios';
+import fetch from 'node-fetch';
 
 // Decodificar la API desde Base64
 const apiBase64 = 'aHR0cHM6Ly9yZXN0YXBpLmFwaWJvdHdhLmJpei5pZC9hcGkvbWVkaWFmaXJlP3VybD0=';
@@ -52,4 +52,4 @@ handler.tags = ['descargas'];
 handler.command = ['mediafire2', 'mdfire2', 'mf2'];
 handler.premium = false;
 
-module.exports = handler;;
+export default handler;

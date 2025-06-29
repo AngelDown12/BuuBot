@@ -23,4 +23,4 @@ handler.help = ['viajar'];
 handler.tags = ['mascotas'];
 handler.command = ['viajar'];
 
-module.exports = handler;;
+export default handler;

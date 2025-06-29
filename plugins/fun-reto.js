@@ -4,7 +4,7 @@ conn.reply(m.chat,`*┌────「 FUN - RETO 」─*\n*“${pickRandom(glob
 handler.help = ['reto']
 handler.tags = ['fun']
 handler.command = /^reto/i
-module.exports = handler;
+export default handler
 
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]

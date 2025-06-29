@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const { Sticker } = require('wa-sticker-formatter');
+import fetch from 'node-fetch'
+import { Sticker } from 'wa-sticker-formatter'
 
 let handler = async (m, { conn, text, command }) => {
   if (!text) return m.reply(`Ejemplo: .${command} 𝐀𝐧𝐠𝐞𝐥`) 
@@ -50,4 +50,4 @@ let handler = async (m, { conn, text, command }) => {
 handler.help = ['stikerly *<consulta>*']
 handler.tags = ['sticker']
 handler.command = /^stikerly$/i
-module.exports = handler;
+export default handler

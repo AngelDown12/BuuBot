@@ -1,6 +1,6 @@
-const db = require('../lib/database.js');
+import db from '../lib/database.js'
 
-const MessageType = require('@whiskeysockets/baileys');
+import MessageType from '@whiskeysockets/baileys'
 let impts = 0
 let handler = async (m, { conn, text }) => {
     let who
@@ -30,4 +30,4 @@ handler.tags = ['owner']
 handler.command = ['addcorazones'] 
 handler.rowner = true
 
-module.exports = handler;
+export default handler

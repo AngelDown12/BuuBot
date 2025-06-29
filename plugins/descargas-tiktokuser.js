@@ -5,7 +5,7 @@
 */
 // *🍁 [ Tiktokuser Downloader ]*
 
-const axios = require('axios');
+import axios from 'axios';
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
   if (!text) return conn.reply(m.chat, '🚩 Ingresa el nombre de usuario de TikTok que deseas buscar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* @jose.xrl15`, m, );
@@ -55,4 +55,4 @@ handler.help = ['tiktokuser *<usuario>*'];
 handler.command = ['tiktokuser', 'tiktokus'];
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

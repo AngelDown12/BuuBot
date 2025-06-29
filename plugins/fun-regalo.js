@@ -1,4 +1,4 @@
-const { promises as fs } = require('fs');
+import { promises as fs } from 'fs';
 
 const charactersFilePath = './src/database/characters.json';
 
@@ -65,4 +65,4 @@ givecharHandler.help = ['givechar <nombre del personaje> @usuario', 'givewaifu <
 givecharHandler.tags = ['gacha'];
 givecharHandler.command = ['regalar', 'givewaifu', 'givechar'];
 
-module.exports = givecharHandler;;
+export default givecharHandler;

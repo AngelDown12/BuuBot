@@ -1,7 +1,7 @@
-const fs = require('fs');
-const FormData = require('form-data');
-const axios = require('axios');
-const fetch = require('node-fetch');
+import fs from 'fs'
+import FormData from 'form-data'
+import axios from 'axios'
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn }) => {
 
@@ -44,4 +44,4 @@ handler.tags = ['transformador']
 handler.help = ['ibb']
 handler.command = ['ibb', 'tourl3']
 handler.register = true 
-module.exports = handler;
+export default handler

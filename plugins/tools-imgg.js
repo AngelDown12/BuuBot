@@ -1,5 +1,5 @@
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -24,4 +24,4 @@ const handler = async (m, { conn, args }) => {
 };
 
 handler.command = ['imgg'];
-module.exports = handler;;
+export default handler;

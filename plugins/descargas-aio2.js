@@ -3,9 +3,9 @@
  - Any Downloader By KenisawaDev 
 
 */
- const axios = require('axios');
- const { URL } = require('url');
- const path = require('path');
+ import axios from "axios";
+ import { URL } from "url";
+ import path from "path";
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
@@ -216,4 +216,4 @@ handler.help = ['anydownloader2 <url>'];
 handler.tags = ['descargas'];
 handler.command = ["aio2","anydownloader2","allinone2"];
 
-module.exports = handler;
+export default handler

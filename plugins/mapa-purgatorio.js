@@ -28,4 +28,4 @@ handler.tags = ['freefire']
 handler.command = ['purga', 'purgatorio', 'purg'] 
 handler.register = true
 handler.admin = true
-module.exports = handler;
+export default handler

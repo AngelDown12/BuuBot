@@ -13,4 +13,4 @@ return console.log(e)
 handler.command = /^(salir|leavegc|salirdelgrupo|leave)$/i
 handler.group = true
 handler.rowner = true
-module.exports = handler;
+export default handler

@@ -43,4 +43,4 @@ const handler = async (m, { conn, args, command}) => {
 };
 
 handler.command = /^(|setcolor|setstyle|setdescription|profileinfo)$/i;
-module.exports = handler;;
+export default handler;

@@ -21,4 +21,4 @@ await conn.sendMessage(m.chat, {text: chaqueta[i], edit: key, mentions: conn.par
 }
 }
 handler.command = ['jalame', 'jalamela', 'chaqueteame', 'chaqueta']
-module.exports = handler;
+export default handler

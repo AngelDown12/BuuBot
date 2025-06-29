@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who;
@@ -50,4 +50,4 @@ handler.tags = ['fun'];
 handler.command = ['kiss', 'besar'];
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

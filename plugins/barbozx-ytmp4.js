@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const axios = require('axios');
+import fetch from "node-fetch";
+import axios from 'axios';
 
 // Constantes
 const MAX_FILE_SIZE = 280 * 1024 * 1024; // 280 MB
@@ -178,4 +178,4 @@ handler.command = ['ytmp4'];
 handler.tags = ['descargas'];
 handler.diamond = true;
 
-module.exports = handler;;
+export default handler;

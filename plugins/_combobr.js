@@ -12,4 +12,4 @@ m.react('✅');
 
 handler.command = ['combobr', 'cbr'];
 
-module.exports = handler;;
+export default handler;

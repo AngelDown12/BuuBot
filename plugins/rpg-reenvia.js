@@ -9,4 +9,4 @@ handler.help = ['reenviar']
 handler.tags = ['tools']
 handler.command = ['reenviar']
 
-module.exports = handler;
+export default handler

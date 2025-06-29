@@ -1,4 +1,4 @@
-const axios = require('axios');  
+import axios from 'axios';  
 
 let keni = async (m, { conn, text, usedPrefix, command }) => {
     const args = text.trim().split(/\s*\|\s*/);
@@ -46,4 +46,4 @@ keni.command = /^fakengl$/i;
 keni.register = true;
 keni.limit = true;
 
-module.exports = keni;;
+export default keni;

@@ -56,7 +56,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 handler.command = /^(menujuego|menujuegos|juegos)$/i;
 handler.register = false;
-module.exports = handler;;
+export default handler;
 
 function clockString(ms) {
     let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000);

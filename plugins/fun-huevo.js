@@ -34,4 +34,4 @@ handler.tags = ['fun'];
 handler.command = ['huevo'];
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

@@ -1,7 +1,7 @@
 
-const { File } = require('megajs');
-const path = require('path');
-const fetch = require('node-fetch');
+import { File } from 'megajs';
+import path from 'path';
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     try {
@@ -57,4 +57,4 @@ handler.tags = ['downloader'];
 handler.command = ['animedl', 'animeflvdl', 'anidl'];
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

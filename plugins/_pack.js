@@ -4,7 +4,7 @@
 - https://github.com/WillZek 
 */
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
@@ -20,4 +20,4 @@ conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkonta
 
 handler.command = ['pack'];
 
-module.exports = handler;;
+export default handler;

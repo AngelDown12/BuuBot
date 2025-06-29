@@ -19,4 +19,4 @@ const handler = async (m, { conn, text}) => {
 
 handler.command = /^newname$/i;
 handler.tags = ['info']
-module.exports = handler;;
+export default handler;

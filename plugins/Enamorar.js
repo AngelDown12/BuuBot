@@ -16,4 +16,4 @@ handler.help = ['love']
 handler.tags = ['fun']
 handler.command = /^(enamorar|ship)$/i
 
-module.exports = handler;
+export default handler

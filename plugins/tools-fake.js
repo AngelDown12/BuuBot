@@ -20,7 +20,7 @@ handler.tags = ['tools']
 handler.command = /^(fake)$/
 handler.register = true 
 
-module.exports = handler;
+export default handler
 
 function copy(obj) {
   return JSON.parse(JSON.stringify(obj))

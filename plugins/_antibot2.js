@@ -1,4 +1,4 @@
-const { areJidsSameUser } = require('@whiskeysockets/baileys');
+import { areJidsSameUser } from '@whiskeysockets/baileys'
 
 export async function before(m, { participants, conn }) {
     // Verificar si es un grupo

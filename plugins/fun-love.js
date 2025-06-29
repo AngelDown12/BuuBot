@@ -7,4 +7,4 @@ m.reply(love, null, { mentions: conn.parseMention(love) })}
 handler.help = ['love *@user*']
 handler.tags = ['fun']
 handler.command = /^(love)$/i
-module.exports = handler;
+export default handler

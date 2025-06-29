@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 // Función para decodificar Base64
 const decodeBase64 = (encoded) => Buffer.from(encoded, "base64").toString("utf-8");
@@ -106,4 +106,4 @@ ${description || "No hay descripción disponible"}
 
 handler.command = /^tv$/i; // Solo responde al comando .tv
 
-module.exports = handler;;
+export default handler;

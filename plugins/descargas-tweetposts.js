@@ -1,7 +1,7 @@
 // By Jtxs 🐢
 // https://whatsapp.com/channel/0029Vanjyqb2f3ERifCpGT0W
 
-const axios = require('axios');
+import axios from 'axios';
 const { proto, generateWAMessageFromContent, generateWAMessageContent } = (await import('@whiskeysockets/baileys')).default;
 
 let handler = async (m, { conn, text }) => {
@@ -66,4 +66,4 @@ handler.command = ['tweetposts']
 handler.register = true
 handler.chocolates = 1
 
-module.exports = handler;;
+export default handler;

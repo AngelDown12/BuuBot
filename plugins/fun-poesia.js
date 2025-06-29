@@ -44,4 +44,4 @@ handler.help = ['poesía'];
 handler.tags = ['arte'];
 handler.command = ['poesía'];
 
-module.exports = handler;;
+export default handler;

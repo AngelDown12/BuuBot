@@ -19,4 +19,4 @@ handler.tags = ['fun']
 handler.command = ['buycoins', 'buyall', 'buy'] 
 handler.register = true 
 
-module.exports = handler;
+export default handler

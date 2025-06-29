@@ -1,5 +1,5 @@
-const {generateWAMessageFromContent} = require('@whiskeysockets/baileys');
-const * as fs = require('fs');
+import {generateWAMessageFromContent} from '@whiskeysockets/baileys';
+import * as fs from 'fs';
 
 const handler = async (m, {conn, text, participants, isOwner, isAdmin}) => {
   try {
@@ -84,4 +84,4 @@ handler.command = /^(hidetag|notify|notificar|noti|n|hidetah|hidet)$/i;
 handler.group = true;
 handler.admin = true;
 
-module.exports = handler;;
+export default handler;

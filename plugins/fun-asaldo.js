@@ -53,4 +53,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["asalto"];
-module.exports = handler;;
+export default handler;

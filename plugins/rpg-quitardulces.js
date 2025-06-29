@@ -44,4 +44,4 @@ handler.command = /^(quitardulces)$/i;
 handler.admin = true; // Solo los administradores pueden usar este comando
 handler.fail = null;
 
-module.exports = handler;;
+export default handler;

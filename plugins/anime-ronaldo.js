@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from "axios";
 
 let handler = async (m, { conn, usedPrefix, command }) => {
     let cristiano = (
@@ -31,4 +31,4 @@ handler.help = ["cr7"];
 handler.tags = ["anime"];
 handler.command = /^(ronaldo|cr7)$/i;
 
-module.exports = handler;;
+export default handler;

@@ -13,4 +13,4 @@ handler.help = ['pfp @user'];
 handler.tags = ['sticker'];
 handler.command = ['pfp'];
 
-module.exports = handler;;
+export default handler;

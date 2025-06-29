@@ -1,5 +1,5 @@
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
     try {
@@ -43,4 +43,4 @@ handler.help = ['brat <texto>'];
 handler.tags = ['sticker'];
 handler.command = /^brat(icker)?$/i;
 
-module.exports = handler;;
+export default handler;

@@ -1,4 +1,4 @@
-const fg = require('api-dylux');
+import fg from 'api-dylux'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) throw `✳️ Ingrese un nombre de usuario\n📌Ejemplo: *${usedPrefix + command}* auronplay`
   m.react(rwait)
@@ -14,4 +14,4 @@ handler.tags = ['dl']
 handler.command = ['igstory', 'ighistoria'] 
 handler.diamond = true
 
-module.exports = handler;
+export default handler

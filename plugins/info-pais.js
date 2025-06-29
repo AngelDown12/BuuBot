@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
@@ -27,4 +27,4 @@ handler.help = ['flag <nombre de un país>'];
 handler.tag = ['buscador'];
 handler.command = ['paisinfo', 'flag'];
 
-module.exports = handler;;
+export default handler;

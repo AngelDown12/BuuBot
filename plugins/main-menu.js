@@ -1,4 +1,4 @@
-const { xpRange } = require('../lib/levelling.js');
+import { xpRange } from '../lib/levelling.js';
 
 const clockString = ms => {
   const h = Math.floor(ms / 3600000);
@@ -115,4 +115,4 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
 };
 handler.command = ['menu', 'help', 'menú'];
 
-module.exports = handler;;
+export default handler;

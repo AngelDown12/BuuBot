@@ -21,4 +21,4 @@ handler.help = ['sintetas @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['sintetas'];
 
-module.exports = handler;;
+export default handler;

@@ -1,4 +1,4 @@
-const MessageType = require('@whiskeysockets/baileys');
+import MessageType from '@whiskeysockets/baileys';
 const pajak = 0;
 const handler = async (m, {conn, text}) => {
   let who;
@@ -22,4 +22,4 @@ const handler = async (m, {conn, text}) => {
 };
 handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
 handler.rowner = true;
-module.exports = handler;;
+export default handler;

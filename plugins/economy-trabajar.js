@@ -19,7 +19,7 @@ handler.help = ['work']
 handler.tags = ['rpg']
 handler.command = ['work', 'trabajar', 'w']
 handler.register = true 
-module.exports = handler;
+export default handler
 
 function segundosAHMS(segundos) {
   const minutos = Math.floor((segundos % 3600) / 60)

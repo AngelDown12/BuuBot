@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 let HS = async (m, { conn, text }) => {
   if (!text) {
@@ -69,4 +69,4 @@ let HS = async (m, { conn, text }) => {
 
 HS.command = ['ytmp4doc'];
 
-module.exports = HS;;
+export default HS;

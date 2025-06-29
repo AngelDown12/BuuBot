@@ -7,7 +7,7 @@
 
 // SPOTIFY - DOWNLOADER 🌟
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 let MF = async (m, { conn, args, command, usedPrefix }) => {
 
@@ -31,4 +31,4 @@ conn.sendMessage(m.chat, { audio: { url: force.download }, mimetype: 'audio/mpeg
 
 MF.command = ['spotifydl', 'spdl'];
 
-module.exports = MF;;
+export default MF;

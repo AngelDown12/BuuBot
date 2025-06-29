@@ -30,4 +30,4 @@ let sugerirHandler = async (m, { conn, text, usedPrefix }) => {
 sugerirHandler.help = ['sugerir']
 sugerirHandler.tags = ['info']
 sugerirHandler.command = ['sugerir', 'suggest']
-module.exports = sugerirHandler;
+export default sugerirHandler

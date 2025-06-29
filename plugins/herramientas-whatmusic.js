@@ -1,5 +1,5 @@
-const fs = require('fs');
-const acrcloud = require('acrcloud');
+import fs from 'fs'
+import acrcloud from 'acrcloud'
 let acr = new acrcloud({
 host: 'identify-eu-west-1.acrcloud.com',
 access_key: 'c33c767d683f78bd17d4bd4991955d81',
@@ -32,4 +32,4 @@ m.reply(txt)
 } else throw '╰⊱❗️⊱ *𝙇𝙊 𝙐𝙎𝙊́ 𝙈𝘼𝙇 | 𝙐𝙎𝙀𝘿 𝙄𝙏 𝙒𝙍𝙊𝙉𝙂* ⊱❗️⊱╮\n\n𝙍𝙀𝙎𝙋𝙊𝙉𝘿𝘼 𝘼 𝙐𝙉 𝘼𝙐𝘿𝙄𝙊 𝙊 𝙑𝙄𝘿𝙀𝙊'
 }
 handler.command = /^quemusica|quemusicaes|whatmusic$/i
-module.exports = handler;
+export default handler

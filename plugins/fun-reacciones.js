@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const GIFBufferToVideoBuffer = require('../lib/Gifbuffer.js');
+import fetch from 'node-fetch';
+import GIFBufferToVideoBuffer from '../lib/Gifbuffer.js';
 
 const getBuffer = async (url) => {
   try {
@@ -112,4 +112,4 @@ handler.help = [
 handler.command = /^(acosar|abrazar|llorar|abrazar|awoo|besar|lamer|acariciar|engreído|golpear|lanzar|ruborizarse|sonreír|saludar|chocar|sostener|morder|glomp|abofetear|matar|feliz|guiñar|tocar|bailar|cringe)$/i;
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

@@ -1,5 +1,5 @@
 
-const fs = require('fs');
+import fs from 'fs';
 
 let handler = async (m, { text, usedPrefix, command }) => {
     
@@ -30,4 +30,4 @@ handler.tags = ['owner'];
 handler.command = ["saveplugin"];
 handler.owner = true;
 
-module.exports = handler;;
+export default handler;

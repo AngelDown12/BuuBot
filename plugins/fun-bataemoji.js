@@ -44,4 +44,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["emoji"];
-module.exports = handler;;
+export default handler;

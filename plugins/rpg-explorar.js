@@ -63,7 +63,7 @@ handler.command = ['explorar', 'adventure', 'bosque']
 handler.register = true
 handler.group = true
 
-module.exports = handler;
+export default handler
 
 function segundosAHMS(segundos) {
   let minutos = Math.floor(segundos / 60)

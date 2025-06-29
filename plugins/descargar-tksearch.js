@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 // Objeto para almacenar las sesiones de TikTok por chat
 const tiktokSessions = new Map();

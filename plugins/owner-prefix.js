@@ -25,6 +25,6 @@ handler.command = ['setprefijo']
 handler.owner = true
 handler.register = false
 
-const getSubbotPrefix = (jid) => subbotPrefixes[jid] || '.'
+export const getSubbotPrefix = (jid) => subbotPrefixes[jid] || '.'
 
-module.exports = handler;
+export default handler

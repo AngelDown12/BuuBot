@@ -1,7 +1,7 @@
-const { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync, promises as fsPromises } = require('fs');
+import { readdirSync, statSync, unlinkSync, existsSync, readFileSync, watch, rmSync, promises as fsPromises } from "fs";
 const fs = { ...fsPromises, existsSync };
-const path, { join } = require('path'); 
-const ws = require('ws');
+import path, { join } from 'path' 
+import ws from 'ws';
 
 let handler = async (m, { conn, command, usedPrefix, args, text, isOwner}) => {
 const isCommand1 = /^(deletesesion|deletebot|deletesession|deletesesaion)$/i.test(command)  
@@ -181,4 +181,4 @@ break
 }}
 
 handler.command = ['deletesesion', 'deletebot', 'deletesession', 'deletesession', 'stop', 'pausarbot', 'bots', 'listjadibots', 'subbots']
-module.exports = handler;
+export default handler

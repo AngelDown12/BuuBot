@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 // Mapa para llevar el control de las sesiones
 let imageSessions = new Map();
@@ -52,4 +52,4 @@ const imageHandler = async (m, { conn, command, usedPrefix }) => {
 // Asignar comando "girls"
 imageHandler.command = /^girls$/i;
 
-module.exports = imageHandler;;
+export default imageHandler;

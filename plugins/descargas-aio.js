@@ -3,7 +3,7 @@
  Any Downloader By KenisawaDev 
 
 */
-const * as cheerio = require('cheerio');
+import * as cheerio from 'cheerio';
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   if (!args[0]) throw m.reply(`✧ Ejemplo: ${usedPrefix}${command} <url>
@@ -124,7 +124,7 @@ handler.help = ['anydownloaser <url>'];
 handler.tags = ['descargas'];
 handler.command = ["aio","anydownloaser","allinone"];
 
-module.exports = handler;
+export default handler
 
 const rednoteDownloader = {
   getToken: async function () {

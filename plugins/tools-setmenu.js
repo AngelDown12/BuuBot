@@ -1,6 +1,6 @@
 
-const { downloadContentFromMessage} = require('@whiskeysockets/baileys');
-const fs = require('fs');
+import { downloadContentFromMessage} from '@whiskeysockets/baileys';
+import fs from 'fs';
 
 const handler = async (m, { conn}) => {
     try {
@@ -33,4 +33,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = /^setmenu$/i;
-module.exports = handler;;
+export default handler;

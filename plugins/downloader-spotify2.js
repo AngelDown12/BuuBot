@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 if (!text) throw m.reply(`🥞 Por favor, ingresa el nombre de una canción de Spotify.`);
@@ -13,4 +13,4 @@ handler.help = ['music *<texto>*']
 handler.tags = ['descargas']
 handler.command = ['music']
 
-module.exports = handler;
+export default handler

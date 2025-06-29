@@ -1,4 +1,4 @@
-const fetch = require('node-fetch'); // Asegúrate de tener node-fetch instalado
+import fetch from "node-fetch"; // Asegúrate de tener node-fetch instalado
 
 const TTS_CHAR_LIMIT = 100; // Límite de caracteres para la API de TTS (ajusta según sea necesario)
 
@@ -115,4 +115,4 @@ let handler = async (m, { conn, text, command }) => {
 
 handler.command = /^bot$/i; // Solo el comando .bot
 
-module.exports = handler;;
+export default handler;

@@ -32,7 +32,7 @@ handler.fail = null;
 handler.exp = 0;
 handler.register = true;
 
-module.exports = handler;;
+export default handler;
 
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)];

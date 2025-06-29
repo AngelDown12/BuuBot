@@ -203,4 +203,4 @@ handler.tags = ['econ'];
 handler.command = ['rf', 'rm'];
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

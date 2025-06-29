@@ -15,4 +15,4 @@ handler.help = ['excavar']
 handler.tags = ['mascota']
 handler.command = ['dig', 'excavar']
 handler.register = true 
-module.exports = handler;;
+export default handler;

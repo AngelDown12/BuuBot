@@ -1,6 +1,6 @@
 
-const axios = require('axios');
-const cheerio = require('cheerio');
+import axios from "axios";
+import cheerio from "cheerio";
 
 const handler = async (m, { conn, args}) => {
     if (!args[0]) return conn.reply(m.chat, '❌ *Debes proporcionar un enlace de TikTok!*', m);
@@ -29,4 +29,4 @@ const handler = async (m, { conn, args}) => {
 };
 
 handler.command = ["tiktokdl"];
-module.exports = handler;;
+export default handler;

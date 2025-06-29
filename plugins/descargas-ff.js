@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+import axios from 'axios'
 
 let HS = async (m, { conn, text }) => {
 if (!text) return conn.reply(m.chat, `❀ Ingresa el ID de un usuario de Free Fire que quieras stalkear`, m)
@@ -59,4 +59,4 @@ console.error(error)
 
 HS.command = ['freefirestalk', 'ffstalk']
 
-module.exports = HS;
+export default HS

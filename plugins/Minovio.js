@@ -1,5 +1,5 @@
-const PhoneNumber = require('awesome-phonenumber');
-const fetch = require('node-fetch');
+import PhoneNumber from 'awesome-phonenumber'
+import fetch from 'node-fetch'
 let handler = async (m, { conn }) => {
   let _pp = './storage/menus/Menu1.jpg'
   let user = db.data.users[m.sender]
@@ -19,7 +19,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['profile [@user]']
 handler.tags = ['rg']
 handler.command = /^minovio$/i
-module.exports = handler;
+export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)

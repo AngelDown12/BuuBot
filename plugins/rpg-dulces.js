@@ -17,4 +17,4 @@ handler.help = ['dulces'];
 handler.tags = ['rpg'];
 handler.command = ['wallet', 'cartera', 'dulces', 'bal', 'coins'];
 handler.register = true; 
-module.exports = handler;;
+export default handler;

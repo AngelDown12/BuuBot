@@ -27,4 +27,4 @@ handler.tags = ['freefire']
 handler.command = ['reglaslideres'] 
 handler.register = true
 handler.admin = true
-module.exports = handler;
+export default handler

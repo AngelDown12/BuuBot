@@ -1,4 +1,4 @@
-const { toAudio } = require('../lib/converter.js');
+import { toAudio } from '../lib/converter.js'
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
@@ -17,4 +17,4 @@ handler.tags = ['tools']
 handler.command = ['tomp3', 'toaudio'] 
 handler.register = true
 
-module.exports = handler;
+export default handler

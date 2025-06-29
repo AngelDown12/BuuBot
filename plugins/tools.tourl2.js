@@ -1,7 +1,7 @@
-const fetch = require('node-fetch');
-const crypto = require('crypto');
-const { FormData, Blob } = require('formdata-node');
-const { fileTypeFromBuffer } = require('file-type');
+import fetch from "node-fetch";
+import crypto from "crypto";
+import { FormData, Blob } from "formdata-node";
+import { fileTypeFromBuffer } from "file-type";
 
 const handler = async (m, { conn }) => {
 let q = m.quoted ? m.quoted : m;
@@ -20,7 +20,7 @@ let link = await catbox(media);
 handler.command = handler.help = ['tourl2']
 handler.tags = ['transformador']
 //handler.yenes = 5
-module.exports = handler;
+export default handler
 
 
 function formatBytes(bytes) {

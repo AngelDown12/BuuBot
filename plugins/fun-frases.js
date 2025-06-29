@@ -15,7 +15,7 @@ handler.command = ['oracion']
 handler.fail = null
 handler.exp = 0
 
-module.exports = handler;
+export default handler
 
 function msToTime(duration) {
 var milliseconds = parseInt((duration % 1000) / 100),

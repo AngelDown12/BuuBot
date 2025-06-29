@@ -28,4 +28,4 @@ handler.tags = ['freefire']
 handler.command = ['alpes'] 
 handler.register = true
 handler.admin = true
-module.exports = handler;
+export default handler

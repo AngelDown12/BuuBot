@@ -41,4 +41,4 @@ handler.help = ['apostardulces <cantidad> @usuario'];
 handler.tags = ['juegos'];
 handler.command = ['apostardulces'];
 
-module.exports = handler;;
+export default handler;

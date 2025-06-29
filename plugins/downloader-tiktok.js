@@ -1,5 +1,5 @@
-const _ = require('lodash');
-const fetch = require('node-fetch');
+import _ from "lodash"
+import fetch from "node-fetch"
 
 let handler = async (m, { conn, command, usedPrefix, args }) => {
 try {
@@ -67,4 +67,4 @@ handler.tags = ["descarga"]
 handler.command = ['splay', 'sp']
 handler.limit = true
 
-module.exports = handler;
+export default handler

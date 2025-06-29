@@ -978,4 +978,4 @@ triviaHandler.help = ['trivia'];
 triviaHandler.tags = ['game'];
 triviaHandler.command = /^(trivia)$/i;
 
-module.exports = triviaHandler;;
+export default triviaHandler;

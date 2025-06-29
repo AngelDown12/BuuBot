@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from "node-fetch";
 
 const fetchImage = async (url, timeout = 10000) => {
   const controller = new AbortController();
@@ -62,4 +62,4 @@ const imageCarouselHandler = async (m, { conn, command, usedPrefix, text = "girl
 
 imageCarouselHandler.command = /^girls$/i;
 
-module.exports = imageCarouselHandler;;
+export default imageCarouselHandler;

@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+import axios from "axios";
 
 const handler = async (m, { conn, args}) => {
     if (!args[0]) return conn.reply(m.chat, "❌ *Debes proporcionar un término de búsqueda!*", m);
@@ -36,4 +36,4 @@ const handler = async (m, { conn, args}) => {
 };
 
 handler.command = ["pinterest"];
-module.exports = handler;;
+export default handler;

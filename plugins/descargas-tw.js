@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 let enviando = false;
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (!text) throw `*[❗] Ingrese un enlace de X (twitter), ejemplo: ${usedPrefix + command}* https://twitter.com/auronplay/status/1586487664274206720?s=20&t=3snvkvwGUIez5iWYQAehpw`;
@@ -29,7 +29,7 @@ try {
   }
 };    
 handler.command = /^((x|xdl|dlx|twdl|tw|twt|twitter)(dl)?)$/i;
-module.exports = handler;;
+export default handler;
 
 const _twitterapi = (id) => `https://info.tweeload.site/status/${id}.json`;
 const getAuthorization = async () => {

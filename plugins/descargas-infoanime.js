@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'
 
 var handler = async (m, { conn, usedPrefix, command, text }) => {
 
@@ -31,4 +31,4 @@ handler.group = true;
 handler.register = true
 handler.command = ['infoanime','animeinfo'] 
 
-module.exports = handler;
+export default handler

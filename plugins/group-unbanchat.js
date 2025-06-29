@@ -27,4 +27,4 @@ handler.tags = ['group']
 handler.command = ['desbanearbot', 'unbanchat']
 handler.group = true
 
-module.exports = handler;
+export default handler

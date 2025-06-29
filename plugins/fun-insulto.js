@@ -34,4 +34,4 @@ handler.help = ['insulto'];
 handler.tags = ['fun'];
 handler.command = ['insulto'];
 
-module.exports = handler;;
+export default handler;

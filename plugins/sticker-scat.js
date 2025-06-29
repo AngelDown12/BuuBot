@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const { sticker } = require('../lib/sticker.js');
+import fetch from 'node-fetch'
+import { sticker } from '../lib/sticker.js'
 
 let handler = async (m, {
     conn
@@ -16,4 +16,4 @@ handler.help = ['scat']
 handler.tags = ['sticker']
 handler.command = ["scat", "stickercat", "cats"]
 handler.register = true 
-module.exports = handler;
+export default handler

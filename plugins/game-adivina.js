@@ -137,4 +137,4 @@ handler.command = ['adivinabandera'];
 handler.group = true;
 handler.register = true;
 
-module.exports = handler;;
+export default handler;

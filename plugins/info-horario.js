@@ -1,4 +1,4 @@
-const moment = require('moment-timezone');
+import moment from 'moment-timezone';
 
 const handler = async (m, {conn}) => {
   const fechaper = moment().tz('America/Lima').format('DD/MM HH:mm');
@@ -52,4 +52,4 @@ handler.help = ['horario'];
 handler.tags = ['info'];
 handler.command = /^(horario)$/i;
 
-module.exports = handler;;
+export default handler;

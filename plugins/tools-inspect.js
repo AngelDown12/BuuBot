@@ -44,4 +44,4 @@ const handler = async (m, { conn, args}) => {
 handler.command = ["ins"];
 handler.help = ["ins <enlace de invitación>"];
 handler.tags = ["tools"];
-module.exports = handler;;
+export default handler;

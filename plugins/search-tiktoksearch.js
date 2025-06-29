@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+import axios from "axios";
 
 const handler = async (m, { conn, text}) => {
     if (!text) return m.reply("🔍 *Por favor, ingresa un término de búsqueda para encontrar videos en TikTok.*");
@@ -33,7 +33,7 @@ const handler = async (m, { conn, text}) => {
 };
 
 handler.command = ["tiktoksearch"];
-module.exports = handler;;
+export default handler;
 
 const tiktok = {
     search: async function (q) {

@@ -1,4 +1,4 @@
-/*const axios = require('axios');
+/*import axios from 'axios'
 let handler = async(m, { conn, usedPrefix, command }) => {
 let cristiano = (await axios.get(`https://raw.githubusercontent.com/BOTGATITO/BotGatito/master/src/JSON/Tiktokmusica.json`)).data  
 let ronaldo = await cristiano[Math.floor(cristiano.length * Math.random())]
@@ -7,7 +7,7 @@ conn.sendFile(m.chat, ronaldo, 'error.jpg', `» 𝙈𝙐́𝙎𝙄𝘾𝘼𝙎 �
 handler.help = ['cristianoronaldo', 'cr7']
 handler.tags = ['internet']
 handler.command = /^(musicastiktok|musicatiktok|tiktokmusic|tiktokmusica)$/i
-module.exports = handler*/;
+export default handler*/
 
 let handler  = async (m, { conn, usedPrefix, command }) => {
 let res = await tiktokmusic[Math.floor(Math.random() * tiktokmusic.length)]
@@ -16,7 +16,7 @@ conn.sendMessage(m.chat, { video: { url: res }, caption: `» 𝙈𝙐𝙎𝙄�
 handler.help = ['tiktokmusic']
 handler.tags = ['random']
 handler.command = /^(tiktokmusic)$/i
-module.exports = handler;
+export default handler
 global.tiktokmusic = [
  "https://telegra.ph/file/710607d85b7abd702eced.mp4",
 "https://telegra.ph/file/0dc17539451e5ead356d0.mp4",

@@ -1,4 +1,4 @@
-const yts = require('yt-search');
+import yts from 'yt-search';
 
 let ytSearchHandler = async (m, { conn, text, usedPrefix, command }) => {
   // Verificar que se haya proporcionado un término de búsqueda
@@ -49,4 +49,4 @@ let ytSearchHandler = async (m, { conn, text, usedPrefix, command }) => {
 ytSearchHandler.help = ['ytsearch/yts <texto>']
 ytSearchHandler.tags = ['búsquedas']
 ytSearchHandler.command = /^(yts|ytsearch)$/i
-module.exports = ytSearchHandler;
+export default ytSearchHandler

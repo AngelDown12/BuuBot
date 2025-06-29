@@ -3,8 +3,8 @@
  - Dejen créditos aunque sea gracias.
 */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const marriagesFile = path.resolve('storage/databases/marry.json');
 let proposals = {}; 
@@ -104,4 +104,4 @@ handler.help = ['marry *@usuario*', 'divorce'];
 handler.command = ['marry', 'divorce'];
 handler.group = true;
 
-module.exports = handler;;
+export default handler;

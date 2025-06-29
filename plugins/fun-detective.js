@@ -54,4 +54,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["detective"];
-module.exports = handler;;
+export default handler;

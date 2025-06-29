@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+import fetch from 'node-fetch';
+import cheerio from 'cheerio';
 
 
 const handler = async (m, {conn, args, command, usedPrefix}) => {
@@ -42,7 +42,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 handler.command = ['xnxxdl'];
 handler.register = true;
 handler.group = false;
-module.exports = handler;;
+export default handler;
 
 async function xnxxdl(URL) {
   return new Promise((resolve, reject) => {

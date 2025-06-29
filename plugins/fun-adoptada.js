@@ -20,4 +20,4 @@ handler.help = ['adoptada @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['adoptada'];
 
-module.exports = handler;;
+export default handler;

@@ -1,6 +1,6 @@
 /* Creado por Bruno Sobrino (https://github.com/Night) */
-const fetch = require('node-fetch');
-const axios = require('axios');
+import fetch from 'node-fetch';
+import axios from 'axios';
 
 const handler = async (m, {text, usedPrefix, command, conn}) => {
  try {
@@ -26,7 +26,7 @@ const handler = async (m, {text, usedPrefix, command, conn}) => {
  }    
 };   
 handler.command = ['cuevana', 'pelisplus'];
-module.exports = handler;;
+export default handler;
 
 async function searchC(query) {
   const response = await axios.get(`https://wwv.cuevana8.com/search?q=${query}`);

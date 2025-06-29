@@ -1,4 +1,4 @@
-const { execSync } = require('child_process');
+import { execSync } from 'child_process'
 let handler = async (m, { conn, text }) => {
 await m.react('🕓')
 if (conn.user.jid == conn.user.jid) {
@@ -11,4 +11,4 @@ handler.tags = ['owner']
 handler.command = ['update', 'actualizar', 'fix', 'fixed'] 
 handler.rowner = true
 
-module.exports = handler;
+export default handler

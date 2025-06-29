@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
     try {
@@ -38,4 +38,4 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 };
 
 handler.command = /^blackboxai$/i;
-module.exports = handler;;
+export default handler;

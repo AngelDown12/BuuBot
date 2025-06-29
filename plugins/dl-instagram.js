@@ -1,4 +1,4 @@
-const { igdl } = require('ruhend-scraper');
+import { igdl } from "ruhend-scraper";
 
 let handler = async (m, { args, conn }) => { 
     if (!args[0]) {
@@ -27,4 +27,4 @@ handler.command = ['ig', 'igdl', 'instagram'];
 handler.tags = ['dl'];
 handler.help = ['ig *<link>*'];
 
-module.exports = handler;;
+export default handler;

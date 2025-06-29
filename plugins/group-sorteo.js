@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 let giveawayData = JSON.parse(fs.readFileSync('./sorteo.json', 'utf-8') || '{}');
 
@@ -136,4 +136,4 @@ handler.help = ['sorteo']
 handler.tags = ['group']
 handler.command = /^(sorteo|enter)$/i;
 
-module.exports = handler;;
+export default handler;

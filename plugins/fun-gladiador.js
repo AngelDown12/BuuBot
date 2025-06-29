@@ -68,4 +68,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["gladiador"];
-module.exports = handler;;
+export default handler;

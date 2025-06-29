@@ -1,7 +1,7 @@
 
 // YAHOO SEARCH ✨
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 let MF = async(m, { conn, args }) => {
 
@@ -31,4 +31,4 @@ m.react('✖️');
 
 MF.command = ['yahoosearch', 'yahoos'];
 
-module.exports = MF;;
+export default MF;

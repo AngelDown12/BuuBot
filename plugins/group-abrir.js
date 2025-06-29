@@ -40,8 +40,4 @@ const handler = (m, { conn }) => {
 
 handler.customPrefix = /^abrir$/i
 handler.command = new RegExp
-<<<<<<< HEAD
 export default handler
-=======
-module.exports = handler;
->>>>>>> e9655f3 (Reemplazo de carpeta plugins por versión corregida)

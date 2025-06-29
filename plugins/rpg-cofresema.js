@@ -32,4 +32,4 @@ handler.help = ['abrircasa'];
 handler.tags = ['economy'];
 handler.command = ['abrircasa'];
 
-module.exports = handler;;
+export default handler;

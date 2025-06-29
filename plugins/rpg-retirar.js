@@ -23,4 +23,4 @@ handler.help = ['retirar']
 handler.tags = ['rpg']
 handler.command = ['withdraw', 'retirar', 'wd']
 handler.register = true 
-module.exports = handler;
+export default handler

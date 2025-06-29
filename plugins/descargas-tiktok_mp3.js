@@ -1,7 +1,7 @@
-const fetch = require('node-fetch');
-const fs = require('fs');
-const { exec } = require('child_process');
-const path = require('path');
+import fetch from 'node-fetch';
+import fs from 'fs';
+import { exec } from 'child_process';
+import path from 'path';
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) {
@@ -60,7 +60,7 @@ handler.disable = false;
 handler.register = true;
 handler.limit = true;
 
-module.exports = handler;;
+export default handler;
 
 async function tiktokdl(url) {
     try {

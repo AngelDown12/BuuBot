@@ -1,5 +1,5 @@
-const axios = require('axios');
-const fetch = require('node-fetch');
+import axios from 'axios';
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, command, usedPrefix }) => {
     if (!db.data.chats[m.chat].nsfw && m.isGroup) {
@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, command, usedPrefix }) => {
 };
 
 handler.command = /^(phsearch|pornhubsearch)$/i;
-module.exports = handler;;
+export default handler;
 
 async function searchPornhub(search) {
     try {

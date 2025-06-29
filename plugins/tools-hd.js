@@ -1,9 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const fetch = require('node-fetch');
-const Jimp = require('jimp');
-const FormData = require('form-data');
-const { fileURLToPath } = require('url');
+import fs from "fs"
+import path from "path"
+import fetch from "node-fetch"
+import Jimp from "jimp"
+import FormData from "form-data"
+import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -42,7 +42,7 @@ handler.help = ['upscale']
 handler.tags = ['tools']
 handler.command = ['hd', 'remini', 'upscale']
 
-module.exports = handler;
+export default handler
 
 async function uploadToUguu(filePath) {
   const form = new FormData()

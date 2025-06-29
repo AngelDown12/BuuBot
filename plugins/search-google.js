@@ -1,5 +1,5 @@
 
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -37,4 +37,4 @@ handler.command = ['google'];
 handler.help = ['google <término>'];
 handler.tags = ['search'];
 
-module.exports = handler;;
+export default handler;

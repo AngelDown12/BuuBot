@@ -16,4 +16,4 @@ handler.tags = ['fun']
 handler.command = /^(Follar|violar)/i
 
 handler.register = true
-module.exports = handler;
+export default handler

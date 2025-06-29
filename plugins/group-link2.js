@@ -25,8 +25,4 @@ const handler = async (m, { conn }) => {
 
 handler.customPrefix = /^link$/i
 handler.command = new RegExp
-<<<<<<< HEAD
 export default handler
-=======
-module.exports = handler;
->>>>>>> e9655f3 (Reemplazo de carpeta plugins por versión corregida)

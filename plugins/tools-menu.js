@@ -39,4 +39,4 @@ let handler = async (m, { conn, usedPrefix }) => {
 };
 
 handler.command = ['menumascotas', 'menupet'];
-module.exports = handler;;
+export default handler;

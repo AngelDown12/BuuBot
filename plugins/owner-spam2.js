@@ -40,4 +40,4 @@ handler.help = ['spam2'];
 handler.tags = ['owner'];
 handler.command = ['spam2'];
 handler.owner = true;
-module.exports = handler;;
+export default handler;

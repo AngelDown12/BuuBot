@@ -12,4 +12,4 @@ handler.help = ['formarpareja']
 handler.tags = ['fun']
 handler.command = ['formarpareja','formarparejas']
 handler.group = true
-module.exports = handler;
+export default handler

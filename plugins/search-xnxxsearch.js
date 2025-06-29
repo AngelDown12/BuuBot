@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
 const handler = async (m, {text, usedPrefix, command}) => {
   const datas = global
@@ -37,7 +37,7 @@ handler.help = ['xnxxsearch'].map((v) => v + ' <query>');
 handler.tags = ['downloader', 'premium'];
 handler.command = ['xnxxsearch', 'xnxxs'];
 handler.register = true;
-module.exports = handler;;
+export default handler;
 
 async function xnxxsearch(query) {
   return new Promise((resolve, reject) => {

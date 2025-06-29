@@ -31,4 +31,4 @@ const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, 
 handler.command = /^(hidnum|hidetagnum)$/i;
 handler.group = handler.botAdmin = handler.admin = true;
 handler.fail = null;
-module.exports = handler;;
+export default handler;

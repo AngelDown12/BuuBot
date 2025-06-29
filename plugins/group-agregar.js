@@ -46,4 +46,4 @@ handler.admin = true;
 handler.botAdmin = true;
 handler.fail = null;
 
-module.exports = handler;;
+export default handler;

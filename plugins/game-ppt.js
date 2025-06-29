@@ -98,4 +98,4 @@ gameHandler.help = ['game'];
 gameHandler.tags = ['game'];
 gameHandler.command = /^(game)$/i;
 
-module.exports = gameHandler;;
+export default gameHandler;

@@ -10,4 +10,4 @@ handler.command = ['cekgay', 'gay2']
 
 handler.group = true
 
-module.exports = handler;
+export default handler

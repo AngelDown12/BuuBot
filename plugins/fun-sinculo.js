@@ -21,4 +21,4 @@ handler.help = ['sinculo @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['sinculo'];
 
-module.exports = handler;;
+export default handler;

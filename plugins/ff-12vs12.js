@@ -1,6 +1,6 @@
-const fg = require('api-dylux'); 
-const fetch = require('node-fetch');
-const axios = require('axios');
+import fg from 'api-dylux' 
+import fetch from 'node-fetch'
+import axios from 'axios'
 let handler = async (m, { conn, args, command, usedPrefix }) => {
 if (!args[0]) throw `
 *12 𝐕𝐄𝐑𝐒𝐔𝐒 12*
@@ -45,4 +45,4 @@ handler.tags = ['freefire']
 handler.command = /^(vs12|12vs12)$/i
 handler.group = true
 handler.admin = true
-module.exports = handler;
+export default handler

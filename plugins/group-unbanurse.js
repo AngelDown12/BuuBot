@@ -11,4 +11,4 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['unban *@user*']
 handler.command = /^unban$/i
 
-module.exports = handler;
+export default handler

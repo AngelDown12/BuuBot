@@ -1,4 +1,4 @@
-// const db = require('../lib/database.js');
+// import db from '../lib/database.js'
 
 let handler = m => m
 handler.before = async function (m, { conn, isAdmin, isBotAdmin }) {
@@ -10,4 +10,4 @@ if (prefixes.some(prefix => m.sender.startsWith(prefix))) {
 await conn.groupRequestParticipantsUpdate(m.chat, [m.sender], 'reject')
 }}}
 
-module.exports = handler;
+export default handler

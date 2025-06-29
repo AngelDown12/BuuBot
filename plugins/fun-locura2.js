@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const axios = require('axios');
+import fetch from 'node-fetch';
+import axios from 'axios';
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
@@ -62,4 +62,4 @@ _*🎶 Enviando música...*_`.trim();
 
 handler.tags = ['downloader']
 handler.command = ['spoti'];
-module.exports = handler;;
+export default handler;

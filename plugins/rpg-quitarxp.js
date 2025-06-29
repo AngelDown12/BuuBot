@@ -1,5 +1,5 @@
 
-const db = require('../lib/database.js');
+import db from '../lib/database.js'
 
 let handler = async (m, { conn, text }) => {
     let who;
@@ -31,4 +31,4 @@ handler.help = ['quitarxp *@user <cantidad>*'];
 handler.tags = ['rpg'];
 handler.command = ['quitarxp', 'restarxp'];
 
-module.exports = handler;;
+export default handler;

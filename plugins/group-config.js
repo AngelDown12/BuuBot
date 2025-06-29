@@ -65,4 +65,4 @@ handler.command = /^(group|grupo)$/i
 handler.admin = true
 handler.botAdmin = true
 
-module.exports = handler;
+export default handler
