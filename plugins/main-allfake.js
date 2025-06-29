@@ -30,7 +30,7 @@ var handler = async function (m, conn, db) {
 
     // Obtener información del usuario
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    let fotoperfil = await conn.profilePictureUrl(who, 'image').catch(() => 'https://qu.ax/QGAVS.jpg')
+    let fotoperfil = await conn.profilePictureUrl(who, 'image').catch(() => 'https://qu.ax/tNPfx.jpg')
 
     // Obtener nacionalidad
     let api = await axios.get(`https://deliriussapi-oficial.vercel.app/tools/country?text=${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}`)
@@ -93,7 +93,7 @@ var handler = async function (m, conn, db) {
     }
 
     // Selección de canal aleatorio
-    let rcanal = { 
+    let  = { 
         contextInfo: { 
             isForwarded: true, 
             forwardedNewsletterMessageInfo: { 
@@ -106,7 +106,7 @@ var handler = async function (m, conn, db) {
                 title: "Texto del bot", 
                 body: '🚀 ♡⃝𝐀𝐧𝐠𝐞𝐥𝒕ᚐ҉ᚐ', 
                 previewType: "PHOTO", 
-                thumbnailUrl: "https://qu.ax/QGAVS.jpg", 
+                thumbnailUrl: "https://qu.ax/tNPfx.jpg", 
                 sourceUrl: "https://whatsapp.com/channel/0029Vaua0ZD3gvWjQaIpSy18", 
                 mediaType: 1, 
                 renderLargerThumbnail: false 
@@ -114,7 +114,7 @@ var handler = async function (m, conn, db) {
         } 
     }
 
-    return { fotoperfil, userNationality, pushname, taguser, rimg, wait, fkontak, rcanal }
+    return { fotoperfil, userNationality, pushname, taguser, rimg, wait, fkontak,  }
 }
 
 export default handler

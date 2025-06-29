@@ -6,10 +6,10 @@
 const wm = "Mi Watermark";
 
 // Variables utilizadas para generar la sourceUrl en externalAdReply
-const nna = "https://ejemplo.com/nna.jpg";
-const nna2 = "https://ejemplo.com/nna2.jpg";
-const nn = "https://ejemplo.com/nn.jpg";
-const md = "https://ejemplo.com/md.jpg";
+const nna = "https://qu.ax/tNPfx.jpg";
+const nna2 = "https://qu.ax/tNPfx.jpg";
+const nn = "https://qu.ax/tNPfx.jpg";
+const md = "https://qu.ax/tNPfx.jpg";
 const yt = "https://youtube.com/c/ejemplo";
 const tiktok = "https://tiktok.com/@ejemplo";
 
@@ -33,9 +33,9 @@ const claimedCharacters = [];
 
 // Lista de personajes predefinidos
 const mainCharacters = [
-  { name: "Naruto Uzumaki", url: "https://i.ibb.co/MygvfhNp/file.jpg", price: 100, claimedBy: null },
-  { name: "Sakura Haruno", url: "https://i.ibb.co/MygvfhNp/file.jpg", price: 120, claimedBy: null },
-  { name: "Sasuke Uchiha", url: "https://i.ibb.co/MygvfhNp/file.jpg", price: 150, claimedBy: null }
+  { name: "Naruto Uzumaki", url: "https://qu.ax/tNPfx.jpg", price: 100, claimedBy: null },
+  { name: "Sakura Haruno", url: "https://qu.ax/tNPfx.jpg", price: 120, claimedBy: null },
+  { name: "Sasuke Uchiha", url: "https://qu.ax/tNPfx.jpg", price: 150, claimedBy: null }
 ];
 
 // ====================
@@ -80,7 +80,7 @@ async function handler(m, { conn }) {
   let who = (m.mentionedJid && m.mentionedJid[0])
     ? m.mentionedJid[0]
     : (m.fromMe ? conn.user.jid : m.sender);
-  let pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://example.com/default-profile.jpg');
+  let pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://qu.ax/tNPfx.jpg');
 
   // Sincronizamos la lista de personajes
   const availableCharacters = syncCharacters();

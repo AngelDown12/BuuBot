@@ -1,5 +1,5 @@
 let handler = async (m, { isPrems, conn }) => {
-  let img = 'https://qu.ax/JRCMQ.jpg';
+  let img = 'https://qu.ax/tNPfx.jpg';
   let texto = `🎧 *M E N Ú   D E   A U D I O S* 🎧
 
 🎵 _Tunometecabrasaramambiche_

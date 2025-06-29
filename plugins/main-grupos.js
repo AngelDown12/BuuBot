@@ -11,12 +11,12 @@ let handler = async (m, { conn, usedPrefix, command }) => {
                  "> By 𝐀𝐧𝐠𝐞𝐥";
 
     // Asegúrate de definir 'imagen2' correctamente antes de usarlo
-    let imagen2 = 'https://qu.ax/Mvhfa.jpg';
+    let imagen2 = 'https://qu.ax/tNPfx.jpg';
 
     // Define los emojis que quieres usar
     let emojis = '🍁';
 
-    await conn.sendFile(m.chat, imagen2, "ian.jpg", grupos, m, null, rcanal);
+    await conn.sendFile(m.chat, imagen2, "ian.jpg", grupos, m, null, );
     await m.react(emojis);
 }
 

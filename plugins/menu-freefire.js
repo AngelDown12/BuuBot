@@ -5,7 +5,7 @@ let handler = async (m, { isPrems, conn, }) => {
     throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\n𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`;
   }
 
-  let img = 'https://i.ibb.co/J55dPST/garena-free-fire-logo-rosj9f102kpok60v.jpg';
+  let img = 'https://qu.ax/tNPfx.jpg';
   let texto = `> > 𝙈𝙀𝙉𝙐 𝘿𝙀 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 👑.
 
 👑 𝙁𝙍𝙀𝙀 𝙁𝙄𝙍𝙀 👑
@@ -53,6 +53,6 @@ let handler = async (m, { isPrems, conn, }) => {
 
 handler.help = ['menuff'];
 handler.tags = ['freefire', 'main'];
-handler.command = ['menuff', 'menufreefire', 'rcanal'];
+handler.command = ['menuff', 'menufreefire', ''];
 handler.register = true;
 export default handler;

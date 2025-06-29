@@ -29,7 +29,7 @@ END:VCARD`
 
   let chat = global.db.data.chats[m.chat];
   let usuario = participants.find(p => p.id === m.sender)?.name || `@${m.sender.split`@`[0]}`;
-  let pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || 'https://files.catbox.moe/xr2m6u.jpg';
+  let pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => null) || 'https://qu.ax/tNPfx.jpg';
 
   let eventos = {
     21: {

@@ -7,10 +7,10 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
-const imagen = "https://qu.ax/JRCMQ.jpg";
+const imagen = "https://qu.ax/tNPfx.jpg";
 
 const menuHeader = `
-╭─❒ 「 *📍 BARBOZA MD* 」
+╭─❒ 「 *📍 𝐀𝐧𝐠𝐞𝐥 MD* 」
 │ 👤 *Nombre:* %name
 │ 🎖 *Nivel:* %level | *XP:* %exp/%max
 │ 🔓 *Límite:* %limit | *Modo:* %mode
@@ -110,7 +110,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => { // Corrected parameter he
 
   } catch (e) {
     console.error(e);
-    conn.reply(m.chat, '⚠️ Ocurrió un error al generar el menú. Por favor, inténtalo de nuevo más tarde o contacta al soporte.', m); // Removed rcanal here
+    conn.reply(m.chat, '⚠️ Ocurrió un error al generar el menú. Por favor, inténtalo de nuevo más tarde o contacta al soporte.', m); // Removed  here
   }
 };
 handler.command = ['menu', 'help', 'menú'];
