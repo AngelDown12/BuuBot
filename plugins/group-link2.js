@@ -9,7 +9,7 @@ const handler = async (m, { conn }) => {
     })
     .catch(() => {
       conn.sendMessage(m.chat, {
-        text: '❌ No tengo permisos para obtener el enlace del grupo.',
+        text: '❌ 𝐀𝐬𝐞𝐠𝐮𝐫𝐚𝐭𝐞 𝐃𝐞 𝐪𝐮𝐞 𝐞𝐥 𝐁𝐨𝐭 𝐬𝐞𝐚 𝐀𝐝𝐦𝐢𝐧.',
         contextInfo: {
           externalAdReply: {
             title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
