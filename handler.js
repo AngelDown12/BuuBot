@@ -461,7 +461,7 @@ if (gruposPermitidos.includes(m.chat) &&!comandosPermitidos.includes(command)) {
 
 global.dfail = (type, m, conn, usedPrefix) => {
     let msg = {
-        rowner: " |𝐀𝐯𝐢𝐬𝐨| `𝐋𝐨 𝐬𝐢𝐞𝐧𝐭𝐨 𝐞𝐬𝐭𝐞 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐬𝐨𝐥𝐨 𝐞𝐬 𝐩𝐚𝐫𝐚 𝐦𝐢 𝐜𝐫𝐞𝐚𝐝𝐨𝐫`🚫",
+        rowner: "🚫𝐄𝐬𝐭𝐞 𝐂𝐨𝐦𝐚𝐧𝐝𝐨 𝐬𝐨𝐥𝐨 𝐄𝐬 𝐏𝐚𝐫𝐚 𝐀𝐧𝐠𝐞𝐥 𝐌𝐢 𝐂𝐫𝐞𝐚𝐝𝐨𝐫.",
         owner: " _ |𝐀𝐯𝐢𝐬𝐨| *`😴 𝙋𝙚𝙧𝙙𝙤𝙣 𝙨𝙤𝙡𝙤 𝙢𝙞𝙨 𝙘𝙧𝙚𝙖𝙙𝙤𝙧𝙚𝙨 𝙥𝙪𝙚𝙙𝙚𝙣 𝙪𝙨𝙖𝙧𝙡𝙤😴.`*_",
         mods: " _*|𝐀𝐯𝐢𝐬𝐨| `⚡ 𝐄𝐡 𝐥𝐨 𝐬𝐢𝐞𝐧𝐭𝐨 𝐞𝐬𝐭𝐨 𝐬𝐨𝐥𝐨 𝐞𝐬 𝐩𝐚𝐫𝐚 𝐥𝐨𝐬 𝐦𝐨𝐝𝐬⚡`*_",
         premium: " |𝐀𝐯𝐢𝐬𝐨| *`🔑 𝐍𝐎 𝐄𝐑𝐄𝐒 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 𝐇𝐀𝐁𝐋𝐀 𝐂𝐎𝐍 𝐌𝐈 𝐂𝐑𝐄𝐀𝐃𝐎𝐑⚡`*_",
