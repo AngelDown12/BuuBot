@@ -3,7 +3,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 
   if (!text && !m.quoted) {
     return conn.sendMessage(m.chat, {
-      text: '🚩 Usa el comando correctamente.\n\n📌 *Ejemplo:*\n> .promote @𝐀𝐧𝐠𝐞𝐥',
+      text: '🚩 𝐔𝐬𝐞 𝐄𝐥 𝐜𝐨𝐦𝐚𝐧𝐝𝐨 𝐂𝐨𝐫𝐫𝐞𝐜𝐭𝐚𝐦𝐞𝐧𝐭𝐞.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 
   if (!number) {
     return conn.sendMessage(m.chat, {
-      text: '🚩 No se pudo identificar el número.',
+      text: '🚩 𝐍𝐨 𝐬𝐞 𝐩𝐮𝐝𝐨 𝐢𝐝𝐞𝐧𝐭𝐢𝐟𝐢𝐜𝐚𝐫 𝐞𝐥 𝐍𝐮𝐦𝐞𝐫𝐨.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
@@ -45,7 +45,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
 
   if (number.length > 13 || number.length < 11) {
     return conn.sendMessage(m.chat, {
-      text: '🚩 El número ingresado es incorrecto.',
+      text: '🚩 𝐄𝐥 𝐧𝐮𝐦𝐞𝐫𝐨 𝐈𝐧𝐠𝐫𝐞𝐬𝐚𝐝𝐨 𝐞𝐬 𝐢𝐧𝐜𝐨𝐫𝐫𝐞𝐜𝐭𝐨.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
@@ -64,7 +64,7 @@ let handler = async (m, { conn, usedPrefix, text }) => {
   try {
     await conn.groupParticipantsUpdate(m.chat, [user], 'promote')
     await conn.sendMessage(m.chat, {
-      text: '✅ Usuario promovido a admin.',
+      text: '✅ 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐏𝐫𝐨𝐦𝐨𝐯𝐢𝐝𝐨 𝐚 𝐀𝐝𝐦𝐢𝐧𝐢𝐬𝐭𝐫𝐚𝐝𝐨𝐫.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
