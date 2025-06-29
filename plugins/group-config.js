@@ -8,7 +8,10 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
   if (!isClose) {
     return conn.sendMessage(m.chat, {
-      text: `*Elija una opción para configurar el grupo*\n\nEjemplo:\n*○ !${command} abrir*\n*○ !${command} cerrar*\n*○ !${command} bloquear*\n*○ !${command} desbloquear*`,
+      text: `.𝐠𝐫𝐮𝐩𝐨 𝐚𝐛𝐫𝐢𝐫 
+𝐩𝐚𝐫𝐚 𝐀𝐛𝐫𝐢𝐫 𝐞𝐥 𝐠𝐫𝐮𝐩𝐨.
+.𝐠𝐫𝐮𝐩𝐨 𝐜𝐞𝐫𝐫𝐚𝐫
+𝐩𝐚𝐫𝐚 𝐂𝐞𝐫𝐫𝐚𝐫 𝐞𝐥 𝐠𝐫𝐮𝐩𝐨.`,
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
