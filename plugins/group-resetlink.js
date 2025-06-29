@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
     const nuevoLink = 'https://chat.whatsapp.com/' + revoke
 
     await conn.sendMessage(m.chat, {
-      text: `🚩 Se restableció con éxito el link del grupo.\n\n🔗 *Nuevo Link:* ${nuevoLink}`,
+      text: `🚩 𝐒𝐞 𝐫𝐞𝐬𝐭𝐚𝐛𝐥𝐞𝐜𝐢𝐨 𝐂𝐨𝐧 𝐞𝐱𝐢𝐭𝐨 𝐞𝐥 𝐋𝐢𝐧𝐤 𝐝𝐞𝐥 𝐠𝐫𝐮𝐩𝐨.\n\n🔗 *Nuevo Link:* ${nuevoLink}`,
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
@@ -20,7 +20,7 @@ let handler = async (m, { conn }) => {
   } catch (e) {
     console.error(e)
     await conn.sendMessage(m.chat, {
-      text: '❌ Error al restablecer el enlace. Asegúrate de que soy admin del grupo.',
+      text: '❌ 𝐀𝐬𝐞𝐠𝐮𝐫𝐚𝐭𝐞 𝐝𝐞 𝐪𝐮𝐞 𝐞𝐥 𝐁𝐨𝐭 𝐒𝐞𝐚 𝐀𝐝𝐦𝐢𝐧.',
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
