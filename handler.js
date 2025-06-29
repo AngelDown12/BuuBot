@@ -470,14 +470,20 @@ global.dfail = (type, m, conn, usedPrefix) => {
         admin: "  |𝐀𝐯𝐢𝐬𝐨| _*`😂 𝐓𝐔 𝐍𝐎 𝐄𝐑𝐄𝐒 𝐀𝐃𝐌𝐈𝐍 😝⚡`*_",
         botAdmin: "  |𝐀𝐯𝐢𝐬𝐨| _*`⚠️ 𝗘𝘀 𝗻𝗲𝗰𝗲𝘀𝗮𝗿𝗶𝗼 𝗤𝘂𝗲 𝗦𝗲𝗮 𝗮𝗱𝗺𝗶𝗻 𝗣𝗥𝗜𝗠𝗘𝗥𝗢 𝗣𝗔𝗥𝗔 𝘂𝘀𝗮𝗿 𝗲𝘀𝘁𝗮 𝗳𝘂𝗻𝗰𝗶𝗼́𝗻⚡`*_",
         unreg: " | 𝐀𝐯𝐢𝐬𝐨| *`↘️𝙐𝙎𝙐𝘼𝙍𝙄𝙊 𝙉𝙊 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊↘️`*_\n\n`Para Registrarse:`\n\n> .reg nombre.edad\n\n`Ejemplo:`\n\n> .reg 𝐀𝐧𝐠𝐞𝐥.18",
-        restrict: "> _*`Comando desactivado por mi Owner`*_" 
+        restrict: "> _*`Comando desactivado por mi Owner`*_"
     }[type]
-    if (msg) return conn.reply(m.chat, msg, m).then(_ => m.react('✖️'))
-}
 
-let file = global.__filename(import.meta.url, true)
-watchFile(file, async () => {
-    unwatchFile(file)
-    console.log(chalk.magenta("Se actualizo 'handler.js'"))
-    if (global.reloadHandler) console.log(await global.reloadHandler())
-})
+    if (msg) return conn.sendMessage(m.chat, {
+        text: msg,
+        contextInfo: {
+            externalAdReply: {
+                title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+                body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+                mediaType: 1,
+                thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+                renderLargerThumbnail: false,
+                sourceUrl: ''
+            }
+        }
+    }, { quoted: m }).then(_ => m.react('✖️'))
+}
