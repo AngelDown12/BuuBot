@@ -37,4 +37,4 @@ handler.tags = ['fun']
 handler.command = ['letra']
 handler.register = true
 
-export default handler
+module.exports = handler;

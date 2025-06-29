@@ -28,4 +28,4 @@ handler.help = ['dulcesdiario'];
 handler.tags = ['economía'];
 handler.command = ['dulcesdiario'];
 
-export default handler;
+module.exports = handler;;

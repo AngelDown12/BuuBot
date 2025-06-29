@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 var handler = async (m, { conn }) => {
 
@@ -59,4 +59,4 @@ handler.tags = ['tools'];
 handler.owner = true;
 // handler.private = true
 
-export default handler
+module.exports = handler;

@@ -52,4 +52,4 @@ mate.before = async (m, { conn}) => {
 };
 
 mate.command = /^mate$/i;
-export default mate;
+module.exports = mate;;

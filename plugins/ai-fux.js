@@ -2,7 +2,7 @@
 - Flux Ai Imagen By Angel-OFC 
 - https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
 */
-import axios from "axios";
+const axios = require('axios');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) return conn.reply(m.chat,`🌸 Ejemplo: ${usedPrefix}${command} paisaje hermoso`, m, fake)
@@ -37,7 +37,7 @@ handler.help = ["flux *<texto>*"];
 handler.tags = ["tools"];
 handler.command = ["flux"];
 
-export default handler;
+module.exports = handler;;
 
 const fluximg = {
   defaultRatio: "2:3", 

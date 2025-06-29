@@ -8,4 +8,4 @@ handler.help = ['cuartoschampions'];
 handler.tags = ['info'];
 handler.command = ['cuartoschampions'];
 
-export default handler;
+module.exports = handler;;

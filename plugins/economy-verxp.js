@@ -16,4 +16,4 @@ handler.help = ['verxp'];
 handler.tags = ['rpg'];
 handler.command = ['verxp', 'xp', 'nivel'];
 
-export default handler;
+module.exports = handler;;

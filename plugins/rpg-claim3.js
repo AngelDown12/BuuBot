@@ -16,4 +16,4 @@ handler.help = ['claim3'];
 handler.tags = ['rpg'];
 handler.command = ['claim3'];
 handler.register = true;
-export default handler;
+module.exports = handler;;

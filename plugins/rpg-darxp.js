@@ -1,5 +1,5 @@
 
-import db from '../lib/database.js'
+const db = require('../lib/database.js');
 
 let handler = async (m, { conn, text }) => {
     let who;
@@ -36,4 +36,4 @@ handler.help = ['regalarxp *@user <cantidad>*'];
 handler.tags = ['rpg'];
 handler.command = ['regalarxp', 'donarexp'];
 
-export default handler;
+module.exports = handler;;

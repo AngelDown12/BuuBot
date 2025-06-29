@@ -21,4 +21,4 @@ handler.help = ['newcommand']
 handler.tags = ['info']
 handler.command = ['newcommand', 'sug']
 
-export default handler
+module.exports = handler;

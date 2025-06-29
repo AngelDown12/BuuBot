@@ -53,4 +53,4 @@ let handler = async (m, { conn }) => {
 
 handler.command = /^(menuhot)$/i;
 handler.register = false;
-export default handler;
+module.exports = handler;;

@@ -22,4 +22,4 @@ noAceptarHandler.tags = ["staff"];
 noAceptarHandler.command = ["noaceptar"];
 noAceptarHandler.owner = true;
 
-export default noAceptarHandler;
+module.exports = noAceptarHandler;;

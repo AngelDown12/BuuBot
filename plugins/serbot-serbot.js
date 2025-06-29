@@ -4,16 +4,16 @@ const {
   makeCacheableSignalKeyStore,
   fetchLatestBaileysVersion
 } = await import("@whiskeysockets/baileys");
-import qrcode from "qrcode";
-import nodeCache from "node-cache";
-import fs from "fs";
-import path from "path";
-import pino from "pino";
-import util from "util";
-import * as ws from "ws";
+const qrcode = require('qrcode');
+const nodeCache = require('node-cache');
+const fs = require('fs');
+const path = require('path');
+const pino = require('pino');
+const util = require('util');
+const * as ws = require('ws');
 const { child, spawn, exec } = await import("child_process");
 const { CONNECTING } = ws;
-import { makeWASocket } from "../lib/simple.js";
+const { makeWASocket } = require('../lib/simple.js');
 let check1 = "60adedfeb87c6";
 let check2 = "e8d2cd8ee01fd";
 let check3 = "S6A2514  in";
@@ -450,7 +450,7 @@ handler.help = ["serbot", "serbot --code", "code"];
 handler.tags = ["serbot"];
 handler.command = ["jadibot", "serbot", "code"];
 
-export default handler;
+module.exports = handler;;
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 function sleep(ms) {

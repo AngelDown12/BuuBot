@@ -11,4 +11,4 @@ handler.help = ['unreg']
 handler.tags = ['rg']
 handler.command = /^unreg(ister)?$/i
 handler.register = true
-export default handler
+module.exports = handler;

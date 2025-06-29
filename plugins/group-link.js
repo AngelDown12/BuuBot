@@ -46,4 +46,4 @@ handler.command = ['link', 'linkgroup']
 handler.group = true
 handler.botAdmin = true
 
-export default handler
+module.exports = handler;

@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 // Variables globales para almacenar el estado
 let pinterestSessions = new Map();
@@ -119,4 +119,4 @@ pinterestHandler.help = [
 pinterestHandler.tags = ['search', 'tools'];
 pinterestHandler.command = /^(pinscroll|pinseguir|pinatras)$/i;
 
-export default pinterestHandler;
+module.exports = pinterestHandler;;

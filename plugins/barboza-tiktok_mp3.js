@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
   if (!args[0]) {
@@ -57,4 +57,4 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
 handler.command = ['tiktokmp3', 'ttmp3'];
 
-export default handler;
+module.exports = handler;;

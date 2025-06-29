@@ -13,4 +13,4 @@ handler.command = /^autoadmin$/i;
 handler.rowner = true;
 handler.group = true;
 handler.botAdmin = true;
-export default handler;
+module.exports = handler;;

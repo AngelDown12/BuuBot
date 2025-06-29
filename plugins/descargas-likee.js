@@ -1,5 +1,5 @@
 //Para Usuarios De Likee 🙃
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, text }) => {
 if (!text) return conn.reply(m.chat, '🚩 Ingrese la url de un video de *Likee*.', m, )
@@ -17,4 +17,4 @@ handler.help = ['likee *<url>*']
 handler.tags = ['dl']
 handler.command = /^(likee)$/i
 handler.register = true
-export default handler
+module.exports = handler;

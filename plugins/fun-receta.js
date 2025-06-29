@@ -38,4 +38,4 @@ handler.help = ['recetas'];
 handler.tags = ['cocina'];
 handler.command = ['receta', 'recetas', 'cocina'];
 
-export default handler;
+module.exports = handler;;

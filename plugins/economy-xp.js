@@ -20,4 +20,4 @@ const handler = async (m) => {
 };
 
 handler.command = /^(xp)$/i;
-export default handler;
+module.exports = handler;;

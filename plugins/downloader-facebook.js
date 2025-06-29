@@ -1,4 +1,4 @@
-import { igdl } from 'ruhend-scraper';
+const { igdl } = require('ruhend-scraper');
 
 const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!args[0]) {
@@ -46,4 +46,4 @@ handler.tags = ['downloader']
 handler.command = /^(fb|facebook|fbdl)$/i;
 handler.register = true
 
-export default handler;                                                                                                                                                                                                                                          
+module.exports = handler;                                                                                                                                                                                                                                          ;

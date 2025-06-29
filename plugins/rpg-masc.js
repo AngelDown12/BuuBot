@@ -26,4 +26,4 @@ handler.help = ['masc'];
 handler.tags = ['rpg'];
 handler.command = ['masc'];
 handler.register = true;
-export default handler;
+module.exports = handler;;

@@ -21,4 +21,4 @@ handler.help = ['gordoteton @usuario'];
 handler.tags = ['diversión'];
 handler.command = ['gordoteton'];
 
-export default handler;
+module.exports = handler;;

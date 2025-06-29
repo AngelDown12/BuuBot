@@ -1,4 +1,4 @@
-import yts from 'yt-search';
+const yts = require('yt-search');
 
 let handler = async (m, { conn, usedPrefix, text, args, command }) => {
     if (!text) {

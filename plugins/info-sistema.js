@@ -1,6 +1,6 @@
 
-import os from 'os';
-import { execSync } from 'child_process';
+const os = require('os');
+const { execSync } = require('child_process');
 
 const formatBytes = (bytes, decimals = 2) => {
     if (bytes === 0) return '0 Bytes';
@@ -67,7 +67,7 @@ handler.tags = ['info'];
 handler.command = ['system', 'sistema'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;
 
 function clockString(ms) {
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)

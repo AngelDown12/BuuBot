@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 const handler = async (m, {conn, command, usedPrefix}) => {
   if (!global.db.data.chats[m.chat].nsfw) {
     return conn.reply(m.chat, `🚩 El grupo no admite contenido *Nsfw.*\n\n> Para activarlo un *Administrador* debe usar el comando */on nsfw*`, m, );
@@ -88,7 +88,7 @@ const handler = async (m, {conn, command, usedPrefix}) => {
 };
 handler.command = ['pack', 'pack2', 'pack3', 'videoxxx', 'vídeoxxx', 'videoxxxlesbi', 'videolesbixxx', 'pornolesbivid', 'pornolesbianavid', 'pornolesbiv', 'pornolesbianav', 'pornolesv'];
 
-export default handler;
+module.exports = handler;;
 
 global.pack = [
   'https://qu.ax/JRCMQ.jpg',

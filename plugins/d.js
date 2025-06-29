@@ -1,5 +1,5 @@
-import { readdirSync, unlinkSync, existsSync, promises as fs } from 'fs';
-import path from 'path';
+const { readdirSync, unlinkSync, existsSync, promises as fs } = require('fs');
+const path = require('path');
 
 var handler = async (m, { conn, usedPrefix }) => {
     if (global.conn.user.jid !== conn.user.jid) {
@@ -48,4 +48,4 @@ handler.command = ['delai', 'delyaemori', 'dsowner', 'clearallsession'];
 
 handler.rowner = true;
 
-export default handler;
+module.exports = handler;;

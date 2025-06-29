@@ -2,7 +2,7 @@
 // Free Code Titans
 // https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) return conn.reply(m.chat, '🚩 Ingresa la referencia bíblica que deseas buscar.\n\nEjemplo:\n' + `> *${usedPrefix + command}* john 3:16`, m, );
@@ -35,4 +35,4 @@ handler.tags = ['search'];
 handler.command = ['biblia'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

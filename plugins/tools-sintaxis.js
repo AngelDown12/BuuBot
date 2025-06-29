@@ -17,4 +17,4 @@ const handler = async (m, { conn, args}) => {
 };
 
 handler.command = ["sintaxis"];
-export default handler;
+module.exports = handler;;

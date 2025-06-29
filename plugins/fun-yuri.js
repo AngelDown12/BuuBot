@@ -1,7 +1,7 @@
 //Codígo creado por David Chian wa.me/5351524614
 
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 
 let handler = async (m, { conn, usedPrefix }) => {
@@ -41,4 +41,4 @@ handler.tags = ['fun'];
 handler.command = ['lesbiana','tijeras'];
 handler.group = true;
 
-export default handler;
+module.exports = handler;;

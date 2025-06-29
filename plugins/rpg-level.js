@@ -15,4 +15,4 @@ handler.help = ['level'];
 handler.tags = ['mascotas'];
 handler.command = ['level'];
 
-export default handler;
+module.exports = handler;;

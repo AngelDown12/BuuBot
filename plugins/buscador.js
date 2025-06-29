@@ -1,7 +1,7 @@
 // Alex-X >> https://github.com/OfcKing
 
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 var handler = async (m, { usedPrefix, command }) => {
     try {
@@ -42,4 +42,4 @@ handler.help = ['rev'];
 handler.tags = ['tools'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

@@ -1,5 +1,5 @@
-import util from 'util'
-import path from 'path'
+const util = require('util');
+const path = require('path');
 
 async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 
@@ -29,7 +29,7 @@ handler.command = ['sorteo']
 handler.tags = ['fun']
 handler.group = true
 
-export default handler
+module.exports = handler;
 
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}

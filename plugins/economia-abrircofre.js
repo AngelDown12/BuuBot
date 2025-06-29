@@ -30,4 +30,4 @@ handler.help = ['abrircofre'];
 handler.tags = ['rpg'];
 handler.command = ['abrircofre'];
 handler.register = true;
-export default handler;
+module.exports = handler;;

@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -100,4 +100,4 @@ handler.help = ['ytmp3 <url de youtube>'];
 handler.tags = ['descargas'];
 handler.command = /^ytmp3$/i;
 
-export default handler;
+module.exports = handler;;

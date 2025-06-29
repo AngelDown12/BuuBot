@@ -1,5 +1,5 @@
 
-import { createHash} from 'crypto';
+const { createHash} = require('crypto');
 
 let handler = async (m, { conn, text, usedPrefix, command}) => {
     let regFormat = /^([^\s]+)\.(\d+)\.(\w+)$/i;
@@ -48,4 +48,4 @@ handler.help = ['registrar <nombre.edad.país>'];
 handler.tags = ['registro'];
 handler.command = ['registrar', 'reg'];
 
-export default handler;
+module.exports = handler;;

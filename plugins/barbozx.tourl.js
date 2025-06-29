@@ -1,6 +1,6 @@
-import fs from "fs"
-import fetch from "node-fetch"
-import FormData from "form-data"
+const fs = require('fs');
+const fetch = require('node-fetch');
+const FormData = require('form-data');
 
 let handler = async m => {
   try {
@@ -31,7 +31,7 @@ let handler = async m => {
 handler.help = ["tourl2", "tourl"]
 handler.tags = ["tools"]
 handler.command = /^(tourl2|tourl)$/i
-export default handler
+module.exports = handler;
 
 async function uploadUguu(path) {
   try {

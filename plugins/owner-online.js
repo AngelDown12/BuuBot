@@ -1,4 +1,4 @@
-import axios from "axios";
+const axios = require('axios');
 
 let handler = async (m, { conn, args }) => {
   try {
@@ -53,4 +53,4 @@ handler.botAdmin = false;
 handler.fail = null;
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

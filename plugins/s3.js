@@ -36,4 +36,4 @@ handler.help = ['mp4meme'];
 handler.tags = ['diversión'];
 handler.command = ['mp4meme'];
 
-export default handler;
+module.exports = handler;;

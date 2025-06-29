@@ -1,4 +1,4 @@
-import fs from 'fs'
+const fs = require('fs');
 
 let mg = '⚠️ ERROR: Falta el texto del plugin';
 
@@ -14,4 +14,4 @@ handler.command = /^(get|getplungis)$/i
 
 handler.rowner = true
 
-export default handler
+module.exports = handler;

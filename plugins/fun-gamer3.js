@@ -15,4 +15,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["nament"];
-export default handler;
+module.exports = handler;;

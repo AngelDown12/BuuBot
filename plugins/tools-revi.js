@@ -25,4 +25,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["revision"];
-export default handler;
+module.exports = handler;;

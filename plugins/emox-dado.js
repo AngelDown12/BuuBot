@@ -22,4 +22,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["dado","dados"];
-export default handler;
+module.exports = handler;;

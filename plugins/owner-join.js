@@ -63,7 +63,7 @@ handler.command = ['join', 'invite']
 
 handler.owner = true
 
-export default handler
+module.exports = handler;
 
 function msToDate(ms) {
   let d = isNaN(ms) ? '--' : Math.floor(ms / 86400000)

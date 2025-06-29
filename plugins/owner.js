@@ -1,8 +1,8 @@
-import syntaxerror from 'syntax-error'
-import { format } from 'util'
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
-import { createRequire } from 'module'
+const syntaxerror = require('syntax-error');
+const { format } = require('util');
+const { fileURLToPath } = require('url');
+const { dirname } = require('path');
+const { createRequire } = require('module');
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname)
@@ -42,7 +42,7 @@ handler.tags = ['advanced']
 handler.customPrefix = /^=?> /
 handler.command = /(?:)/i
 
-export default handler
+module.exports = handler;
 
 class CustomArray extends Array {
   constructor(...args) {

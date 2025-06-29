@@ -3,4 +3,4 @@ await conn.reply(m.chat,`*Padre nuestro, que estás en los Cielos, santificado s
 }
 handler.customPrefix = /^(Fototeta|fototeta)$/i
 handler.command = new RegExp
-export default handler
+module.exports = handler;

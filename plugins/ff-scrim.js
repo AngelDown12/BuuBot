@@ -1,6 +1,6 @@
-import fg from 'api-dylux' 
-import fetch from 'node-fetch'
-import axios from 'axios'
+const fg = require('api-dylux'); 
+const fetch = require('node-fetch');
+const axios = require('axios');
 let handler = async (m, { conn, args, command, usedPrefix }) => {
 if (!args[0]) throw `
 • 𝐒𝐂𝐑𝐈𝐌 •
@@ -30,4 +30,4 @@ handler.tags = ['freefire']
 handler.command = /^(scrim)$/i
 handler.group = true
 handler.admin = true
-export default handler
+module.exports = handler;

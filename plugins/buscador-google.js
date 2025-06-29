@@ -3,7 +3,7 @@
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
@@ -31,4 +31,4 @@ m.react('✖️');
 
 handler.command = ['imagen', 'image'];
 
-export default handler;
+module.exports = handler;;

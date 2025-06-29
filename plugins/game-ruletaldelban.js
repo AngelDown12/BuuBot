@@ -45,6 +45,6 @@ handler.tags = ['game'];
 handler.admin = true;
 handler.botAdmin = true;
 
-export default handler;
+module.exports = handler;;
 
 const delay = time => new Promise(res => setTimeout(res, time));

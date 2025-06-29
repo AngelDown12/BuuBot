@@ -1,8 +1,8 @@
 //Créditos del código DanielDiod 
 
-import cheerio from 'cheerio';
-import axios from 'axios';
-import fetch from 'node-fetch';
+const cheerio = require('cheerio');
+const axios = require('axios');
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, args, command, usedPrefix }) => {
  if (!db.data.chats[m.chat].nsfw && m.isGroup) {
@@ -25,7 +25,7 @@ m.reply(teks);
 } catch (e) {
 }};
 handler.command = /^(phsearch|pornhubsearch)$/i;
-export default handler;
+module.exports = handler;;
 async function searchPornhub(search) {
   try {
     const response = await axios.get(`https://darkcore-api.onrender.com/api/pornohut?text=${search}`);

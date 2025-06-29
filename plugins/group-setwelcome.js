@@ -15,4 +15,4 @@ handler.command = ['setwelcome', 'bienvenida']
 handler.botAdmin = true
 handler.admin = true
 handler.group = true
-export default handler
+module.exports = handler;

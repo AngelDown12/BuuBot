@@ -1,5 +1,5 @@
-import axios from "axios";
-import cheerio from "cheerio";
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) {
@@ -78,7 +78,7 @@ await conn.sendMessage(m.chat, {
 handler.help = ["tiktok *<url>*"];
 handler.tags = ["dl"];
 handler.command = ["tiktok"];
-export default handler;
+module.exports = handler;;
 
 const headers = {
   authority: "ttsave.app",

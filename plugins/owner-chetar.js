@@ -14,4 +14,4 @@ handler.help = ['chetar'];
 handler.tags = ['owner'];
 handler.command = ['chetar'];
 handler.owner = true;
-export default handler
+module.exports = handler;

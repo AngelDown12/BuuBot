@@ -1,5 +1,5 @@
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -28,4 +28,4 @@ const handler = async (m, { conn, args }) => {
 };
 
 handler.command = ['botai'];
-export default handler;
+module.exports = handler;;

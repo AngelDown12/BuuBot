@@ -45,7 +45,7 @@ handler.tags = ['rpg'];
 handler.command = ['annual', 'yearly']; 
 handler.register = true; 
 
-export default handler; 
+module.exports = handler; ;
 
 function msToTime(duration) { 
     const seconds = Math.floor((duration / 1000) % 60); 

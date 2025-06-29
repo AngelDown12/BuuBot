@@ -13,4 +13,4 @@ handler.help = ['donarsala']
 handler.tags = ['freefire']
 handler.command = ['donarsala', 'sala']
 handler.group = true 
-export default handler
+module.exports = handler;

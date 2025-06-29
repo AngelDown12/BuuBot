@@ -10,4 +10,4 @@ handler.help = ['ki']
 handler.tags = ['rpg']
 handler.command = ['ki']
 handler.register = true 
-export default handler
+module.exports = handler;

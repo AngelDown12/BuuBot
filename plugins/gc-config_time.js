@@ -45,7 +45,7 @@ handler.command = /^(grouptime|gctime)$/i;
 handler.botAdmin = true;
 handler.group = true;
 
-export default handler;
+module.exports = handler;;
 
 function clockString(ms) {
   const h = Math.floor(ms / 3600000);

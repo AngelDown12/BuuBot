@@ -1,6 +1,6 @@
 
-import { WAMessageStubType } from "@whiskeysockets/baileys";
-import fetch from "node-fetch";
+const { WAMessageStubType } = require('@whiskeysockets/baileys');
+const fetch = require('node-fetch');
 
 export async function before(m, { conn, participants, groupMetadata }) {
   try {

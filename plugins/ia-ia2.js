@@ -5,7 +5,7 @@
 - https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
 */
 // *[ 🧇 BING IMAGE ]*
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 let handler = async (m, { conn, text }) => {
 if (!text) return m.reply('Ingresa el texto de lo que quieres buscar en imágenes 🔍')
@@ -52,4 +52,4 @@ m.reply('Ocurrió un error al buscar las imágenes. Inténtalo de nuevo.')
 }
 }
 handler.command = /^(bingsearch)$/i
-export default handler
+module.exports = handler;

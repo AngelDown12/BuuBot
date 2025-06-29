@@ -15,4 +15,4 @@ handler.help = ['formartrio']
 handler.tags = ['fun']
 handler.command = ['formartrio','formartrios']
 handler.group = true
-export default handler 
+module.exports = handler ;

@@ -1,5 +1,5 @@
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) {
@@ -39,4 +39,4 @@ handler.command = ['playstore'];
 handler.help = ['playstore <nombre>'];
 handler.tags = ['search'];
 
-export default handler;
+module.exports = handler;;

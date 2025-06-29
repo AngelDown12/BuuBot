@@ -30,4 +30,8 @@ handler.command = new RegExp(); // Necesario para que funcione con customPrefix
 handler.group = true;
 handler.admin = true;
 
+<<<<<<< HEAD
 export default handler;
+=======
+module.exports = handler;;
+>>>>>>> e9655f3 (Reemplazo de carpeta plugins por versión corregida)

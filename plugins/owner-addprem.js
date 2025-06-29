@@ -22,4 +22,4 @@ handler.command = /^(addprem|addpremium)$/i
 handler.group = true
 handler.rowner = true
 
-export default handler
+module.exports = handler;

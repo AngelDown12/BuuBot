@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, usedPrefix, command }) => {
     let grupos = "*Hola!, te invito a unirte a los grupos oficiales del Bot para convivir con la comunidad* ⭐\n\n" +
@@ -24,4 +24,4 @@ handler.help = ['grupos'];
 handler.tags = ['main'];
 handler.command = ['grupos', 'iangrupos', 'gruposian'];
 
-export default handler;
+module.exports = handler;;

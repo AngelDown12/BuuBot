@@ -65,7 +65,7 @@ handler.tags = ['game']
 handler.command = ['slot']
 handler.register = true
 handler.group = false 
-export default handler
+module.exports = handler;
 
 function segundosAHMS(segundos) {
   let segundosRestantes = segundos % 60

@@ -9,4 +9,4 @@ handler.help = ['totalfunciones']
 handler.tags = ['main']
 handler.command = ['totalfunciones']
 handler.register = true
-export default handler 
+module.exports = handler ;

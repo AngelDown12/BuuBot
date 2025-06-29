@@ -62,4 +62,4 @@ let handler = async (m, { conn, command }) => {
 };
 
 handler.command = ['agua', 'pasear', 'viajar', 'acariciar'];
-export default handler;
+module.exports = handler;;

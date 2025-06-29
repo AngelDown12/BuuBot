@@ -28,4 +28,4 @@ handler.help = ['ganarmonedas'];
 handler.tags = ['economía'];
 handler.command = ['ganarmonedas'];
 
-export default handler;
+module.exports = handler;;

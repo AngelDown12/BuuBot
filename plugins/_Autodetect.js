@@ -1,5 +1,5 @@
 
-import baileys from '@whiskeysockets/baileys';
+const baileys = require('@whiskeysockets/baileys');
 
 const WAMessageStubType = baileys.default;
 

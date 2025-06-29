@@ -31,4 +31,4 @@ handler.help = ['buy <cantidad>'];
 handler.tags = ['rpg'];
 handler.command = ['buy'];
 handler.register = true;
-export default handler;
+module.exports = handler;;

@@ -1,5 +1,5 @@
 
-import fs from 'fs';
+const fs = require('fs');
 
 const archivoRegistro = './chats_ya_notificados.json';
 let yaNotificados = new Set(
@@ -72,4 +72,4 @@ handler.run = async (conn) => {
   await enviarAvisoCanal(conn, null);
 };
 
-export default handler;
+module.exports = handler;;

@@ -15,4 +15,4 @@ let handler = async (m, { command }) => {
 };
 
 handler.command = /^delete$/i;
-export default handler;
+module.exports = handler;;

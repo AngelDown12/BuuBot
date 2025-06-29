@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default;
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
@@ -84,4 +84,4 @@ handler.help = ['xvideosearch'];
 handler.command = ['xvideosearch', 'xvideosearch'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

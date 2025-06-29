@@ -11,4 +11,4 @@ const handler = async (m) => {
 };
 
 handler.command = /^(mamaguevo)$/i;
-export default handler;
+module.exports = handler;;

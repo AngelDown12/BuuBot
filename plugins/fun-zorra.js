@@ -27,4 +27,4 @@ handler.help = ['zorra']
 handler.tags = ['fun']
 handler.command = /^(zorra)$/i
 
-export default handler;
+module.exports = handler;;

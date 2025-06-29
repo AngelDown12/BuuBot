@@ -40,7 +40,7 @@ handler.register = true
 handler.fail = null
 handler.exp = 0
 
-export default handler
+module.exports = handler;
 
 function sort(property, ascending = true) {
 if (property) return (...args) => args[ascending & 1][property] - args[!ascending & 1][property]

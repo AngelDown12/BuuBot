@@ -34,4 +34,4 @@ handler.help = ['resemanal'];
 handler.tags = ['rpg'];
 handler.command = ['resemanal'];
 
-export default handler;
+module.exports = handler;;

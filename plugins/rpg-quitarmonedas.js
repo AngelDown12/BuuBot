@@ -26,4 +26,4 @@ handler.help = ['quitarmonedas <cantidad>'];
 handler.tags = ['economía'];
 handler.command = ['quitarmonedas'];
 
-export default handler;
+module.exports = handler;;

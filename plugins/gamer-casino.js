@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+const db = require('../lib/database.js');
 
 let buatall = 1
 let cooldowns = {}
@@ -49,7 +49,7 @@ handler.register = true
 
 handler.fail = null
 
-export default handler
+module.exports = handler;
 
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)]

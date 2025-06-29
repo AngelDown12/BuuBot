@@ -1,5 +1,5 @@
 
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 const obtenerTikTok = async (query) => {
     try {
         const apiUrl = `https://api.siputzx.my.id/api/s/tiktok?query=${encodeURIComponent(query)}`;
@@ -45,4 +45,4 @@ const handler = async (m, { conn, text}) => {
 };
 
 handler.command = ["tik"];
-export default handler;
+module.exports = handler;;

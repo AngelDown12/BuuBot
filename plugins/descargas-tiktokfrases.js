@@ -7,7 +7,7 @@ conn.sendMessage(m.chat, { video: { url: res }, caption: `» 𝙁𝙍𝘼𝙎�
 handler.help = ['tiktokfrases']
 handler.tags = ['random']
 handler.command = /^(frasestiktok|frasetiktok|tiktokfrases|tiktokfrase)$/i
-export default handler
+module.exports = handler;
 global.tiktokfrases = [
 "https://telegra.ph/file/c5950c6b4f7abf652a096.mp4",
 "https://telegra.ph/file/e853f7555b5173f8cf438.mp4",

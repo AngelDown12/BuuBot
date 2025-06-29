@@ -1,6 +1,6 @@
-import axios from 'axios';
-import fetch from 'node-fetch';
-import cheerio from 'cheerio';
+const axios = require('axios');
+const fetch = require('node-fetch');
+const cheerio = require('cheerio');
 async function wikipedia(querry) {
 try {
 const link = await axios.get(`https://es.wikipedia.org/wiki/${querry}`);
@@ -34,4 +34,4 @@ handler.tags = ['buscadores'];
 handler.command = /^(wiki|wikipedia)$/i;
 handler.register = true
 handler.limit = 1
-export default handler;
+module.exports = handler;;

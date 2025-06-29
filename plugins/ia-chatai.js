@@ -1,5 +1,5 @@
 
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
 const handler = async (m, { conn, text }) => {
     if (!text) return m.reply("🔍 *Por favor, ingresa tu mensaje para la IA.*");
@@ -20,4 +20,4 @@ handler.help = ["chatbot"];
 handler.tags = ["ai"];
 handler.command = ["chatbot", "askai"];
 
-export default handler;
+module.exports = handler;;

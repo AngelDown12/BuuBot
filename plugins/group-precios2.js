@@ -30,4 +30,4 @@ handler.tags = ['main'];
 handler.group = true;
 handler.command = ['precios2', 'p2'];
 
-export default handler;
+module.exports = handler;;

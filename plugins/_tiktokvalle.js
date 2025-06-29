@@ -6,7 +6,7 @@ conn.sendMessage(m.chat, { video: { url: res }, caption: `» 𝗩𝗔𝗟𝗟�
 handler.help = ['tiktokvalle']
 handler.tags = ['random']
 handler.command = /^(tiktokvalle)$/i
-export default handler
+module.exports = handler;
 global.tiktokvalle = [
 "https://telegra.ph/file/c33f7f1fafb6d1b9f61c8.mp4",
 "https://telegra.ph/file/639bc84a65e597a07073c.mp4",

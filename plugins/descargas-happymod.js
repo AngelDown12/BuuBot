@@ -1,5 +1,5 @@
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
@@ -32,4 +32,4 @@ m.react('✖️');
 
 handler.command = ['happymodsearch', 'hpmodseaech', 'hpmsearch'];
 
-export default handler;
+module.exports = handler;;

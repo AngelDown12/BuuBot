@@ -144,4 +144,4 @@ handler.help = ['menuaudios2'];
 handler.tags = ['main'];
 handler.command = ['menuaudios2', 'menu2'];
 
-export default handler;
+module.exports = handler;;

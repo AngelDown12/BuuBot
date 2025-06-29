@@ -40,4 +40,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["memoria"];
-export default handler;
+module.exports = handler;;

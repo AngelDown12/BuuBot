@@ -1,6 +1,6 @@
 
-import fetch from 'node-fetch'; 
-import MessageType from '@whiskeysockets/baileys'; 
+const fetch = require('node-fetch'); 
+const MessageType = require('@whiskeysockets/baileys'); 
 
 const handler = async (m, { conn }) => { 
   try {
@@ -16,4 +16,4 @@ const handler = async (m, { conn }) => {
 }; 
 
 handler.command = /^\.fotoantiguabot$/i; 
-export default handler;
+module.exports = handler;;

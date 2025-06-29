@@ -42,6 +42,6 @@ handler.help = ['asustar @usuario'];
 handler.tags = ['diversion'];
 handler.command = ['asustar', 'hackear'];
 
-export default handler;
+module.exports = handler;;
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));

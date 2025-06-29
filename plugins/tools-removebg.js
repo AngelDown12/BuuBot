@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (!text) throw `*🧑‍💻 ingrese la URL de la imagen.*`;
 m.react('🕒');
@@ -23,4 +23,4 @@ throw `Error: ${error.message}`;
 handler.tags = ['tools'];
 handler.help = ['removebg'];
 handler.command = ['removebg','bg'];
-export default handler;
+module.exports = handler;;

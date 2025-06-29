@@ -1,6 +1,6 @@
-import translate from '@vitalets/google-translate-api';
-import axios from 'axios';
-import fetch from 'node-fetch';
+const translate = require('@vitalets/google-translate-api');
+const axios = require('axios');
+const fetch = require('node-fetch');
 const handler = (m) => m;
 
 handler.before = async (m) => {
@@ -20,7 +20,7 @@ handler.before = async (m) => {
   }
   return true;
 };
-export default handler;
+module.exports = handler;;
 
 async function simitalk(ask, apikeyyy = "iJ6FxuA9vxlvz5cKQCt3", language = "es") {
     if (!ask) return { status: false, resultado: { msg: "Debes ingresar un texto para hablar con simsimi." }};

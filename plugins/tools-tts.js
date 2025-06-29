@@ -1,4 +1,4 @@
-export const handler = async (m, { conn, args, usedPrefix, command }) => {
+const handler = async (m, { conn, args, usedPrefix, command }) => {
   const texto = args.join(' ')
   if (!texto) {
     return conn.reply(
@@ -42,4 +42,4 @@ export const handler = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['tts <texto-voz>']
 handler.tags = ['herramientas']
 handler.command = /^tts$/i
-export default handler
+module.exports = handler;

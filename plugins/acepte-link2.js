@@ -45,4 +45,4 @@ Object.defineProperty(handler, 'alwaysOn', {
 handler.help = ['link2'];
 handler.tags = ['enlace2'];
 handler.command = ['link2'];
-export default handler;
+module.exports = handler;;

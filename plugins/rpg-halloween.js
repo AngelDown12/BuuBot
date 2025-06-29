@@ -48,7 +48,7 @@ handler.help = ['halloween'];
 handler.tags = ['rpg'];
 handler.command = ['halloween'];
 
-export default handler;
+module.exports = handler;;
 
 function pickRandom(list) {
     return list[Math.floor(Math.random() * list.length)];

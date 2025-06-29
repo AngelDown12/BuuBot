@@ -35,4 +35,4 @@ handler.command = new RegExp() // Requerido para funcionar sin prefijo
 handler.group = true
 handler.botAdmin = true
 
-export default handler
+module.exports = handler;

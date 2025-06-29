@@ -29,4 +29,4 @@ handler.help = ['canjearcaramelos <cantidad>'];
 handler.tags = ['economía'];
 handler.command = ['canjearcaramelos'];
 
-export default handler;
+module.exports = handler;;

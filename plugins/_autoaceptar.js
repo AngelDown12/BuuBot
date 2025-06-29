@@ -16,4 +16,4 @@ if (chat.autoAceptar && !isAdmin) {
             if (jid.includes('@s.whatsapp.net') && jid.split('@')[0].startsWith(latinPrefix)) {
                 await conn.groupRequestParticipantsUpdate(m.chat, [jid], "approve")}}
 }}
-export default handler
+module.exports = handler;

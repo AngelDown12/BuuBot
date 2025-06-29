@@ -68,4 +68,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["speed"];
-export default handler;
+module.exports = handler;;

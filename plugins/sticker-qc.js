@@ -1,5 +1,5 @@
-import { sticker} from '../lib/sticker.js';
-import axios from 'axios';
+const { sticker} = require('../lib/sticker.js');
+const axios = require('axios');
 
 const emoji = '🔥';
 const emoji2 = '🎖️';
@@ -30,4 +30,4 @@ handler.group = true;
 handler.register = true
 handler.command = ['qc'];
 
-export default handler;
+module.exports = handler;;

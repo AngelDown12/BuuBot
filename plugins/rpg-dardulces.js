@@ -39,4 +39,4 @@ handler.help = ['dardulces *@user <cantidad>*'];
 handler.tags = ['rpg'];
 handler.command = ['dardulces', 'donardulces'];
 
-export default handler;
+module.exports = handler;;

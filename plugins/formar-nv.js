@@ -24,4 +24,4 @@ handler.tags = ['fun'];
 handler.command = ['formarnv'];
 handler.group = true;
 
-export default handler;
+module.exports = handler;;

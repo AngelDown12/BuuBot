@@ -1,4 +1,4 @@
-import ws from "ws";
+const ws = require('ws');
 
 let handler = async (m, { conn, usedPrefix, args }) => {
   try {
@@ -60,4 +60,4 @@ handler.command = ["setprimary"];
 handler.group = true;
 handler.admin = true;
 
-export default handler;
+module.exports = handler;;

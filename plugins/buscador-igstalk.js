@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) {
@@ -39,4 +39,4 @@ handler.tags = ['stalk'];
 handler.command = ['igstalk', 'instagramstalk'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

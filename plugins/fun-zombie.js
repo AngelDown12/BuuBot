@@ -50,4 +50,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["zombie"];
-export default handler;
+module.exports = handler;;

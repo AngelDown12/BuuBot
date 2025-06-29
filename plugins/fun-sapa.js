@@ -28,4 +28,4 @@ handler.help = ['sapa']
 handler.tags = ['fun']
 handler.command = /^(sapa)$/i // Expresión regular para el comando
 
-export default handler;
+module.exports = handler;;

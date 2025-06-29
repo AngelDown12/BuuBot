@@ -20,7 +20,7 @@ handler.register = true
 handler.fail = null
 handler.exp = 0
 
-export default handler
+module.exports = handler;
 
 function msToTime(duration) {
   var milliseconds = parseInt((duration % 1000) / 100),

@@ -1,5 +1,5 @@
-import { canLevelUp, xpRange } from '../lib/levelling.js'
-import fetch from 'node-fetch'
+const { canLevelUp, xpRange } = require('../lib/levelling.js');
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn }) => {
 let img = await (await fetch(`https://qu.ax/JRCMQ.jpg`)).buffer()
@@ -27,4 +27,4 @@ handler.help = ['levelup']
 handler.tags = ['rpg']
 handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
 handler.register = true 
-export default handler
+module.exports = handler;

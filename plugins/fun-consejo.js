@@ -5,7 +5,7 @@
 handler.help = ['consejo']
 handler.tags = ['fun'];
 handler.command = ['consejo'];
-export default handler;
+module.exports = handler;;
 
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())];

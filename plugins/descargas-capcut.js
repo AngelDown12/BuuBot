@@ -1,5 +1,5 @@
 
-import axios from 'axios';
+const axios = require('axios');
 
 let handler = async (m, { conn, args }) => {
     if (!args[0]) return conn.reply(m.chat, `[ ✰ ]  Ingresa un link de CapCut`, m);
@@ -32,4 +32,4 @@ handler.tags = ['downloader'];
 handler.command = ['capcut', 'ccdownload'];
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

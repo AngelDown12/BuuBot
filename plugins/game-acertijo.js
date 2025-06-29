@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 const timeout = 60000;
 const poin = 10;
 const handler = async (m, {conn, usedPrefix}) => {
@@ -29,4 +29,4 @@ const handler = async (m, {conn, usedPrefix}) => {
 handler.help = ['acertijo'];
 handler.tags = ['fun'];
 handler.command = ['acertijo', 'acert', 'adivinanza', 'tekateki'];
-export default handler;
+module.exports = handler;;

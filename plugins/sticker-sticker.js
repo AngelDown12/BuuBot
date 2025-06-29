@@ -1,8 +1,8 @@
 
-import { sticker} from '../lib/sticker.js'
-import uploadFile from '../lib/uploadFile.js'
-import uploadImage from '../lib/uploadImage.js'
-import { webp2png} from '../lib/webp2mp4.js'
+const { sticker} = require('../lib/sticker.js');
+const uploadFile = require('../lib/uploadFile.js');
+const uploadImage = require('../lib/uploadImage.js');
+const { webp2png} = require('../lib/webp2mp4.js');
 
 let handler = async (m, { conn, args, usedPrefix, command}) => {
   let stiker = false
@@ -80,7 +80,7 @@ handler.help = ['stiker <img>', 'sticker <url>']
 handler.tags = ['sticker']
 handler.command = ['s', 'sticker', 'stiker']
 
-export default handler
+module.exports = handler;
 
 const isUrl = (text) => {
   return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))

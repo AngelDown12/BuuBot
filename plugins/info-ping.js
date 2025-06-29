@@ -1,5 +1,5 @@
-import speed from 'performance-now'
-import { spawn, exec, execSync } from 'child_process'
+const speed = require('performance-now');
+const { spawn, exec, execSync } = require('child_process');
 
 let handler = async (m, { conn }) => {
          let timestamp = speed();
@@ -16,4 +16,4 @@ handler.tags = ['info']
 handler.command = ['ping']
 handler.register = true
 
-export default handler
+module.exports = handler;

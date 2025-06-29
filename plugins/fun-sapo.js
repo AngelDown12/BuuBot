@@ -27,4 +27,4 @@ handler.help = ['sapo']
 handler.tags = ['fun']
 handler.command = /^(sapo)$/i
 
-export default handler;
+module.exports = handler;;

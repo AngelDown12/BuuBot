@@ -130,4 +130,4 @@ handler.help = ["morse"].map(v => v + " *<encode|decode>*")
 handler.tags = ["fun"]
 handler.command = /^(morse)/i
 handler.register = true 
-export default handler
+module.exports = handler;

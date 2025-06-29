@@ -1,4 +1,4 @@
-import MessageType from '@whiskeysockets/baileys';
+const MessageType = require('@whiskeysockets/baileys');
 const pajak = 0;
 const handler = async (m, {conn, text}) => {
   let who;
@@ -23,4 +23,4 @@ Bot 𝐀𝐧𝐠𝐞𝐥  -
 };
 handler.command = ['añadirdiamantes', 'addd', 'dard', 'dardiamantes'];
 handler.admin = true;
-export default handler;
+module.exports = handler;;

@@ -60,4 +60,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["chefextremo"];
-export default handler;
+module.exports = handler;;

@@ -2,8 +2,8 @@
 - https:// github.com/WillZek 
 */
 
-import fetch from 'node-fetch';
-import fg from 'senna-fg';
+const fetch = require('node-fetch');
+const fg = require('senna-fg');
 
 let handler = async (m, { conn, args, command }) => {
 
@@ -43,4 +43,4 @@ handler.help = ['ytmp3doc', 'ytmp4doc'];
 handler.tag = ['descargas'];
 handler.command = ['ytmp3doc', 'mp3doc', 'ytmp4doc', 'mp4doc', 'ytadoc', 'ytvdoc'];
 
-export default handler;
+module.exports = handler;;

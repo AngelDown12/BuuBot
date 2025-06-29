@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 
 export async function before(m, { conn }) {
 let name = `🎖️ ᥒᥙᥱ᥎᥆ ᥴᥲᥒᥲᥣ | ᥴ᥆mᥙᥒі𝗍ᥡ sіgᥙᥱ ᥴᥲᥒᥲᥣ ⭐`

@@ -1,6 +1,6 @@
-import PhoneNumber from 'awesome-phonenumber';
-import fetch from 'node-fetch';
-import fs from 'fs';
+const PhoneNumber = require('awesome-phonenumber');
+const fetch = require('node-fetch');
+const fs = require('fs');
 
 const imagen1 = 'https://qu.ax/JRCMQ.jpg';
 
@@ -82,4 +82,4 @@ handler.tags = ['rg'];
 handler.command = ['profile', 'perfil'];
 handler.estrellas = 2;
 
-export default handler;
+module.exports = handler;;

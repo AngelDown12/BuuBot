@@ -1,6 +1,6 @@
-import axios from 'axios'
+const axios = require('axios');
 
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
 
@@ -74,7 +74,7 @@ handler.register = true
 
 handler.command = ['ia', 'simi', 'chatgpt', 'ai', 'chat', 'gpt']
 
-export default handler
+module.exports = handler;
 
 // Función para enviar una imagen y obtener el análisis
 

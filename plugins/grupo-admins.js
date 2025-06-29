@@ -21,4 +21,4 @@ handler.tags = ['grupo'];
 handler.customPrefix = /a|@/i;
 handler.command = /^(admins|@admins|dmins)$/i;
 handler.group = true;
-export default handler;
+module.exports = handler;;

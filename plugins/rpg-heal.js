@@ -30,4 +30,4 @@ handler.help = ['heal'];
 handler.tags = ['rpg'];
 handler.command = ['heal', 'curar'];
 
-export default handler;
+module.exports = handler;;

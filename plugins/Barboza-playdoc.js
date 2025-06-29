@@ -1,6 +1,6 @@
 // By WillZek >> https://github.com/WillZek
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
@@ -31,4 +31,4 @@ m.react('✖️');
 
 handler.command = ['playdoc', 'pdoc'];
 
-export default handler
+module.exports = handler;

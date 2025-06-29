@@ -20,7 +20,7 @@ handler.help = ['botreglas']
 handler.tags = ['main']
 handler.command = ['botreglas', 'reglasdelbot', 'reglasbot', 'reglas']
 handler.register = true
-export default handler
+module.exports = handler;
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)

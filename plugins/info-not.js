@@ -23,4 +23,4 @@ let noAceptarHandler = async (m, { conn, text, usedPrefix, command }) => {
 noAceptarHandler.help = ['noaceptar']
 noAceptarHandler.tags = ['staff']
 noAceptarHandler.command = ['noaceptar']
-export default noAceptarHandler
+module.exports = noAceptarHandler;

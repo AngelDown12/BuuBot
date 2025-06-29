@@ -1,5 +1,5 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 try {
@@ -20,7 +20,7 @@ handler.tags = ['buscador']
 handler.command = ['mercadolibre']
 handler.estrellas = 2
 handler.register = true
-export default handler;
+module.exports = handler;;
 
 async function mercado(query) {
 try {

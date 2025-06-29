@@ -8,4 +8,4 @@ const handler = async (m, {conn}) => {
 handler.help = ['gay'];
 handler.tags = ['maker'];
 handler.command = /^(gay)$/i;
-export default handler;
+module.exports = handler;;

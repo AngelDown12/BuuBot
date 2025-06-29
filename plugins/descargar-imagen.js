@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 let handler = async (m, { conn, text }) => {
@@ -67,10 +67,10 @@ handler.help = ['imagen *<texto>*']
 handler.tags = ['internet', 'dl']
 handler.command = /^(image|imagen)$/i
 
-export default handler;
+module.exports = handler;;
 
 
-/* import { googleImage } from '@bochilteam/scraper'
+/* const { googleImage } = require('@bochilteam/scraper');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let user = global.db.data.users[m.sender]
@@ -102,4 +102,4 @@ handler.help = ['imagen *<texto>*']
 handler.tags = ['internet', 'dl']
 handler.command = /^(image|imagen)$/i
 
-export default handler */
+module.exports = handler */;

@@ -1,5 +1,5 @@
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn }) => {
     let user = global.db.data.users[m.sender];
@@ -82,7 +82,7 @@ handler.tags = ['rpg'];
 handler.command = ['adventure', 'aventura']
 handler.cooldown =1500000;
 
-export default handler;
+module.exports = handler;;
 
 function pickRandom(list) {
    return list[Math.floor(Math.random() * list.length)];

@@ -66,4 +66,4 @@ handler.command = ["colaboradores", "staff"];
 handler.register = true;
 handler.tags = ["main"];
 
-export default handler;
+module.exports = handler;;

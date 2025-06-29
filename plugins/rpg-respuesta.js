@@ -60,4 +60,4 @@ handler.command = ['respuesta', 'responder']
 handler.register = true;
 handler.private = true;
 
-export default handler;
+module.exports = handler;;

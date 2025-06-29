@@ -25,4 +25,4 @@ global.db.data.users[m.sender].lastcofre = new Date * 1
 handler.command = ['kalahari'] 
 handler.register = true
 handler.admin = true
-export default handler
+module.exports = handler;

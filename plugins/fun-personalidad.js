@@ -24,7 +24,7 @@ handler.help = ['personalidad *<nombre>*']
 handler.tags = ['fun']
 handler.command = /^personalidad/i
 
-export default handler 
+module.exports = handler ;
 
 function pickRandom(list) {
   return list[Math.floor(Math.random() * list.length)]

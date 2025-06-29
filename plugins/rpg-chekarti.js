@@ -10,4 +10,4 @@ handler.tags = ['rpg'];
 handler.command = ['chetarki'];
 handler.register = true;
 handler.owner = true
-export default handler;
+module.exports = handler;;

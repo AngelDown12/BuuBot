@@ -1,7 +1,7 @@
 /* Codigo hecho por @Fabri115 y mejorado por ianalejandro */
 
-import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs'
-import path from 'path'
+const { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } = require('fs');
+const path = require('path');
 
 var handler = async (m, { conn, usedPrefix }) => {
 
@@ -46,4 +46,4 @@ handler.command = /^(delzero|dsowner|clearallsession)$/i
 
 handler.rowner = true
 
-export default handler
+module.exports = handler;

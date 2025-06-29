@@ -1,5 +1,5 @@
-import util from 'util'
-import path from 'path'
+const util = require('util');
+const path = require('path');
 let user = a => '@' + a.split('@')[0]
 function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
 if (!text) return m.reply(`Ejemplo de uso:\n.top *texto*`)
@@ -35,6 +35,6 @@ m.reply(top, null, { mentions: [a, b, c, d, e, f, g, h, i, j]})
 handler.help = handler.command = ['top']
 handler.tags = ['fun']
 handler.group = true
-export default handler
+module.exports = handler;
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]}

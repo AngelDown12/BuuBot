@@ -1,4 +1,4 @@
-import os from 'os';
+const os = require('os');
 
 let handler = async (m, { conn }) => {
     try {
@@ -23,4 +23,4 @@ handler.tags = ['owner'];
 handler.command = ['restart', 'reiniciar'];
 handler.rowner = true;
 
-export default handler;
+module.exports = handler;;

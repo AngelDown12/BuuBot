@@ -1,7 +1,7 @@
 //Codígo creado por Destroy wa.me/584120346669
 
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who;
@@ -54,4 +54,4 @@ handler.tags = ['nsfws'];
 handler.command = ['sexo','sex'];
 handler.group = true;
 
-export default handler
+module.exports = handler;

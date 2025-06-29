@@ -1,6 +1,6 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
-import qs from 'qs';
+const axios = require('axios');
+const cheerio = require('cheerio');
+const qs = require('qs');
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (!text) {
@@ -177,4 +177,4 @@ handler.help = ['audio'];
 handler.tags = ['downloader'];
 handler.command = /^(audio)$/i;
 
-export default handler;
+module.exports = handler;;

@@ -26,4 +26,4 @@ handler.before = async function (m, { conn, isAdmin, isBotAdmin, isOwner, isROwn
   }
 }
 
-export default handler;
+module.exports = handler;;

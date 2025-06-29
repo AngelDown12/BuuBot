@@ -1,6 +1,6 @@
-import fetch from 'node-fetch';
-import yts from 'yt-search';
-import { youtubedl, youtubedlv2 } from '@bochilteam/scraper';
+const fetch = require('node-fetch');
+const yts = require('yt-search');
+const { youtubedl, youtubedlv2 } = require('@bochilteam/scraper');
 
 let limit = 100; 
 
@@ -105,4 +105,4 @@ let handler = async (m, { conn: star, args, usedPrefix, command }) => {
 
 handler.command = ['play4', 'playvidoc']; // Comandos disponibles
 
-export default handler;
+module.exports = handler;;

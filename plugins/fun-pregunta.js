@@ -9,4 +9,4 @@ mentions: m.mentionedJid
 handler.help = ['pregunta *<texto>*']
 handler.tags = ['fun']
 handler.command = /^pregunta|preguntas|apakah$/i
-export default handler
+module.exports = handler;

@@ -55,4 +55,4 @@ handler.help = ['menuff'];
 handler.tags = ['freefire', 'main'];
 handler.command = ['menuff', 'menufreefire', ''];
 handler.register = true;
-export default handler;
+module.exports = handler;;

@@ -39,4 +39,4 @@ handler.help = ['darxp *@user <cantidad>*'];
 handler.tags = ['rpg'];
 handler.command = ['darxp'];
 
-export default handler;
+module.exports = handler;;

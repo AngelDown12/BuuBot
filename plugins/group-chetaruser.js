@@ -31,4 +31,4 @@ handler.tags = ['group']; // Esta etiqueta se puede mantener, aunque no afecta l
 handler.command = /^(ilimitado2|infiniy2|chetaruser)$/i;
 handler.rowner = false;
 handler.fail = null;
-export default handler;
+module.exports = handler;;

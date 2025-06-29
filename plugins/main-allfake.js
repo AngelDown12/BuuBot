@@ -1,8 +1,8 @@
-import pkg from '@whiskeysockets/baileys'
-import fs from 'fs'
-import fetch from 'node-fetch'
-import axios from 'axios'
-import PhoneNumber from 'awesome-phonenumber'
+const pkg = require('@whiskeysockets/baileys');
+const fs = require('fs');
+const fetch = require('node-fetch');
+const axios = require('axios');
+const PhoneNumber = require('awesome-phonenumber');
 
 const { generateWAMessageFromContent, prepareWAMessageMedia, proto } = pkg
 
@@ -117,4 +117,4 @@ var handler = async function (m, conn, db) {
     return { fotoperfil, userNationality, pushname, taguser, rimg, wait, fkontak,  }
 }
 
-export default handler
+module.exports = handler;

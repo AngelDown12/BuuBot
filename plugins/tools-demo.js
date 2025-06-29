@@ -1,6 +1,6 @@
 
-import { randomBytes } from "crypto"
-import axios from "axios"
+const { randomBytes } = require('crypto');
+const axios = require('axios');
 
 let handler = async (m, { conn, text }) => {
     if (!text) throw '¿Como puedo ayudarte hoy?';
@@ -29,7 +29,7 @@ handler.command = handler.help = ['demo'];
 handler.estrellas = 3;
 handler.tags = ['tools'];
 
-export default handler;
+module.exports = handler;;
 
 async function chatGpt(query){
 try {

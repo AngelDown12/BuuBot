@@ -15,4 +15,4 @@ handler.help = ['madrid'] // Comando que se utilizará
 handler.tags = ['fun']
 handler.command = /^(madrid)$/i // Expresión regular para el comando
 
-export default handler;
+module.exports = handler;;

@@ -26,7 +26,7 @@ await conn.reply(m.chat, description, m, { mentions: [m.sender] })
 await conn.sendMessage(m.chat, { audio: buffer, fileName: 'error.mp3', mimetype: 'audio/mpeg', ptt: true }, { quoted: m })
 }
 }}
-export default handler
+module.exports = handler;
 
 function formatFileSize(bytes) {
 const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'TY', 'EY']

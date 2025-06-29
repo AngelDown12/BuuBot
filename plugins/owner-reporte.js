@@ -10,4 +10,4 @@ handler.help = ['reportar']
 handler.tags = ['info']
 handler.command = ['reporte','report','reportar','bug','error']
 
-export default handler
+module.exports = handler;

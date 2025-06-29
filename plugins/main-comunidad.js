@@ -40,4 +40,4 @@ https://whatsapp.com/channel/0029Vaua0ZD3gvWjQaIpSy18
 };
 
 handler.command = /^(comunidad)$/i; 
-export default handler;
+module.exports = handler;;

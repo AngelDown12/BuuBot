@@ -27,4 +27,4 @@ handler.tags = ['freefire']
 handler.command = ['bermuda'] 
 handler.register = true
 handler.admin = true
-export default handler
+module.exports = handler;

@@ -67,4 +67,4 @@ const handler = async (m, { conn}) => {
 
 handler.command = ["menu4"];
 handler.tags = ["main"];
-export default handler;
+module.exports = handler;;

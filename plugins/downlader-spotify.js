@@ -1,5 +1,5 @@
 
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, args, command, usedPrefix}) => {
   const text = args.join(" ");
@@ -62,4 +62,4 @@ handler.tags = ['descargas'];
 handler.command = /^spotify$/i;
 handler.register = true;
 
-export default handler;
+module.exports = handler;;

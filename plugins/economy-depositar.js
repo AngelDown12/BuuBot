@@ -1,4 +1,4 @@
-import db from '../lib/database.js'
+const db = require('../lib/database.js');
 
 let handler = async (m, { args }) => {
 let user = global.db.data.users[m.sender]
@@ -24,4 +24,4 @@ handler.tags = ['economy']
 handler.command = ['deposit', 'depositar', 'd', 'dep', 'aguardar']
 handler.group = true;
 handler.register = true
-export default handler 
+module.exports = handler ;

@@ -23,4 +23,4 @@ handler.tags = ['group']
 handler.command = ['banearbot', 'banchat']
 handler.group = true 
 
-export default handler
+module.exports = handler;

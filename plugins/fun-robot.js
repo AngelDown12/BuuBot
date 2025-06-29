@@ -61,4 +61,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["robotp"];
-export default handler;
+module.exports = handler;;

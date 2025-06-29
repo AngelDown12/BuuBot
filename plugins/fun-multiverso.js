@@ -67,4 +67,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["multiverso"];
-export default handler;
+module.exports = handler;;

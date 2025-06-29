@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 
 let regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
 let handler = async (m, { args, usedPrefix, command }) => {
@@ -40,4 +40,4 @@ await m.react('✖️')
 handler.help = ['gitclone *<url git>*']
 handler.tags = ['dl']
 handler.command = /^(gitclone)$/i
-export default handler
+module.exports = handler;

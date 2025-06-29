@@ -62,4 +62,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["escape"];
-export default handler;
+module.exports = handler;;

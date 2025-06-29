@@ -1,5 +1,5 @@
 
-import axios from "axios";
+const axios = require('axios');
 
 let handler = async (m, { conn}) => {
   let res = (await axios.get(`https://raw.githubusercontent.com/davidprospero123/api-anime/main/BOT-JSON/Messi.json`)).data;
@@ -20,4 +20,4 @@ handler.help = ['messi'];
 handler.tags = ['anime'];
 handler.command = /^(messi)$/i;
 
-export default handler;
+module.exports = handler;;

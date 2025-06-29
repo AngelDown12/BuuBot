@@ -1,6 +1,6 @@
-import fetch from 'node-fetch';
-import axios from 'axios';
-import cheerio from 'cheerio';
+const fetch = require('node-fetch');
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 const handler = async (m, { conn, args, command, usedPrefix, text }) => {
     // Verificar si el comando NSFW está habilitado en el grupo
@@ -27,7 +27,7 @@ handler.command = ['xvideosdl'];
 handler.register = true;
 handler.group = false;
 
-export default handler;
+module.exports = handler;;
 
 async function xvideosdl(url) {
     return new Promise((resolve, reject) => {

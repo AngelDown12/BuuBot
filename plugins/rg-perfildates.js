@@ -15,4 +15,4 @@ handler.command = ['perfildates', 'pedates', 'perd'];
 handler.tag = ['rg'];
 handler.help = ['perfildates'];
 
-export default handler;
+module.exports = handler;;

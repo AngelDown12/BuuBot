@@ -14,4 +14,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["classic"];
-export default handler;
+module.exports = handler;;

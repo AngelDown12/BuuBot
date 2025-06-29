@@ -1,5 +1,5 @@
-import fetch from "node-fetch";
-import axios from 'axios';
+const fetch = require('node-fetch');
+const axios = require('axios');
 
 // Constantes
 const VIDEO_THRESHOLD = 70 * 1024 * 1024; // 70 MB
@@ -172,4 +172,4 @@ handler.command = ['ytmp4'];
 handler.tags = ['descargas'];
 handler.diamond = true;
 
-export default handler;
+module.exports = handler;;

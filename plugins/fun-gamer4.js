@@ -15,4 +15,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["gamer"];
-export default handler;
+module.exports = handler;;

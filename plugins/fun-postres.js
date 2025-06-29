@@ -61,4 +61,4 @@ handler.before = async (m, { conn}) => {
 };
 
 handler.command = ["postres"];
-export default handler;
+module.exports = handler;;

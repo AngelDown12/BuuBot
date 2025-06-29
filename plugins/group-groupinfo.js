@@ -50,4 +50,4 @@ handler.tags = ['group'];
 handler.command = ['infogrupo','infogp'];
 handler.group = true;
 
-export default handler;
+module.exports = handler;;

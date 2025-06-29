@@ -24,4 +24,4 @@ handler.help = ['owner'];
 handler.tags = ['main'];
 handler.command = ['owner', 'creator', 'creador', 'dueño'];
 
-export default handler;
+module.exports = handler;;

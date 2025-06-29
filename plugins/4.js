@@ -25,4 +25,4 @@ const initHandler = async (m, { conn, usedPrefix }) => {
 
 initHandler.command = /^init$/i;
 
-export default initHandler;
+module.exports = initHandler;;

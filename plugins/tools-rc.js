@@ -44,4 +44,4 @@ let handler = async (m, { args, text, command, conn }) => {
 
 handler.help = handler.command = ["rc"];
 handler.tags = ["tools"];
-export default handler;
+module.exports = handler;;

@@ -4,7 +4,7 @@
 
 // *`[🕯️ DALLE 🕯️]`*
 
-import axios from 'axios';
+const axios = require('axios');
 
 const handler = async (m, { conn, args }) => {
     if (!args[0]) {
@@ -37,4 +37,4 @@ handler.command = ['dalle'];
 handler.help = ['dalle'];
 handler.tags = ['tools'];
 
-export default handler;
+module.exports = handler;;

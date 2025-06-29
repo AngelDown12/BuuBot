@@ -15,4 +15,4 @@ const handler = async (m, { conn}) => {
 };
 
 handler.command = ["rankedmode"];
-export default handler;
+module.exports = handler;;

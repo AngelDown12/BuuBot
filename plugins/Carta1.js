@@ -1,6 +1,6 @@
 
- import fetch from 'node-fetch'; 
- import MessageType from '@whiskeysockets/baileys'; 
+ const fetch = require('node-fetch'); 
+ const MessageType = require('@whiskeysockets/baileys'); 
  const handler = async (m, {conn, text, groupMetadata}) => { 
    try {
     let _user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
@@ -26,4 +26,4 @@ conn.sendFile(m.chat, stiker, null, {asSticker: true});
    } catch (e) { } 
  }; 
  handler.command = /^(carta1|carta)$/i; 
- export default handler;
+ module.exports = handler;;

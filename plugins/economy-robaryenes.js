@@ -27,7 +27,7 @@ return;
 handler.help = ['rob2'];
 handler.tags = ['economy'];
 handler.command = ['robar2', 'rob2'];
-export default handler;
+module.exports = handler;;
 function msToTime(duration) {
   const milliseconds = parseInt((duration % 1000) / 100);
   let seconds = Math.floor((duration / 1000) % 60);

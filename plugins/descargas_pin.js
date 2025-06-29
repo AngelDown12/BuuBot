@@ -1,4 +1,4 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const handler = async (m, { conn, args, usedPrefix, command}) => {
   if (!args[0]) {
@@ -46,4 +46,4 @@ const handler = async (m, { conn, args, usedPrefix, command}) => {
 };
 
 handler.command = ["pin"];
-export default handler;
+module.exports = handler;;

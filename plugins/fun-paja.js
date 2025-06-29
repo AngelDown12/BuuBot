@@ -15,4 +15,4 @@ handler.help = ['pajeame'];
 handler.tags = ['fun'];
 handler.command = /^pajeame|paja$/i;
 
-export default handler;
+module.exports = handler;;

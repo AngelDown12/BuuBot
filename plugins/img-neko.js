@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+const fetch = require('node-fetch');
 
 let handler = async (m, { conn, usedPrefix, command }) => {
 await m.react('🕓')
@@ -18,4 +18,4 @@ handler.command = ['neko']
 //handler.limit = 1
 handler.register = true 
 
-export default handler
+module.exports = handler;

@@ -1,5 +1,5 @@
-import { createHash } from 'crypto';  
-import fetch from 'node-fetch';
+const { createHash } = require('crypto');  
+const fetch = require('node-fetch');
 
 const handler = async (m, { conn, command, usedPrefix, text }) => {
 
@@ -20,4 +20,4 @@ handler.help = ['setdescription <establece tu descripción>']
 handler.tags = ['rg']
 handler.command = ['setdescription', 'setdesc']
 handler.estrellas = 3;
-export default handler;
+module.exports = handler;;
