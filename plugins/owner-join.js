@@ -1,80 +1,64 @@
-let handler = async (m, { conn, text, usedPrefix, command, args }) => {
+let handler = async (m, { conn, text, usedPrefix, command }) => {
   const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
   const [_, code] = text.match(linkRegex) || []
-  const days = parseInt(args[1])
   const owbot = global.owner[1]
-  const now = Date.now()
 
-  if (!args[0]) return errorMsg(m, conn, usedPrefix, command, '✳️ Envíe el link del grupo.\n\n📌 Ejemplo:\n*' + usedPrefix + command + '* <linkwa> <días>')
-  if (!code) return errorMsg(m, conn, usedPrefix, command, '✳️ Link inválido')
-  if (!args[1]) return errorMsg(m, conn, usedPrefix, command, '📌 Falta el número de días.\n\nEjemplo:\n*' + usedPrefix + command + '* <linkwa> 2')
-  if (isNaN(days)) return errorMsg(m, conn, usedPrefix, command, '✳️ Solo números válidos para los días.')
+  if (!args[0]) return replyWithIcon(m, conn, `✳️ Envíe el link del grupo.\n\n📌 Ejemplo:\n*${usedPrefix + command}* <linkwa>`)
+  if (!code) return replyWithIcon(m, conn, `✳️ Link inválido`)
 
   try {
     const groupId = await conn.groupAcceptInvite(code)
     const metadata = await conn.groupMetadata(groupId)
-    const expireInMs = 86400000 * days
-
-    global.db.data.chats[groupId] ??= {}
-    global.db.data.chats[groupId].expired = Math.max(global.db.data.chats[groupId].expired || 0, now) + expireInMs
-
-    const remaining = msToDate(global.db.data.chats[groupId].expired - now)
     const groupName = metadata.subject
 
+    // 🛡️ Elimina límite de tiempo (permanece para siempre)
+    global.db.data.chats[groupId] ??= {}
+    delete global.db.data.chats[groupId].expired
+
     await conn.sendMessage(m.chat, {
-      text: `✅ Me uní correctamente al grupo *${groupName}*\n\n📌 El bot saldrá automáticamente después de:\n${remaining}`,
-      contextInfo: adReplyObj()
+      text: `✅ Me uní correctamente al grupo *${groupName}*\n\n📌 El bot permanecerá en el grupo sin límite de tiempo.`,
+      contextInfo: iconReply()
     }, { quoted: m })
 
-    await conn.reply(owbot + '@s.whatsapp.net',
-      `≡ *INVITACIÓN A GRUPO*\n\n@${m.sender.split('@')[0]} ha invitado al bot al grupo:\n*${groupName}*\n\n🆔 ID: ${groupId}\n📌 Enlace: ${args[0]}\n⏰ Salida automática en: ${remaining}`,
-      null,
-      { mentions: [m.sender] })
+    await conn.sendMessage(owbot + '@s.whatsapp.net', {
+      text: `≡ *INVITACIÓN A GRUPO*\n\n@${m.sender.split('@')[0]} ha invitado al bot al grupo:\n*${groupName}*\n\n🆔 ID: ${groupId}\n📌 Enlace: ${args[0]}\n🕒 Sin límite de tiempo.`,
+      contextInfo: iconReply()
+    }, { mentions: [m.sender] })
 
   } catch (e) {
-    await conn.reply(owbot + '@s.whatsapp.net', String(e))
-    return errorMsg(m, conn, usedPrefix, command, '✳️ No se pudo unir al grupo. Asegúrese que el enlace es válido o que el grupo no esté lleno.')
+    await conn.sendMessage(owbot + '@s.whatsapp.net', {
+      text: String(e),
+      contextInfo: iconReply()
+    })
+
+    return replyWithIcon(m, conn, `✳️ No se pudo unir al grupo. Verifique que el enlace es válido o que el grupo no esté lleno.`)
   }
 }
 
-handler.help = ['join <chat.whatsapp.com> <días>']
+handler.help = ['join <chat.whatsapp.com>']
 handler.tags = ['owner']
-handler.command = ['join', 'invite']
+handler.command = ['join']
 handler.owner = true
 
 export default handler
 
-function msToDate(ms) {
-  let d = Math.floor(ms / 86400000)
-  let h = Math.floor(ms / 3600000) % 24
-  let m = Math.floor(ms / 60000) % 60
-  let s = Math.floor(ms / 1000) % 60
-  return `${d}d ${h}h ${m}m ${s}s`.replace(/\b(\d)\b/g, '0$1')
-}
-
-function errorMsg(m, conn, prefix, command, text) {
+// 📥 Respuesta con ícono personalizado
+function replyWithIcon(m, conn, text) {
   return conn.sendMessage(m.chat, {
     text,
-    contextInfo: {
-      externalAdReply: {
-        title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-        body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-        thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
-        renderLargerThumbnail: false,
-        sourceUrl: ''
-      }
-    }
+    contextInfo: iconReply()
   }, { quoted: m })
 }
 
-function adReplyObj() {
+// 🎨 Icono personalizado (externalAdReply)
+function iconReply() {
   return {
     externalAdReply: {
       title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
       body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
       thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
       renderLargerThumbnail: false,
-      sourceUrl: ''
+      sourceUrl: ""
     }
   }
 }
