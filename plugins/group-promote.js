@@ -1,39 +1,105 @@
-let handler = async (m, {conn, usedPrefix, text}) => {
-  if (isNaN(text) && !text.match(/@/g)) {
-  } else if (isNaN(text)) {
-    var number = text.split`@`[1];
-  } else if (!isNaN(text)) {
-    var number = text;
+let handler = async (m, { conn, usedPrefix, text }) => {
+  let number
+
+  if (!text && !m.quoted) {
+    return conn.sendMessage(m.chat, {
+      text: '🚩 Usa el comando correctamente.\n\n📌 *Ejemplo:*\n> .promote @𝐀𝐧𝐠𝐞𝐥',
+      contextInfo: {
+        externalAdReply: {
+          title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          mediaType: 1,
+          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
+    }, { quoted: m })
   }
 
-  if (!text && !m.quoted)
-    return conn.reply(
-      m.chat,
-      '🚩 Use el comandó correctamente\n\n`Ejemplo :`\n\n> . promote @𝐀𝐧𝐠𝐞𝐥',
-      m
-    );
-  if (number.length > 13 || (number.length < 11 && number.length > 0))
-    return conn.reply(m.chat, `_. ᩭ✎El número ingresado es incorrecto, por favor ingrese el número correcto_`, m);
+  if (text) {
+    if (isNaN(text)) {
+      number = text.split`@`[1]
+    } else {
+      number = text
+    }
+  } else if (m.quoted?.sender) {
+    number = m.quoted.sender.split('@')[0]
+  }
+
+  if (!number) {
+    return conn.sendMessage(m.chat, {
+      text: '🚩 No se pudo identificar el número.',
+      contextInfo: {
+        externalAdReply: {
+          title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          mediaType: 1,
+          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
+    }, { quoted: m })
+  }
+
+  if (number.length > 13 || number.length < 11) {
+    return conn.sendMessage(m.chat, {
+      text: '🚩 El número ingresado es incorrecto.',
+      contextInfo: {
+        externalAdReply: {
+          title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          mediaType: 1,
+          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
+    }, { quoted: m })
+  }
+
+  const user = number + '@s.whatsapp.net'
 
   try {
-    if (text) {
-      var user = number + "@s.whatsapp.net";
-    } else if (m.quoted.sender) {
-      var user = m.quoted.sender;
-    } else if (m.mentionedJid) {
-      var user = number + "@s.whatsapp.net";
-    }
+    await conn.groupParticipantsUpdate(m.chat, [user], 'promote')
+    await conn.sendMessage(m.chat, {
+      text: '✅ Usuario promovido a admin.',
+      contextInfo: {
+        externalAdReply: {
+          title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          mediaType: 1,
+          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
+    }, { quoted: m })
   } catch (e) {
-  } finally {
-    conn.groupParticipantsUpdate(m.chat, [user], "promote");
-    conn.reply(m.chat, `🚩 ordenes recibidas`, m);
+    console.error(e)
+    await conn.sendMessage(m.chat, {
+      text: '❌ No se pudo promover al usuario.',
+      contextInfo: {
+        externalAdReply: {
+          title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
+          mediaType: 1,
+          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
+    }, { quoted: m })
   }
-};
-handler.help = ["*593xxx*", "*@usuario*", "*responder chat*"].map((v) => "promote " + v);
-handler.tags = ["group"];
-handler.command = /^(promote|daradmin|darpoder)$/i;
-handler.group = true;
-handler.admin = true;
-handler.botAdmin = true;
-handler.fail = null;
-export default handler;
+}
+
+handler.help = ["*593xxx*", "*@usuario*", "*responder chat*"].map(v => "promote " + v)
+handler.tags = ["group"]
+handler.command = /^(promote|daradmin|darpoder)$/i
+handler.group = true
+handler.admin = true
+handler.botAdmin = true
+handler.fail = null
+
+export default handler
