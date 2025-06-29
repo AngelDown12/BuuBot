@@ -364,7 +364,21 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 `.trim();
 
-  await conn.sendMessage(m.chat, { image: { url: img }, caption: text }, { quoted: m });
+  await conn.sendMessage(m.chat, {
+  image: { url: img },
+  caption: text,
+  contextInfo: {
+    externalAdReply: {
+      title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+      body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+      thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+      sourceUrl: '',
+      mediaType: 1,
+      renderLargerThumbnail: false,
+      showAdAttribution: false
+    }
+  }
+}, { quoted: m });
 };
 
 handler.customPrefix = /^(menu|menú|ayuda|help)$/i;
