@@ -16,7 +16,7 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
     textoFinal += `💻 @${user.id.split('@')[0]}\n`;
   }
 
-  textoFinal += `╰⸼ ┄ ┄ ┄ ─  ꒰  ׅ୭ *${wm}* ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
+  textoFinal += `𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 ≼᳞ׄ\`;
 
   await conn.sendMessage(m.chat, {
     text: textoFinal,
