@@ -16,7 +16,7 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
     textoFinal += `💻 @${user.id.split('@')[0]}\n`;
   }
 
-  textoFinal += `𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 ≼᳞ׄ\`;
+  // Quitamos el final basura
 
   await conn.sendMessage(m.chat, {
     text: textoFinal,
@@ -24,7 +24,6 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
   });
 };
 
-// 🎯 Detecta .tagall, tagall, invocar, todos, etc.
 handler.customPrefix = /^(\.|)(tagall|invocar|invocacion|invocación|todos|talibanes)/i;
 handler.command = new RegExp(); // Necesario para que funcione con customPrefix
 handler.group = true;
