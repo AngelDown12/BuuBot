@@ -15,7 +15,7 @@ const handler = async (m, {text, usedPrefix, command, conn}) => {
     try {
         img = 'https://wwv.cuevana8.com' + aaaa[randomIndex].image;
     } catch {
-        img = 'https://qu.ax/tNPfx.jpg';
+        img = 'https://qu.ax/JRCMQ.jpg';
     }    
   if (aaaa == '') throw `*${tradutor.texto2}*`;                                        /* https://wwv.cuevana8.com */
   const res = await aaaa.map((v) => `*${tradutor.texto3[0]}* ${v.title}\n*${tradutor.texto3[1]}* ${v.link}`).join`\n\n─────────────────\n\n`;

@@ -7,7 +7,7 @@ const clockString = ms => {
   return [h, m, s].map(v => v.toString().padStart(2, '0')).join(':');
 };
 
-const imagen = "https://qu.ax/tNPfx.jpg";
+const imagen = "https://qu.ax/JRCMQ.jpg";
 
 const menuHeader = `
 ╭─❒ 「 *📍 𝐀𝐧𝐠𝐞𝐥 MD* 」

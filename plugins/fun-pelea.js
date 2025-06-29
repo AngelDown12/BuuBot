@@ -7,7 +7,7 @@ let handler = async (m, {
 
     if (typeof conn.fight[m.sender] != "undefined" && conn.fight[m.sender] == true) return m.reply(`No puedes pelear de nuevo porque ya estás en una pelea.`)
 
-    let peleando = "https://qu.ax/tNPfx.jpg"
+    let peleando = "https://qu.ax/JRCMQ.jpg"
 
     let users = participants.map(u => u.id)
     var oponente
