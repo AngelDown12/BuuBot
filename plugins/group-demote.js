@@ -53,7 +53,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     await conn.groupParticipantsUpdate(m.chat, [user], 'demote')
 
     await conn.sendMessage(m.chat, {
-      text: `🚩 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐃𝐞𝐠𝐫𝐚𝐝𝐚𝐝𝐨.`,
+      text: `🚩 𝐔𝐬𝐮𝐚𝐫𝐢𝐨 𝐃𝐞𝐠𝐫.`,
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
