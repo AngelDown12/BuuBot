@@ -10,7 +10,7 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
   const mensaje = texto.replace(/^(\.|)(tagall|invocar|invocacion|invocación|todos|talibanes)/i, '').trim();
   const miembros = participants.length;
 
-  let textoFinal = `*!  MENCION GENERAL  !*\n  *PARA ${miembros} MIEMBROS* 🗣️\n\n*» INFO :* ${mensaje || 'Sin mensaje.'}\n\n╭  ┄ 𝅄  ۪꒰ \`⡞᪲=͟͟͞🄲ꭈׁׅo͓̽ᨰׁׅʙo͓̽tׁׅ ≼᳞ׄ\` ꒱  ۟  𝅄 ┄\n`;
+  let textoFinal = `*!  MENCION GENERAL  !*\n  *PARA ${miembros} MIEMBROS* 🗣️\n\n*» INFO :* ${mensaje || 'Sin mensaje.'}\n\n╭  ┄ 𝅄  ۪꒰ \`⡞᪲=͟͟͞𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 ≼᳞ׄ\` ꒱  ۟  𝅄 ┄\n`;
 
   for (const user of participants) {
     textoFinal += `👑 @${user.id.split('@')[0]}\n`;
