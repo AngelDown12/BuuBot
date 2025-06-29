@@ -1,4 +1,4 @@
-const wm = '𝐀𝐥𝐞𝐞 𝐁𝐨𝐭 👑';
+const wm = '';
 
 const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
   if (!(isAdmin || isOwner)) {
@@ -13,7 +13,7 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
   let textoFinal = `*!  MENCION GENERAL  !*\n  *PARA ${miembros} MIEMBROS* 🗣️\n\n*» INFO :* ${mensaje || 'Sin mensaje.'}\n\n╭  ┄ 𝅄  ۪꒰ \`⡞᪲=͟͟͞𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 ≼᳞ׄ\` ꒱  ۟  𝅄 ┄\n`;
 
   for (const user of participants) {
-    textoFinal += `👑 @${user.id.split('@')[0]}\n`;
+    textoFinal += `💻 @${user.id.split('@')[0]}\n`;
   }
 
   textoFinal += `╰⸼ ┄ ┄ ┄ ─  ꒰  ׅ୭ *${wm}* ୧ ׅ ꒱  ┄  ─ ┄ ⸼`;
