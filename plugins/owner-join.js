@@ -1,4 +1,4 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
+let handler = async (m, { conn, text, usedPrefix, command, args }) => {
   const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
   const [_, code] = text.match(linkRegex) || []
   const owbot = global.owner[1]
@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     const metadata = await conn.groupMetadata(groupId)
     const groupName = metadata.subject
 
-    // 🛡️ Elimina límite de tiempo (permanece para siempre)
+    // 🛡️ Sin límite de tiempo
     global.db.data.chats[groupId] ??= {}
     delete global.db.data.chats[groupId].expired
 
@@ -31,7 +31,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
       contextInfo: iconReply()
     })
 
-    return replyWithIcon(m, conn, `✳️ No se pudo unir al grupo. Verifique que el enlace es válido o que el grupo no esté lleno.`)
+    return replyWithIcon(m, conn, `✳️ No se pudo unir al grupo. Asegúrese que el enlace sea válido o que el grupo no esté lleno.`)
   }
 }
 
@@ -42,7 +42,6 @@ handler.owner = true
 
 export default handler
 
-// 📥 Respuesta con ícono personalizado
 function replyWithIcon(m, conn, text) {
   return conn.sendMessage(m.chat, {
     text,
@@ -50,7 +49,6 @@ function replyWithIcon(m, conn, text) {
   }, { quoted: m })
 }
 
-// 🎨 Icono personalizado (externalAdReply)
 function iconReply() {
   return {
     externalAdReply: {
