@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
   if (!m.quoted) {
     return conn.sendMessage(m.chat, {
-      text: `🚩 Responde al mensaje que deseas eliminar.`,
+      text: `🚩 𝐑𝐞𝐬𝐩𝐨𝐧𝐝𝐚 𝐀𝐥 𝐦𝐞𝐧𝐬𝐚𝐣𝐞 𝐪𝐮𝐞 𝐃𝐞𝐬𝐞𝐚 𝐄𝐥𝐢𝐦𝐢𝐧𝐚𝐫.`,
       contextInfo: {
         externalAdReply: {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
