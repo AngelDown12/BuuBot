@@ -1,26 +1,10 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
-  const img = 'https://qu.ax/FxpUy.jpg';
+  const img = 'https://qu.ax/WhnpY.jpg';
   const name = await conn.getName(m.sender);
   const text = `🪙 𝐌 𝐔 𝐋 𝐓 𝐈 - 𝐌 𝐄 𝐍 𝐔́ 
 
 
  
-   _*𝐂𝐎𝐌𝐀𝐍𝐃𝐎𝐒*_
-   _*𝐒𝐈𝐍 𝐏𝐑𝐄𝐅𝐈𝐉𝐎 👑*_
-┣━━━━━━━━━━━━━━┫
-┃⋗ 🗣️ *𝐀𝐛𝐫𝐢𝐫*
-┃⋗ 🗣️ *𝐂𝐞𝐫𝐫𝐚𝐫* 
-┃⋗ 🗣️ *𝐓𝐨𝐝𝐨𝐬 / 𝐭𝐨𝐝𝐨𝐬*
-┃⋗ 🗣️ *𝐋𝐢𝐧𝐤 / 𝐥𝐢𝐧𝐤* 
-┃⋗ 🗣️ *𝐏𝐫𝐨𝐦𝐨𝐭𝐞* 
-┃⋗ 🗣️ *𝐊𝐢𝐜𝐤 / 𝐤𝐢𝐜𝐤* 
-┃⋗ 🗣️ *𝐍 / 𝐧*
-┃⋗ 🗣️ *𝐃𝐞𝐥 / 𝐝𝐞𝐥*
-┃⋗ 🗣️ *𝐃𝐞𝐦𝐨𝐭𝐞*
-┃⋗ 🗣️ *𝐌𝐞𝐧𝐮 / 𝐦𝐞𝐧𝐮*  
-┃⋗ 🗣️ 
-┗━━━━━━━━━━━━━━┛
-
 
   「 *📚 𝘐𝘯𝘧𝘰 📚* 」
 ┣━━━━━━━━━━━━━━┫
@@ -380,21 +364,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 `.trim();
 
-  await conn.sendMessage(m.chat, {
-  image: { url: img },
-  caption: text,
-  contextInfo: {
-    externalAdReply: {
-      title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-      body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-      thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
-      sourceUrl: '',
-      mediaType: 1,
-      renderLargerThumbnail: false,
-      showAdAttribution: false
-    }
-  }
-}, { quoted: m });
+  await conn.sendMessage(m.chat, { image: { url: img }, caption: text }, { quoted: m });
+};
 
 handler.customPrefix = /^(menu|menú|ayuda|help)$/i;
 handler.command = new RegExp; // para que funcione sin prefijo
