@@ -28,21 +28,8 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    // Enviar imagen de la miniatura con detalles
-    await conn.sendMessage(m.chat, {
-      image: { url: video.thumbnail },
-      caption: `╭─⬣「 *𝐀𝐧𝐠𝐞𝐥* 」⬣
-┃🎵 *Título:* ${video.title}
-┃📺 *Canal:* ${video.channel}
-┃⏱️ *Duración:* ${video.duration}
-┃👀 *Vistas:* ${video.views}
-┃📆 *Publicado:* ${video.published || "-"}
-┃🔗 *Enlace:* ${video.url}
-╰⬣`
-    }, { quoted: m });
-
-    // Mensaje animado tipo reproductor
-    const playerMsg = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
+    // Enviar imagen de la miniatura + mensaje animado tipo reproductor
+    const caption = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
@@ -54,7 +41,8 @@ _${video.title}_
 *⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`;
 
     await conn.sendMessage(m.chat, {
-      text: playerMsg
+      image: { url: video.thumbnail },
+      caption
     }, { quoted: m });
 
     // Descargar audio
@@ -70,15 +58,15 @@ _${video.title}_
 ╰`);
     }
 
-    // Enviar audio con externalAdReply personalizado
+    // Enviar audio con miniatura en el reproductor
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
       fileName: `${video.title}.mp3`,
       contextInfo: {
         externalAdReply: {
-          title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-          body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+          title: video.title,
+          body: video.channel || 'YouTube',
           thumbnailUrl: video.thumbnail,
           renderLargerThumbnail: true,
           sourceUrl: video.url
