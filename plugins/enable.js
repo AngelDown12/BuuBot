@@ -234,7 +234,8 @@ m.reply(`*𝐀𝐧𝐠𝐞𝐥-𝐁𝐨𝐭 𝐀𝐯𝐢𝐬𝐨*
 _${type}_ 𝐀𝐜𝐭𝐢𝐯𝐨 𝐜𝐨𝐫𝐫𝐞𝐜𝐭𝐚𝐦𝐞𝐧𝐭𝐞.
 
 𝐀𝐜𝐭𝐮𝐚𝐥𝐦𝐞𝐧𝐭𝐞 *${isEnable? 'Activado ✅': 'Desactivado ❌'}*
-𝐀𝐜𝐭𝐢𝐜𝐨: ${isAll? '*𝐓𝐨𝐝𝐨 𝐞𝐥 𝐁𝐨𝐭* 🌐': isUser? '*Usuario específico* 👥': '*Este Chat* 💬'}`)
+
+𝐀𝐜𝐭𝐢𝐜𝐨: ${isAll? '*𝐓𝐨𝐝𝐨 𝐞𝐥 𝐁𝐨𝐭* 🌐': isUser? '*Usuario específico* 👥': '𝐄𝐬𝐭𝐞 𝐂𝐡𝐚𝐭 '}`)
 }
 
 handler.help = ['enable', 'disable', 'on', 'off']
