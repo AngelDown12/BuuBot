@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
+  if (typeof m.text !== 'string') m.text = '';
   if (!text) {
     await m.react('📀');
     return m.reply(`╭─⬣「 𝐀𝐧𝐠𝐞𝐥 」⬣
@@ -28,10 +29,10 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    // ✅ Enviar solo el link para que WhatsApp genere la vista previa enriquecida
+    // ✅ Manda solo el link directo para preview rica de WhatsApp
     await conn.sendMessage(m.chat, video.url, { quoted: m });
 
-    // 🎵 Mensaje estilo reproductor
+    // 🎵 Estilo reproductor
     const playerMsg = `*POLVORA BOT Music* - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
@@ -47,7 +48,7 @@ ${video.duration} ━━━━⬤─────── 04:05
       text: playerMsg
     }, { quoted: m });
 
-    // 🔊 Descargar el audio
+    // 🔊 Descargar audio
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
     const downloadData = await downloadResponse.json();
@@ -60,6 +61,7 @@ ${video.duration} ━━━━⬤─────── 04:05
 ╰`);
     }
 
+    // ✅ Manda el audio con ícono personalizado
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
