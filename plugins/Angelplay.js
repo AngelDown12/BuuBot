@@ -28,12 +28,13 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    const playerMsg = {
+    // Mensaje tipo animado con miniatura del video
+    await conn.sendMessage(m.chat, {
       text: `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
-_${video.title}_
+${video.title}
 
 » 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
 » 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
@@ -45,12 +46,10 @@ _${video.title}_
           body: video.channel || 'YouTube',
           thumbnailUrl: video.thumbnail,
           renderLargerThumbnail: true,
-          sourceUrl: ''
+          sourceUrl: 'https://google.com' // usar URL inofensiva para evitar preview de YT
         }
       }
-    };
-
-    await conn.sendMessage(m.chat, playerMsg, { quoted: m });
+    }, { quoted: m });
 
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
@@ -64,6 +63,7 @@ _${video.title}_
 ╰`);
     }
 
+    // Envío del audio sin preview del link
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
@@ -74,7 +74,7 @@ _${video.title}_
           body: video.channel || 'YouTube',
           thumbnailUrl: video.thumbnail,
           renderLargerThumbnail: true,
-          sourceUrl: ''
+          sourceUrl: 'https://google.com' // neutral, para no activar preview de YT
         }
       }
     }, { quoted: m });
