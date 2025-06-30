@@ -28,14 +28,17 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    let info = `╭─⬣「 *𝐀𝐧𝐠𝐞𝐥* 」⬣
-│  ≡◦🎵 *Título:* ${video.title}
-│  ≡◦📺 *Canal:* ${video.author.name}
-│  ≡◦⏱️ *Duración:* ${video.duration}
-│  ≡◦👁️ *Vistas:* ${video.views}
-│  ≡◦📅 *Publicado:* ${video.publishedAt}
-│  ≡◦🔗 *Enlace:* ${video.url}
-╰`;
+    let info = `
+𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
+
+01:59 ━━━━⬤─────── 04:05
+
+🎵 *Título:* ${video.title}
+
+» 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
+» 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
+
+*⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`;
 
     await conn.sendMessage(m.chat, {
       image: { url: video.image },
