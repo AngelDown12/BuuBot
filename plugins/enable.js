@@ -231,11 +231,9 @@ para el bot
 
 m.reply(`⚠️ *𝐀𝐧𝐠𝐞𝐥-MD Notificación* ⚠️
 
-💎 *Comando ejecutado:* *${type}*
-👤 *Estado actual:* *${isEnable? 'Activado ✅': 'Desactivado ❌'}*
-📍 *Ámbito:* ${isAll? '*Todo el Bot* 🌐': isUser? '*Usuario específico* 👥': '*Este Chat* 💬'}
-
-🚀 *Muchas gracias por usar Bot 𝐀𝐧𝐠𝐞𝐥 Ai*🎖️`)
+💎 *${type}* 𝐀𝐜𝐭𝐢𝐯𝐨 𝐜𝐨𝐫𝐫𝐞𝐜𝐭𝐚𝐦𝐞𝐧𝐭𝐞.
+👤 𝐀𝐜𝐭𝐮𝐚𝐥𝐦𝐞𝐧𝐭𝐞 *${isEnable? 'Activado ✅': 'Desactivado ❌'}*
+📍 *Ámbito:* ${isAll? '*Todo el Bot* 🌐': isUser? '*Usuario específico* 👥': '*Este Chat* 💬'}`)
 }
 
 handler.help = ['enable', 'disable', 'on', 'off']
