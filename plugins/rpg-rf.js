@@ -6,10 +6,10 @@
 const wm = "Mi Watermark";
 
 // Variables utilizadas para generar la sourceUrl en externalAdReply
-const nna = "https://files.catbox.moe/ntyp5r.jpg";
-const nna2 = "https://files.catbox.moe/ntyp5r.jpg";
-const nn = "https://files.catbox.moe/ntyp5r.jpg";
-const md = "https://files.catbox.moe/ntyp5r.jpg";
+const nna = "https://qu.ax/JRCMQ.jpg";
+const nna2 = "https://qu.ax/JRCMQ.jpg";
+const nn = "https://qu.ax/JRCMQ.jpg";
+const md = "https://qu.ax/JRCMQ.jpg";
 const yt = "https://youtube.com/c/ejemplo";
 const tiktok = "https://tiktok.com/@ejemplo";
 
@@ -33,9 +33,9 @@ const claimedCharacters = [];
 
 // Lista de personajes predefinidos
 const mainCharacters = [
-  { name: "Naruto Uzumaki", url: "https://files.catbox.moe/ntyp5r.jpg", price: 100, claimedBy: null },
-  { name: "Sakura Haruno", url: "https://files.catbox.moe/ntyp5r.jpg", price: 120, claimedBy: null },
-  { name: "Sasuke Uchiha", url: "https://files.catbox.moe/ntyp5r.jpg", price: 150, claimedBy: null }
+  { name: "Naruto Uzumaki", url: "https://qu.ax/JRCMQ.jpg", price: 100, claimedBy: null },
+  { name: "Sakura Haruno", url: "https://qu.ax/JRCMQ.jpg", price: 120, claimedBy: null },
+  { name: "Sasuke Uchiha", url: "https://qu.ax/JRCMQ.jpg", price: 150, claimedBy: null }
 ];
 
 // ====================
@@ -80,7 +80,7 @@ async function handler(m, { conn }) {
   let who = (m.mentionedJid && m.mentionedJid[0])
     ? m.mentionedJid[0]
     : (m.fromMe ? conn.user.jid : m.sender);
-  let pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://files.catbox.moe/ntyp5r.jpg');
+  let pp = await conn.profilePictureUrl(who, 'image').catch(() => 'https://qu.ax/JRCMQ.jpg');
 
   // Sincronizamos la lista de personajes
   const availableCharacters = syncCharacters();

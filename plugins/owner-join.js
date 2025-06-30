@@ -54,11 +54,7 @@ function iconReply() {
     externalAdReply: {
       title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
       body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-<<<<<<< HEAD
-      thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
-=======
       thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
->>>>>>> 350c446b31869e4786e195ff45506cbd29337973
       renderLargerThumbnail: false,
       sourceUrl: ""
     }

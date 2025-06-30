@@ -33,7 +33,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     txt += `✩ *MimeType* : ${mimetype}\n\n`;
     txt += `*- ↻ El archivo se está enviando, espera un momento...*\n`;
 
-    let img = await (await fetch('https://files.catbox.moe/ntyp5r.jpg')).buffer();
+    let img = await (await fetch('https://qu.ax/JRCMQ.jpg')).buffer();
 
     // Envío del archivo y mensaje
     await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, null, null, { asDocument: false });

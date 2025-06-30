@@ -39,7 +39,7 @@ const sendAudioWithRetry = async (conn, chat, audioUrl, videoTitle, maxRetries =
   let attempt = 0;
   let thumbnailBuffer;
   try {
-    const response = await axios.get('https://files.catbox.moe/ntyp5r.jpg', { responseType: 'arraybuffer' });
+    const response = await axios.get('https://qu.ax/JRCMQ.jpg', { responseType: 'arraybuffer' });
     thumbnailBuffer = Buffer.from(response.data, 'binary');
   } catch (error) {
     console.error("Error al obtener thumbnail:", error.message);

@@ -1,9 +1,5 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
-<<<<<<< HEAD
-  const img = 'https://files.catbox.moe/ntyp5r.jpg';
-=======
   const img = 'https://qu.ax/JRCMQ.jpg';
->>>>>>> 350c446b31869e4786e195ff45506cbd29337973
   const name = await conn.getName(m.sender);
   const text = `🪙 𝐌 𝐔 𝐋 𝐓 𝐈 - 𝐌 𝐄 𝐍 𝐔́ 
 
@@ -373,11 +369,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     externalAdReply: {
       title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
       body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-<<<<<<< HEAD
-      thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
-=======
       thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
->>>>>>> 350c446b31869e4786e195ff45506cbd29337973
       sourceUrl: '',
       mediaType: 1,
       renderLargerThumbnail: false,
