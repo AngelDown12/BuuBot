@@ -12,10 +12,11 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
     const isChannelLink = channelLinkRegex.exec(m.text)
 
     if ((isGroupLink || isChannelLink) && !isAdmin) {
-        let user = m.sender
-        let mentionUser = `@${user.split('@')[0]}`
+        const user = m.sender
+        const mentionUser = `@${user.split('@')[0]}`
+        const thumbnail = 'https://files.catbox.moe/ntyp5r.jpg'
 
-        // Mensaje principal
+        // ⚠️ Mensaje con mención real
         await conn.sendMessage(m.chat, {
             text: `🚫 *Enlace detectado* ⚠️\n\nAnda a hacer tu Publicidad a otro lado ${mentionUser}\n\n*Elimino tu mensaje y a ti por escoria*`,
             mentions: [user],
@@ -23,7 +24,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
                 externalAdReply: {
                     title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                     body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-                    thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
+                    thumbnailUrl: thumbnail,
                     mediaType: 1,
                     renderLargerThumbnail: false,
                     sourceUrl: ''
@@ -31,11 +32,12 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
             }
         })
 
+        // Si el bot es admin, elimina y expulsa
         if (isBotAdmin) {
             await conn.sendMessage(m.chat, { delete: m.key })
             await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
         } else {
-            // Mensaje separado si no tiene permisos
+            // Si NO es admin, envía mensaje separado con mención real
             await conn.sendMessage(m.chat, {
                 text: `⚠️ *No puedo eliminar ni expulsar a ${mentionUser} porque no soy admin.*`,
                 mentions: [user],
@@ -43,7 +45,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
                     externalAdReply: {
                         title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                         body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-                        thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
+                        thumbnailUrl: thumbnail,
                         mediaType: 1,
                         renderLargerThumbnail: false,
                         sourceUrl: ''
