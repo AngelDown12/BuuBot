@@ -13,7 +13,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   try {
     await m.react('📀');
 
-    const searchApi = `https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`;
+    const searchApi = `https://delirius-apiofc.vercel.app/search/ytsearch?q=${encodeURIComponent(text)}`;
     const searchResponse = await fetch(searchApi);
     const searchData = await searchResponse.json();
 
@@ -28,7 +28,8 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    const caption = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
+    const playerMsg = {
+      text: `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
@@ -37,12 +38,19 @@ _${video.title}_
 » 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
 » 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
 
-*⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`;
+*⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`,
+      contextInfo: {
+        externalAdReply: {
+          title: video.title,
+          body: video.channel || 'YouTube',
+          thumbnailUrl: video.thumbnail,
+          renderLargerThumbnail: true,
+          sourceUrl: ''
+        }
+      }
+    };
 
-    await conn.sendMessage(m.chat, {
-      image: { url: video.thumbnail },
-      caption
-    }, { quoted: m });
+    await conn.sendMessage(m.chat, playerMsg, { quoted: m });
 
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
@@ -59,14 +67,14 @@ _${video.title}_
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
-      fileName: `${video.title}.mp3`,
+      fileName: `${video.title} - MP3`,
       contextInfo: {
         externalAdReply: {
           title: video.title,
           body: video.channel || 'YouTube',
           thumbnailUrl: video.thumbnail,
           renderLargerThumbnail: true,
-          sourceUrl: '' // <== URL removida como pediste
+          sourceUrl: ''
         }
       }
     }, { quoted: m });
