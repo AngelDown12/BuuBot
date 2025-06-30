@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     // Mostrar miniatura con caption de animación
     await conn.sendMessage(m.chat, {
       image: { url: video.thumbnail },
-      caption: `*POLVORA BOT Music* - youtube ❤️
+      caption: `*_ANGEL BOT Music_*
 
 ${video.duration} ━━━━⬤─────── 04:05
 
