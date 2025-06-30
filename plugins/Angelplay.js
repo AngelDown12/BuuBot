@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 
   try {
-    await m.react('📀');
+    await m.react('📀'); // buscando...
 
     const searchApi = `https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`;
     const searchResponse = await fetch(searchApi);
@@ -28,11 +28,12 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    const playerMsg = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
+    const playerMsg = `*POLVORA BOT Music* - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
-_${video.title}_
+*${video.title}*
+🔗 ${video.url}
 
 » 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
 » 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
