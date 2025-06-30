@@ -23,7 +23,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
                 externalAdReply: {
                     title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                     body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-                    thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+                    thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
                     mediaType: 1,
                     renderLargerThumbnail: false,
                     sourceUrl: ''
@@ -43,7 +43,7 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
                     externalAdReply: {
                         title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                         body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-                        thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+                        thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
                         mediaType: 1,
                         renderLargerThumbnail: false,
                         sourceUrl: ''
