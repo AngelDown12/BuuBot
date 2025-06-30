@@ -28,7 +28,6 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    // Enviar imagen de la miniatura + mensaje animado tipo reproductor
     const caption = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
@@ -45,7 +44,6 @@ _${video.title}_
       caption
     }, { quoted: m });
 
-    // Descargar audio
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
     const downloadData = await downloadResponse.json();
@@ -58,7 +56,6 @@ _${video.title}_
 ╰`);
     }
 
-    // Enviar audio con miniatura en el reproductor
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
@@ -69,7 +66,7 @@ _${video.title}_
           body: video.channel || 'YouTube',
           thumbnailUrl: video.thumbnail,
           renderLargerThumbnail: true,
-          sourceUrl: video.url
+          sourceUrl: '' // <== URL removida como pediste
         }
       }
     }, { quoted: m });
