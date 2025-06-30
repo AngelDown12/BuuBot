@@ -28,13 +28,10 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    // Enviar vista previa del link de YouTube con miniatura estilo WhatsApp
-    await conn.sendMessage(m.chat, {
-      text: video.url,
-      linkPreview: true
-    }, { quoted: m });
+    // ✅ Enviar solo el link para que WhatsApp genere la vista previa enriquecida
+    await conn.sendMessage(m.chat, video.url, { quoted: m });
 
-    // Mensaje tipo reproductor personalizado
+    // 🎵 Mensaje estilo reproductor
     const playerMsg = `*POLVORA BOT Music* - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
@@ -50,7 +47,7 @@ ${video.duration} ━━━━⬤─────── 04:05
       text: playerMsg
     }, { quoted: m });
 
-    // Descargar y mandar el audio
+    // 🔊 Descargar el audio
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
     const downloadData = await downloadResponse.json();
