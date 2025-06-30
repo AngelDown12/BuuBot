@@ -12,7 +12,7 @@ let handler = async (m, { conn, isAdmin, isROwner }) => {
         title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
         body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
         mediaType: 1,
-        thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+        thumbnailUrl: 'https://files.catbox.moe/ntyp5r.jpg',
         renderLargerThumbnail: false,
         sourceUrl: ''
       }

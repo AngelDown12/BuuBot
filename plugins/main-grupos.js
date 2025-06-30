@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
                  "> By 𝐀𝐧𝐠𝐞𝐥";
 
     // Asegúrate de definir 'imagen2' correctamente antes de usarlo
-    let imagen2 = 'https://qu.ax/JRCMQ.jpg';
+    let imagen2 = 'https://files.catbox.moe/ntyp5r.jpg';
 
     // Define los emojis que quieres usar
     let emojis = '🍁';
