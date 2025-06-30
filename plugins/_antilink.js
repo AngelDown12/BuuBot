@@ -6,55 +6,50 @@ export async function before(m, { conn, isAdmin, isBotAdmin }) {
     if (!m.isGroup) return false
 
     let chat = global.db.data.chats[m.chat]
-    let bot = global.db.data.settings[this.user.jid] || {}
+    if (!chat.antiLink) return true
 
     const isGroupLink = linkRegex.exec(m.text)
     const isChannelLink = channelLinkRegex.exec(m.text)
 
-    if (chat.antiLink && (isGroupLink || isChannelLink) && !isAdmin) {
-        const mainMsg = `𝙀𝙣𝙡𝙖𝙘𝙚 𝙙𝙚𝙩𝙚𝙘𝙩𝙖𝙙𝙤 ⚠️\n\n𝘼𝙣𝙙𝙖 𝙖 𝙝𝙖𝙘𝙚𝙧 𝙩𝙪 𝙋𝙪𝙗𝙡𝙞𝙘𝙞𝙙𝙖𝙙 𝙖 𝙤𝙩𝙧𝙤 𝙡𝙖𝙙𝙤 *@${m.sender.split('@')[0]}*\n\n𝙀𝙡𝙞𝙢𝙞𝙣𝙤 𝙩𝙪 𝙢𝙚𝙣𝙨𝙖𝙟𝙚 𝙮 𝙖 𝙩𝙞 𝙥𝙤𝙧 𝙚𝙨𝙘𝙤𝙧𝙞𝙖`;
+    if ((isGroupLink || isChannelLink) && !isAdmin) {
+        let user = m.sender
+        let mentionUser = `@${user.split('@')[0]}`
 
-        const noAdminMsg = `⚠️ *No puedo eliminarlo porque no soy admin.*`;
-
-        // Enviar el mensaje principal
+        // Mensaje principal
         await conn.sendMessage(m.chat, {
-            text: mainMsg,
-            mentions: [m.sender],
+            text: `🚫 *Enlace detectado* ⚠️\n\nAnda a hacer tu Publicidad a otro lado ${mentionUser}\n\n*Elimino tu mensaje y a ti por escoria*`,
+            mentions: [user],
             contextInfo: {
                 externalAdReply: {
                     title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                     body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                     thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
-                    sourceUrl: '',
                     mediaType: 1,
                     renderLargerThumbnail: false,
-                    showAdAttribution: true
+                    sourceUrl: ''
                 }
             }
         })
 
-        // Si no es admin, manda el mensaje de advertencia por separado
-        if (!isBotAdmin) {
+        if (isBotAdmin) {
+            await conn.sendMessage(m.chat, { delete: m.key })
+            await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
+        } else {
+            // Mensaje separado si no tiene permisos
             await conn.sendMessage(m.chat, {
-                text: noAdminMsg,
+                text: `⚠️ *No puedo eliminar ni expulsar a ${mentionUser} porque no soy admin.*`,
+                mentions: [user],
                 contextInfo: {
                     externalAdReply: {
                         title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                         body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
                         thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
-                        sourceUrl: '',
                         mediaType: 1,
                         renderLargerThumbnail: false,
-                        showAdAttribution: true
+                        sourceUrl: ''
                     }
                 }
             })
-        }
-
-        // Si es admin, elimina el mensaje y expulsa
-        if (isBotAdmin) {
-            await conn.sendMessage(m.chat, { delete: m.key })
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
 
         return false
