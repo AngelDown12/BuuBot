@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 
   try {
-    await m.react('📀'); // buscando...
+    await m.react('📀');
 
     const searchApi = `https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`;
     const searchResponse = await fetch(searchApi);
@@ -28,12 +28,11 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    let info = `
-𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
+    const playerMsg = `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - 𝘺𝘰𝘶𝘵𝘶𝘣𝘦 ❤️
 
-01:59 ━━━━⬤─────── 04:05
+${video.duration} ━━━━⬤─────── 04:05
 
-${video.title}
+_${video.title}_
 
 » 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
 » 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
@@ -41,8 +40,7 @@ ${video.title}
 *⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`;
 
     await conn.sendMessage(m.chat, {
-      image: { url: video.image },
-      caption: info
+      text: playerMsg
     }, { quoted: m });
 
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
@@ -60,14 +58,23 @@ ${video.title}
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
-      fileName: `${video.title}.mp3`
+      fileName: `${video.title}.mp3`,
+      contextInfo: {
+        externalAdReply: {
+          title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+          body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
+          thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+          renderLargerThumbnail: false,
+          sourceUrl: ''
+        }
+      }
     }, { quoted: m });
 
-    await m.react('🟢'); // éxito
+    await m.react('🟢');
   } catch (error) {
     console.error(error);
     await m.react('🔴');
-    m.reply(`╭─⬣「 *𝐀𝐧𝐠𝐞𝐥 * 」⬣
+    m.reply(`╭─⬣「 *𝐀𝐧𝐠𝐞𝐥* 」⬣
 │  ❌ *Error Interno*
 │  ➤ ${error.message}
 ╰`);
