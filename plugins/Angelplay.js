@@ -28,27 +28,19 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
-    // Mensaje tipo animado con miniatura del video
+    // Mostrar miniatura con caption de animación
     await conn.sendMessage(m.chat, {
-      text: `𝙋𝙊𝙇𝙑𝙊𝙍𝘼 𝘽𝙊𝙏 𝙈𝙪𝙨𝙞𝙘 - youtube ❤️
+      image: { url: video.thumbnail },
+      caption: `*POLVORA BOT Music* - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
 ${video.title}
 
-» 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
-» 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
+» *ENVIANDO AUDIO* 🎧
+» *AGUARDE UN POCO . . .*
 
-*⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`,
-      contextInfo: {
-        externalAdReply: {
-          title: video.title,
-          body: video.channel || 'YouTube',
-          thumbnailUrl: video.thumbnail,
-          renderLargerThumbnail: true,
-          sourceUrl: 'https://google.com' // usar URL inofensiva para evitar preview de YT
-        }
-      }
+*⇆‌ ㅤ ㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤ ㅤㅤ↻*`
     }, { quoted: m });
 
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
@@ -63,20 +55,11 @@ ${video.title}
 ╰`);
     }
 
-    // Envío del audio sin preview del link
+    // Enviar el audio sin icono ni preview
     await conn.sendMessage(m.chat, {
       audio: { url: downloadData.result.download.url },
       mimetype: 'audio/mpeg',
-      fileName: `${video.title} - MP3`,
-      contextInfo: {
-        externalAdReply: {
-          title: video.title,
-          body: video.channel || 'YouTube',
-          thumbnailUrl: video.thumbnail,
-          renderLargerThumbnail: true,
-          sourceUrl: 'https://google.com' // neutral, para no activar preview de YT
-        }
-      }
+      fileName: `${video.title}.mp3`
     }, { quoted: m });
 
     await m.react('🟢');
