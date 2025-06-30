@@ -211,7 +211,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       externalAdReply: {
         title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
         body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-        thumbnailUrl: "https://qu.ax/JRCMQ.jpg",
+        thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
         mediaType: 1,
         renderLargerThumbnail: false,
         sourceUrl: ''
