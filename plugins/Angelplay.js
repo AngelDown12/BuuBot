@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   }
 
   try {
-    await m.react('📀'); // buscando...
+    await m.react('📀');
 
     const searchApi = `https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`;
     const searchResponse = await fetch(searchApi);
@@ -28,12 +28,18 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     const video = searchData.data[0];
 
+    // Enviar vista previa del link de YouTube con miniatura estilo WhatsApp
+    await conn.sendMessage(m.chat, {
+      text: video.url,
+      linkPreview: true
+    }, { quoted: m });
+
+    // Mensaje tipo reproductor personalizado
     const playerMsg = `*POLVORA BOT Music* - youtube ❤️
 
 ${video.duration} ━━━━⬤─────── 04:05
 
 *${video.title}*
-🔗 ${video.url}
 
 » 𝙀𝙉𝙑𝙄𝘼𝙉𝘿𝙊 𝘼𝙐𝘿𝙄𝙊 🎧
 » 𝘼𝙂𝙐𝘼𝙍𝘿𝙀 𝙐𝙉 𝙋𝙊𝘾𝙊 . . .
@@ -44,6 +50,7 @@ ${video.duration} ━━━━⬤─────── 04:05
       text: playerMsg
     }, { quoted: m });
 
+    // Descargar y mandar el audio
     const downloadApi = `https://api.vreden.my.id/api/ytmp3?url=${video.url}`;
     const downloadResponse = await fetch(downloadApi);
     const downloadData = await downloadResponse.json();
