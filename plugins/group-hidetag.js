@@ -15,35 +15,30 @@ const handler = async (m, { conn, text, participants, isAdmin, isBotAdmin, isOwn
   const users = participants.map(p => p.id)
   const commandUsed = m.text?.split(' ')[0] || ''
   const mensaje = text?.replace(new RegExp(`^${commandUsed}`, 'i'), '').trim()
+  const options = { mentions: users, quoted: m }
 
   if (m.quoted) {
     const quoted = m.quoted
     const mime = (quoted.msg || quoted).mimetype || ''
-    const isMedia = /image|video|sticker|audio/.test(mime)
-    const options = { mentions: users, quoted: m }
+    const media = /image|video|sticker|audio/.test(mime) ? await quoted.download() : null
 
-    if (isMedia) {
-      const media = await quoted.download()
-      if (/image/.test(mime)) {
-        return await conn.sendMessage(m.chat, { image: media, caption: mensaje, ...options })
-      } else if (/video/.test(mime)) {
-        return await conn.sendMessage(m.chat, { video: media, caption: mensaje, mimetype: 'video/mp4', ...options })
-      } else if (/audio/.test(mime)) {
-        return await conn.sendMessage(m.chat, { audio: media, mimetype: 'audio/mpeg', ptt: true, ...options })
-      } else if (/sticker/.test(mime)) {
-        return await conn.sendMessage(m.chat, { sticker: media, ...options })
-      }
+    if (/image/.test(mime)) {
+      return conn.sendMessage(m.chat, { image: media, caption: mensaje, ...options })
+    } else if (/video/.test(mime)) {
+      return conn.sendMessage(m.chat, { video: media, caption: mensaje, mimetype: 'video/mp4', ...options })
+    } else if (/audio/.test(mime)) {
+      return conn.sendMessage(m.chat, { audio: media, mimetype: 'audio/mpeg', ptt: true, ...options })
+    } else if (/sticker/.test(mime)) {
+      return conn.sendMessage(m.chat, { sticker: media, ...options })
     } else {
       const citado = quoted.text || quoted.body || mensaje
-      return await conn.sendMessage(m.chat, { text: citado || mensaje, mentions: users }, options)
+      return conn.sendMessage(m.chat, { text: citado, ...options })
     }
   }
 
-  if (!mensaje) return
-  await conn.sendMessage(m.chat, {
-    text: mensaje,
-    mentions: users
-  }, { quoted: m })
+  if (mensaje) {
+    return conn.sendMessage(m.chat, { text: mensaje, ...options })
+  }
 }
 
 handler.help = ['hidetag']
