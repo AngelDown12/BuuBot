@@ -1,62 +1,30 @@
-let handler = async (m, { conn, text, usedPrefix, command, args }) => {
-  const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
-  const [_, code] = text.match(linkRegex) || []
-  const owbot = global.owner[1]
-
-  if (!args[0]) return replyWithIcon(m, conn, `✳️ Envíe el link del grupo.\n\n📌 Ejemplo:\n*${usedPrefix + command}* <linkwa>`)
-  if (!code) return replyWithIcon(m, conn, `✳️ Link inválido`)
-
+const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i;
+let enviando;
+const handler = async (m, {conn, text, isMods, isOwner, isPrems}) => {
+ if (enviando) return;
+     enviando = true 
   try {
-    const groupId = await conn.groupAcceptInvite(code)
-    const metadata = await conn.groupMetadata(groupId)
-    const groupName = metadata.subject
-
-    // 🛡️ Sin límite de tiempo
-    global.db.data.chats[groupId] ??= {}
-    delete global.db.data.chats[groupId].expired
-
-    await conn.sendMessage(m.chat, {
-      text: `✅ Me uní correctamente al grupo *${groupName}*\n\n📌 El bot permanecerá en el grupo sin límite de tiempo.`,
-      contextInfo: iconReply()
-    }, { quoted: m })
-
-    await conn.sendMessage(owbot + '@s.whatsapp.net', {
-      text: `≡ *INVITACIÓN A GRUPO*\n\n@${m.sender.split('@')[0]} ha invitado al bot al grupo:\n*${groupName}*\n\n🆔 ID: ${groupId}\n📌 Enlace: ${args[0]}\n🕒 Sin límite de tiempo.`,
-      contextInfo: iconReply()
-    }, { mentions: [m.sender] })
-
-  } catch (e) {
-    await conn.sendMessage(owbot + '@s.whatsapp.net', {
-      text: String(e),
-      contextInfo: iconReply()
-    })
-
-    return replyWithIcon(m, conn, `✳️ No se pudo unir al grupo. Asegúrese que el enlace sea válido o que el grupo no esté lleno.`)
-  }
-}
-
-handler.help = ['join <chat.whatsapp.com>']
-handler.tags = ['owner']
-handler.command = ['join']
-handler.owner = true
-
-export default handler
-
-function replyWithIcon(m, conn, text) {
-  return conn.sendMessage(m.chat, {
-    text,
-    contextInfo: iconReply()
-  }, { quoted: m })
-}
-
-function iconReply() {
-  return {
-    externalAdReply: {
-      title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-      body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-      thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
-      renderLargerThumbnail: false,
-      sourceUrl: ""
+    const link = text //(m.quoted ? m.quoted.text ? m.quoted.text : text : text) || text;
+    if (!link || !link.match(linkRegex)) throw '*[❗] Link erroneo o faltante, ingrese el enlace de un grupo de WhatsApp.*\n\n*—◉ Ejemplo:*\n*◉ #join https://chat.whatsapp.com/FwEUGxkvZD85fIIp0gKyFC*';
+    const [_, code] = link.match(linkRegex) || [];
+    if ( isPrems || isMods || isOwner || m.fromMe) {
+      const res = await conn.groupAcceptInvite(code);
+      await conn.sendMessage(m.chat, {text: '*[ ✔️ ] El Bot ha ingresado con éxito al grupo.*'}, {quoted: m})
+      enviando = false 
+    } else {
+      conn.sendMessage(m.chat, {text: '*[❗] El link de su grupo fue enviado a mi propietario/a.*\n\n*—◉ Su grupo estará en evaluación y el propietario/a del Bot decidirá si agrega o no al Bot.*\n\n*—◉ Algunas de las razones por la cual su solicitud puede ser rechazada son:*\n*1.- El Bot está saturado.*\n*2.- El Bot fue eliminado del grupo recientemente.*\n*3.- El link del grupo ha sido restablecido.*\n*4.-El Bot no se agrega a grupos por decisión del propietario/a.*\n\n*—◉ El proceso de evaluación puede tomar algo de tiempo, incluso dias, tenga paciencia.*'}, {quoted: m});
+      const data = global.owner.filter(([id]) => id)[0];
+      const dataArray = Array.isArray(data) ? data : [data];
+      for (const entry of dataArray) await conn.sendMessage(entry + '@s.whatsapp.net', {text: '*[❗] NUEVA SOLICITUD DE UN BOT PARA UN GRUPO [❗]*\n\n*—◉ Solicitante:* ' + '@' + m.sender.split('@')[0] + '\n*—◉ Link del grupo:* ' + link, mentions: [m.sender], contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [m.sender], "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.titulowm2, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen6, "mediaUrl": `${link}`, "sourceUrl": `${link}`}}}, {quoted: m});
+      enviando = false 
     }
+  } catch {
+    enviando = false 
+    throw '*[❗] Lo sentimos, algo salio mal por favor reportelo o vuelva a intentarlo.*';
   }
-}
+};
+handler.help = ['join [chat.whatsapp.com]'];
+handler.tags = ['premium'];
+handler.command = /^join|nuevogrupo$/i;
+handler.private = true;
+export default handler;
