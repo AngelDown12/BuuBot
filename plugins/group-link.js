@@ -7,7 +7,7 @@ var handler = async (m, { conn }) => {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
           body: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
           mediaType: 1,
-          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          thumbnailUrl: 'https://files.catbox.moe/ntyp5r.jpg',
           renderLargerThumbnail: false,
           sourceUrl: ''
         }
@@ -31,7 +31,7 @@ var handler = async (m, { conn }) => {
           title: '𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲',
           body: 'Verifica mis permisos en el grupo',
           mediaType: 1,
-          thumbnailUrl: 'https://qu.ax/JRCMQ.jpg',
+          thumbnailUrl: 'https://files.catbox.moe/ntyp5r.jpg',
           renderLargerThumbnail: false,
           sourceUrl: ''
         }

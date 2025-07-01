@@ -28,7 +28,7 @@ let handler = async (m, { conn, args, usedPrefix, command}) => {
 │ ⏱️ *Máx. duración de video:* 15 segundos
 │
 │ 🌐 También puedes usar un enlace:
-│     *.sticker https://qu.ax/JRCMQ.jpg*
+│     *.sticker https://files.catbox.moe/ntyp5r.jpg*
 │
 │ 🚀 ¡Exprésate con estilo!
 ╰──────────────────────────────╯`, m, )

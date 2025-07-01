@@ -65,7 +65,7 @@ const handler = async (m, {conn, text, participants, isOwner, isAdmin}) => {
               contextInfo: {
                 mentionedJid: users,
                 externalAdReply: {
-                  thumbnail: 'https://qu.ax/JRCMQ.jpg',
+                  thumbnail: 'https://files.catbox.moe/ntyp5r.jpg',
                   sourceUrl: global.canal
                 }
               }
