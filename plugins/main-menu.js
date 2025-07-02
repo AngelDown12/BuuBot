@@ -5,17 +5,20 @@ Hola 👋 ${m.sender.split('@')[0]}
 
 Elige una opción 👇`;
 
-  const templateButtons = [
-    { index: 1, quickReplyButton: { displayText: '📚 Info', id: '.info' } },
-    { index: 2, quickReplyButton: { displayText: '💸 Donar', id: '.donar' } },
-    { index: 3, quickReplyButton: { displayText: '👑 Owner', id: '.owner' } }
+  const buttons = [
+    { buttonId: '.info', buttonText: { displayText: '📚 Info' }, type: 1 },
+    { buttonId: '.donar', buttonText: { displayText: '💸 Donar' }, type: 1 },
+    { buttonId: '.owner', buttonText: { displayText: '👑 Owner' }, type: 1 }
   ];
 
-  await conn.sendMessage(m.chat, {
+  const buttonMessage = {
     text: texto,
     footer: 'Bot Angel 👑',
-    templateButtons: templateButtons
-  }, { quoted: m });
+    buttons: buttons,
+    headerType: 1
+  };
+
+  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
 };
 
 handler.command = /^menu$/i;
