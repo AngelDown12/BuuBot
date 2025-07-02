@@ -13,6 +13,20 @@ Elige una opción 👇`,
           displayText: '👑 Owner',
           id: '.owner'
         }
+      },
+      {
+        index: 2,
+        quickReplyButton: {
+          displayText: '💸 Donar',
+          id: '.donar'
+        }
+      },
+      {
+        index: 3,
+        quickReplyButton: {
+          displayText: '📚 Info',
+          id: '.info'
+        }
       }
     ]
   }
