@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const require = createRequire(__dirname)
 
 // 🧠 Poner aquí tu número (sin el +)
-const OWNER_NUMBERS = ['521XXXXXXXXXX'] // <-- reemplaza con tu número
+const OWNER_NUMBERS = ['5217227584934'] // <-- reemplaza con tu número
 
 let handler = async (m, _2) => {
   let { conn, usedPrefix, noPrefix, args, groupMetadata } = _2
