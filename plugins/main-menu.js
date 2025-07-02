@@ -362,6 +362,16 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 `.trim();
 
+    const fullMenu = `${finalHeader}\n\n${menuBody}\n\n${menuFooter}`;
+
+    // Aquí está el cambio clave: se envía como 'video'
+    await conn.sendMessage(m.chat, {
+      video: { url: imagen }, // Esto enviará el archivo como un video para que se reproduzca solo.
+
+
+
+
+
   await conn.sendMessage(m.chat, {
   image: { url: img },
   caption: text,
