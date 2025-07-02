@@ -1,26 +1,21 @@
 let handler = async (m, { conn }) => {
-  console.log('[MENU TEST] Handler activado ✅');
+  const texto = `✨ *MENÚ PRINCIPAL* ✨
 
-  const texto = `✨ *MENÚ PRINCIPAL* ✨\n\nHola 👋 ${m.sender}\n\nElige una opción 👇`;
+Hola 👋 ${m.sender.split('@')[0]}
 
-  const buttons = [
-    { buttonId: '.info', buttonText: { displayText: 'ℹ️ Info' }, type: 1 },
-    { buttonId: '.donar', buttonText: { displayText: '💸 Donar' }, type: 1 },
-    { buttonId: '.owner', buttonText: { displayText: '👑 Owner' }, type: 1 }
+Elige una opción 👇`;
+
+  const templateButtons = [
+    { index: 1, quickReplyButton: { displayText: '📚 Info', id: '.info' } },
+    { index: 2, quickReplyButton: { displayText: '💸 Donar', id: '.donar' } },
+    { index: 3, quickReplyButton: { displayText: '👑 Owner', id: '.owner' } }
   ];
 
-  const buttonMessage = {
+  await conn.sendMessage(m.chat, {
     text: texto,
-    footer: 'AngelBot 👑',
-    buttons: buttons,
-    headerType: 1
-  };
-
-  console.log('[MENU TEST] Enviando mensaje...');
-
-  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
-
-  console.log('[MENU TEST] Mensaje enviado ✅');
+    footer: 'Bot Angel 👑',
+    templateButtons: templateButtons
+  }, { quoted: m });
 };
 
 handler.command = /^menu$/i;
