@@ -1,9 +1,8 @@
-
 let handler = async (m, { conn, isRowner }) => {
     let _muptime;
     let totalreg = Object.keys(global.db.data.users).length;
     let totalchats = Object.keys(global.db.data.chats).length;
-    let pp = 'https://files.catbox.moe/ntyp5r.jpg'; // Usamos la URL de la imagen aquí
+    let pp = 'https://files.catbox.moe/6dewf4.jpg'; // Usamos la URL de la imagen aquí
 
     if (process.send) {
         process.send('uptime');
@@ -17,8 +16,8 @@ let handler = async (m, { conn, isRowner }) => {
     const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats);
     const groupsIn = chats.filter(([id]) => id.endsWith('@g.us'));
     const used = process.memoryUsage();
-    let Sisked = `╭─⬣「 *Estado De Bot 𝐀𝐧𝐠𝐞𝐥* 」⬣\n`;
-    Sisked += `│ 👤 *Creador ∙* 𝐀𝐧𝐠𝐞𝐥\n`;
+    let Sisked = `╭─⬣「 *Estado De sᥲsᥙkᥱ ᑲ᥆𝗍 mძ 🌀* 」⬣\n`;
+    Sisked += `│ 👤 *Creador ∙* Barboza\n`;
     Sisked += `│ 💎 *Grupos Unidos ∙* ${groupsIn.length}\n`;
     Sisked += `│ 💨 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`;
     Sisked += `│ 🪙 *Total De Chats ∙* ${chats.length}\n`;
@@ -27,7 +26,7 @@ let handler = async (m, { conn, isRowner }) => {
     Sisked += `│ 💸 *Actividad ∙* ${muptime}\n`;
     Sisked += `╰─⬣`;
     
-    await conn.sendFile(m.chat, pp, 'nino.jpg', Sisked, fkontak, null, );
+    await conn.sendFile(m.chat, pp, 'nino.jpg', Sisked, fkontak, null, rcanal);
 }
 
 handler.help = ['status'];

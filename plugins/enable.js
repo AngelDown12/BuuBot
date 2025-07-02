@@ -1,3 +1,4 @@
+
 let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
   let isEnable = /true|enable|(turn)?on|1/i.test(command);
   let chat = global.db.data.chats[m.chat];
@@ -23,17 +24,17 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break;
 
     case 'antiprivado2':
-      if (!m.isGroup) {
-        if (!isOwner) {
-          global.dfail('group', m, conn);
-          throw false;
-        }
-      } else if (!isAdmin) {
-        global.dfail('admin', m, conn);
-        throw false;
-      }
-      chat.antiPrivate2 = isEnable;
-      break;
+  if (!m.isGroup) {
+    if (!isOwner) {
+      global.dfail('group', m, conn);
+      throw false;
+}
+} else if (!isAdmin) {
+    global.dfail('admin', m, conn);
+    throw false;
+}
+  chat.antiPrivate2 = isEnable;
+  break;
 
     case 'antilag':
       if (!m.isGroup) {
@@ -156,6 +157,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break;
 
     case 'antiprivado':
+      // Ahora cualquiera puede activarlo o desactivarlo
       bot.antiPrivate = isEnable;
       break;
 
@@ -187,38 +189,54 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 *🧑‍💻 INGRESE UNA OPCIÓN PARA ACTIVAR O DESACTIVAR*
 
 *🔖 LISTA DE OPCIONES*
-*Tipo :* welcome - Activa Bienvenida/Despedida
-*Tipo :* nsfw - Comandos +18
-*Tipo :* antilag - Anti Lags
-*Tipo :* antiarabes - Anti Arabes
-*Tipo :* antilink - Anti Enlaces
-*Tipo :* autoread - Auto Leer
-*Tipo :* restrict - Acciones Avanzadas
-*Tipo :* document - Descarga en Documentos
-*Tipo :* modoadmin - Solo Admins
-*Tipo :* audios - Activar Audios
-*Tipo :* subbots - Modo SubBots
+*Tipo :* welcome
+*Descripción :* Des/Activa la *Bienvenida* y *Despedida* para Grupos
+
+*Tipo :* nsfw 
+*Descripción :* Des/Activa los comandos *NSFW* para Grupos
+
+*Tipo :* antilag
+*Descripción :* Des/Activa el *AntiLag* en un grupo*
+*Tipo :* antiarabes 
+*Descripción :* Des/Activa el *AntiArabes* para Grupos
+
+*Tipo :* antilink 
+*Descripción :* Des/Activa el *AntiLink* para Grupos
+
+*Tipo :* autoread 
+*Descripción :* Des/Activa el *AutoRead* para el Bot
+
+*Tipo :* restrict
+*Description :* Des/Activa el *Restrict*
+para el bot
+
+*Tipo :* document 
+*Descripción :* Des/Activa la *Descarga En Documentos* para el Usuario
+
+*Tipo :* modoadmin
+*Descripción :* Des/Activa la *modoadmin* para el Usuario
+
+*Tipo :* audios
+*Descripción :* Des/Activa la *audios* para el Usuario
+
+*Tipo :* subbots
+*Descripción :* Des/Activa la *subbots* para el Usuario
+
 
 *• Ejemplo:*
-*- ${usedPrefix + command} welcome*
-`.trim());
-      throw false;
+*- ${usedPrefix + command}* welcome
+`.trim())
+      throw false
   }
 
-  await conn.sendMessage(m.chat, {
-    text: `*𝐀𝐧𝐠𝐞𝐥-𝐁𝐨𝐭 𝐀𝐯𝐢𝐬𝐨*\n\n*𝐂𝐨𝐦𝐚𝐧𝐝𝐨:* *_${type}_* \n\n*𝐀𝐜𝐭𝐮𝐚𝐥𝐦𝐞𝐧𝐭𝐞:* *${isEnable ? '𝐀𝐜𝐭𝐢𝐯𝐚𝐝𝐨* ✅' : '*Desactivado ❌*'}*\n\n*𝐒𝐨𝐥𝐢𝐜𝐢𝐭𝐚𝐝𝐨:* ${isAll ? '*𝐄𝐧 𝐓𝐨𝐝𝐨 𝐞𝐥 𝐁𝐨𝐭* 🌐' : isUser ? '*𝐄𝐧 𝐄𝐬𝐭𝐞 𝐔𝐬𝐮𝐚𝐫𝐢𝐨* 👥' : '*𝐄𝐧 𝐄𝐬𝐭𝐞 𝐂𝐡𝐚𝐭*'}`,
-    contextInfo: {
-      externalAdReply: {
-        title: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-        body: "𝐀𝐧𝐠𝐞𝐥 𝐁𝐨𝐭 𝐃𝐞𝐥𝐚𝐲",
-        thumbnailUrl: "https://files.catbox.moe/ntyp5r.jpg",
-        mediaType: 1,
-        renderLargerThumbnail: false,
-        sourceUrl: ''
-      }
-    }
-  });
-};
+m.reply(`⚠️ *sᥲsᥙkᥱ ᑲ᥆𝗍 mძ 🌀 Notificación* ⚠️
+
+💎 *Comando ejecutado:* *${type}*
+👤 *Estado actual:* *${isEnable? 'Activado ✅': 'Desactivado ❌'}*
+📍 *Ámbito:* ${isAll? '*Todo el Bot* 🌐': isUser? '*Usuario específico* 👥': '*Este Chat* 💬'}
+
+🚀 *Muchas gracias por usar sᥲsᥙkᥱ ᑲ᥆𝗍 mძ 🌀*🎖️`)
+}
 
 handler.help = ['enable', 'disable', 'on', 'off']
 handler.tags = ['nable']
