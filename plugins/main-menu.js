@@ -1,5 +1,5 @@
 let handler = async (m, { conn }) => {
-  const video = 'https://files.catbox.moe/yrbsms.mp4'; // video del menú
+  const video = 'https://files.catbox.moe/2njulz.mp4'; // video del menú
   const text = `🪙 𝐌 𝐔 𝐋 𝐓 𝐈 - 𝐌 𝐄 𝐍 𝐔́ 
 
   「 *📚 𝘐𝘯𝘧𝘰 📚* 」
