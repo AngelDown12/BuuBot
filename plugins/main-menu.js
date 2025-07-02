@@ -1,24 +1,16 @@
 let handler = async (m, { conn }) => {
-  const text = `✨ *MENU PRINCIPAL* ✨
-
-Hola 👋 ${m.pushName || 'usuario'}!
-
-Elige una opción 👇`;
-
-  const buttons = [
-    { buttonId: '.infomenu', buttonText: { displayText: '📚 Info' }, type: 1 },
-    { buttonId: '.descargasmenu', buttonText: { displayText: '📥 Descargas' }, type: 1 },
-    { buttonId: '.logomenu', buttonText: { displayText: '🎨 Logos' }, type: 1 }
-  ];
-
-  const buttonMessage = {
-    text: text,
-    footer: 'AngelBot Delay ⚡',
-    buttons: buttons,
+  const menu = {
+    text: `✨ 𝗠𝗘𝗡𝗨 𝗣𝗥𝗜𝗡𝗖𝗜𝗣𝗔𝗟 ✨\n\nHola 👋 ${m.sender.split('@')[0]}\n\nElige una opción 👇`,
+    footer: 'By Angel Bot ✨',
+    buttons: [
+      { buttonId: '.info', buttonText: { displayText: '📚 Info' }, type: 1 },
+      { buttonId: '.descargas', buttonText: { displayText: '📥 Descargas' }, type: 1 },
+      { buttonId: '.owner', buttonText: { displayText: '👑 Owner' }, type: 1 },
+    ],
     headerType: 1
   };
 
-  await conn.sendMessage(m.chat, buttonMessage, { quoted: m });
+  await conn.sendMessage(m.chat, menu, { quoted: m });
 };
 
 handler.command = /^menu$/i;
