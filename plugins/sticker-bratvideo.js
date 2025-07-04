@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import { sticker } from '../lib/sticker.js';
 
 const handler = async (m, { conn, args }) => {
   if (!args[0]) return;
@@ -10,13 +11,9 @@ const handler = async (m, { conn, args }) => {
     const res = await fetch(apiUrl);
     const buffer = await res.buffer();
 
-    // Enviarlo como documento .webp (visible, descargable)
-    await conn.sendMessage(m.chat, {
-      document: buffer,
-      fileName: 'bratsticker.webp',
-      mimetype: 'image/webp'
-    }, { quoted: m });
-
+    const stik = await sticker(buffer, false, 'Barboza', 'Angel Bot');
+    if (stik) return conn.sendFile(m.chat, stik, 'bratv.webp', '', m);
+    
   } catch {}
 };
 
