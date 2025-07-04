@@ -1,28 +1,23 @@
+/* Pack By WillZek 
+- Free Codes Titan
+- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
+- https://github.com/WillZek 
+*/
+
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn }) => {
-  let txt = 'Pack 🔥🔥🔥\nToca *Siguiente* para ver otro.';
-  let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-  await conn.sendMessage(
-  m.chat,
-  {
-    image: { url: img },
-    caption: txt,
-    footer: 'Shadow Bot',
-    buttons: [
-      {
-        buttonId: '.pack',
-        buttonText: { displayText: '👉 Siguiente' },
-        type: 1
-      }
-    ],
-    headerType: 4
-  },
-  { quoted: m.quoted ? m.quoted : m } // 👈 aquí forzas que encadene
-); // ✅ esto asegura que conteste al mensaje tocado
-  );
-};
+m.react('🕑');
 
-handler.command = /^pack$/i;
+let txt = 'Pack🔥🔥🔥\n> Pon De Nuevo .pack para mirar el siguiente ✨';
+
+let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
+
+m.react('✅');
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+}
+
+handler.command = ['pack'];
+
 export default handler;
