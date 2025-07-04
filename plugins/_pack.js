@@ -1,10 +1,13 @@
 let handler = async (m, { conn }) => {
-  const img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
-  const txt = 'Pack🔥🔥🔥\n> Pon De Nuevo .pack para mirar el siguiente ✨';
+  if (!m.text?.toLowerCase().includes('pack')) return;
 
-  return conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
+  conn.sendMessage(m.chat, {
+    image: { url: 'https://delirius-apiofc.vercel.app/nsfw/girls' },
+    caption: 'Pack🔥🔥🔥\n> Pon De Nuevo *pack* para mirar el siguiente ✨'
+  }, { quoted: m });
 };
 
-handler.command = /^pack$/i;
+handler.customPrefix = /pack/i;
+handler.command = new RegExp;
 
 export default handler;
