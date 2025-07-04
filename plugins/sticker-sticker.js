@@ -64,18 +64,12 @@ export default handler
 
 // Función para mensaje de ayuda
 function helpText() {
-  return `╭─〔 🌟 *CREADOR DE STICKERS* 🌟 〕─╮
-│
-│ 🖼️ *Envía una imagen o video corto*
-│     para generar tu sticker personalizado.
-│
-│ ⏱️ *Máx. duración de video:* 15 segundos
-│
-│ 🌐 También puedes usar un enlace:
-│     *sticker https://ejemplo.com/imagen.png*
-│
-│ 🚀 ¡Exprésate con estilo!
-╰──────────────────────────────╯`
+  return `〔 🌟 *CREADOR DE STICKERS* 🌟 
+
+ 🖼️ *Envía una imagen o video corto*
+     *para generar tu sticker personalizado*.
+
+               No seas pendejo amigo`
 }
 
 // Función para mensaje de error
