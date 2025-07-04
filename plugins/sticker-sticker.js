@@ -64,11 +64,10 @@ export default handler
 
 // Función para mensaje de ayuda
 function helpText() {
-  return `
- 🖼️ *Envía una imagen o video corto*
+  return ` 🖼️ *Envía una imagen o video corto*
      *para generar tu sticker personalizado*.
 
-               No seas pendejo amigo`
+               `No seas pendejo amigo``
 }
 
 // Función para mensaje de error
