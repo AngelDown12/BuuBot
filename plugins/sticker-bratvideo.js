@@ -10,8 +10,11 @@ const handler = async (m, { conn, args }) => {
     const res = await fetch(apiUrl);
     const buffer = await res.buffer();
 
+    // Enviarlo como documento .webp (visible, descargable)
     await conn.sendMessage(m.chat, {
-      sticker: buffer
+      document: buffer,
+      fileName: 'bratsticker.webp',
+      mimetype: 'image/webp'
     }, { quoted: m });
 
   } catch {}
