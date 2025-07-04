@@ -6,17 +6,21 @@
 
 import fetch from 'node-fetch';
 
-let handler = async(m, { conn, text, usedPrefix, command }) => {
+let handler = async (m, { conn }) => {
+  try {
+    await m.react('🕑');
 
-m.react('🕑');
+    const txt = 'Pack🔥🔥🔥\n> Pon De Nuevo .pack para mirar el siguiente ✨';
+    const img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
 
-let txt = 'Pack🔥🔥🔥\n> Pon De Nuevo .pack para mirar el siguiente ✨';
+    // Envía la imagen con caption y cita el mensaje original
+    await conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
-
-m.react('✅');
-conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
-}
+    await m.react('✅');
+  } catch (e) {
+    console.error(e);
+  }
+};
 
 handler.command = ['pack'];
 
