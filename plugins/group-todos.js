@@ -11,7 +11,7 @@ const handler = async (m, { conn, participants, isAdmin, isOwner }) => {
     throw false
   }
 
-  const emojis = ['🤴🏽', '👸🏼']
+  const emojis = ['🤡', '💩']
   const lista = participants.map((u, i) => `${emojis[i % emojis.length]} @${u.id.split('@')[0]}`).join('\n')
 
   const textoFinal = [
