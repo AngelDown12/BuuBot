@@ -32,6 +32,6 @@ const handler = async (m, { conn }) => {
 // Activador sin prefijo: solo escribes "menu"
 handler.customPrefix = /^menu$/i
 handler.command = new RegExp()
-handler.register = true
+handler.register = false
 
 export default handler
