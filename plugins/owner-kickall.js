@@ -30,7 +30,9 @@ const handler = async (m, { conn, participants, isAdmin, isBotAdmin, isOwner }) 
 
   try {
     await conn.groupParticipantsUpdate(m.chat, expulsar, 'remove')
-    await m.reply(`✅ Se expulsaron a *${expulsar.length}* miembros del grupo.`)
+    await m.reply(`✅ Se expulsaron a *${expulsar.length}* miembros del grupo.
+
+𝐕𝐀𝐂𝐈𝐀𝐍𝐃𝐎 𝐄𝐋 𝐁𝐀𝐒𝐔𝐑𝐄𝐑𝐎 🧹🔥`)
   } catch (e) {
     console.error('❌ Error al expulsar masivamente:', e)
     await m.reply('⚠️ Error al intentar expulsar. Puede que WhatsApp haya bloqueado la acción masiva.')
