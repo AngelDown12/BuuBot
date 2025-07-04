@@ -61,6 +61,6 @@ handler.customPrefix = /^(owner|creator|creador|dueño)$/i
 handler.command = new RegExp()
 handler.tags = ['main']
 handler.help = ['owner']
-handler.register = true
+handler.register = false
 
 export default handler
