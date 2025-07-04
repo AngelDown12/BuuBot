@@ -486,9 +486,9 @@ global.dfail = (type, m, conn, usedPrefix) => {
         contextInfo: {
             externalAdReply: {
                 title: '𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐨𝐭 🍷',
-                body: '𝐒𝐡𝐚𝐝𝐨𝐰 𝐁𝐨𝐭 🍷',
+                body: '',
                 mediaType: 1,
-                thumbnailUrl: 'https://qu.ax/tNPfx.jpg',
+                thumbnailUrl: 'https://qu.ax/SeOXm.jpg',
                 renderLargerThumbnail: false,
                 sourceUrl: ''
             }
