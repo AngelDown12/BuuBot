@@ -176,7 +176,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
 handler.command = handler.help = ["play", "play2", "ytmp3", "yta", "ytmp4", "ytv"];
 handler.tags = ["downloader"];
-handler.register = true
+handler.register = false
 
 export default handler;
 
