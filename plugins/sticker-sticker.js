@@ -58,7 +58,7 @@ const handler = async (m, { conn, args }) => {
 
 handler.customPrefix = /^(s|sticker|stiker)$/i
 handler.command = new RegExp()
-handler.register = true
+handler.register = false
 
 export default handler
 
