@@ -64,7 +64,7 @@ export default handler
 
 // Función para mensaje de ayuda
 function helpText() {
-  return `〔 🌟 *CREADOR DE STICKERS* 🌟 
+  return `🌟 *CREADOR DE STICKERS* 🌟 
 
  🖼️ *Envía una imagen o video corto*
      *para generar tu sticker personalizado*.
