@@ -1,9 +1,6 @@
 const handler = async (m, { conn }) => {
   const texto = `
 •          𝐌𝐚𝐮/ 𝟑𝟑𝟑 / 
-𝐑𝐞𝐲𝐞𝐬 𝟑’ 𝐏𝐢𝐭𝐨 𝐆𝐫𝐚𝐧𝐝𝐞
-
-      
 
       𝐏𝐮𝐫𝐨 𝐏𝐢𝐧𝐜𝐡𝐞 𝟑𝟑𝟑 𝐀𝐥𝐯
                   𝐁𝐲 𝟑𝟑𝟑
