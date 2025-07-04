@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
 
   conn.sendMessage(m.chat, {
     image: { url: 'https://delirius-apiofc.vercel.app/nsfw/girls' },
-    caption: 'Pack🔥🔥🔥\n> Pon De Nuevo *pack* para mirar el siguiente ✨'
+    caption: '> Pon De Nuevo *pack* para mirar el siguiente ✨'
   }, { quoted: m });
 };
 
