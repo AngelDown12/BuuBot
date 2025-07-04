@@ -67,7 +67,7 @@ function helpText() {
   return `🖼️ *Envía una imagen o video corto*
      *para generar tu sticker personalizado*.
 
-               No seas pendejo amigo`
+               *_No seas pendejo amigo_*`
 }
 
 // Función para mensaje de error
