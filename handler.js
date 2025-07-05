@@ -485,10 +485,10 @@ global.dfail = (type, m, conn, usedPrefix) => {
         text: msg,
         contextInfo: {
             externalAdReply: {
-                title: '𝐌𝐚𝐮 𝐁𝐨𝐭 🕷️',
-                body: '𝐌𝐚𝐮 𝐁𝐨𝐭 🕷️',
+                title: '',
+                body: '',
                 mediaType: 1,
-                thumbnailUrl: 'https://qu.ax/SeOXm.jpg',
+                thumbnailUrl: 'https://files.catbox.moe/2txrtp.jpgp',
                 renderLargerThumbnail: false,
                 sourceUrl: ''
             }
