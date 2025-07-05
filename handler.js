@@ -488,7 +488,7 @@ global.dfail = (type, m, conn, usedPrefix) => {
                 title: '𝐁𝐔𝐔 𝐁𝐎𝐓 🔮',
                 body: '𝐁𝐔𝐔 𝐁𝐎𝐓 🔮',
                 mediaType: 1,
-                thumbnailUrl: 'https://files.catbox.moe/2txrtp.jpgp',
+                thumbnailUrl: 'https://files.catbox.moe/2txrtp.jpg',
                 renderLargerThumbnail: false,
                 sourceUrl: ''
             }
