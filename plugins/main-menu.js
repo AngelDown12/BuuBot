@@ -1,10 +1,5 @@
 const handler = async (m, { conn }) => {
   const texto = `
-•          𝐌𝐚𝐮/ 𝟑𝟑𝟑 / 
-
-      𝐏𝐮𝐫𝐨 𝐏𝐢𝐧𝐜𝐡𝐞 𝟑𝟑𝟑 𝐀𝐥𝐯
-                  𝐁𝐲 𝟑𝟑𝟑
-       𝐘 𝐮𝐬𝐭𝐞𝐝𝐞𝐬 𝐪𝐮𝐞 𝐬𝐚𝐛𝐞𝐧 𝐡𝐚𝐜𝐞𝐫 𝐢𝐧𝐮𝐭𝐢𝐥𝐞𝐬?
 
 ┣━━━━━━━━━━━━━━┫
 ┃⋗ 🗣️ *𝐀𝐛𝐫𝐢𝐫*
@@ -21,7 +16,7 @@ const handler = async (m, { conn }) => {
 ┗━━━━━━━━━━━━━━┛`.trim()
 
   await conn.sendMessage(m.chat, {
-    image: { url: 'https://qu.ax/SeOXm.jpg' },
+    image: { url: 'https://files.catbox.moe/2txrtp.jpgp' },
     caption: texto
   }, { quoted: m })
 }
