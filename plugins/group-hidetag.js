@@ -15,7 +15,7 @@ const handler = async (m, { conn, text, participants, isAdmin, isBotAdmin, isOwn
   const users = participants.map(p => p.id);
   const commandUsed = m.text?.split(' ')[0] || '';
   const mensaje = text?.replace(new RegExp(`^${commandUsed}`, 'i'), '').trim();
-  const firma = '𝐁𝐔𝐔 𝐁𝐎𝐓 🔮';
+  const firma = '> 𝐁𝐔𝐔 𝐁𝐎𝐓 🔮';
   const fullText = mensaje ? `${mensaje}\n\n${firma}` : firma;
   const options = { mentions: users, quoted: m };
 
