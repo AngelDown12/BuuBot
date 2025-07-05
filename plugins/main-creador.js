@@ -6,13 +6,13 @@
 import PhoneNumber from 'awesome-phonenumber'
 
 let handler = async (m, { conn }) => {
-  m.react('🎭')
+  m.react('🔮')
 
-  const imageUrl = 'https://qu.ax/GbxoW.jpg'
-  const numCreador = '66825401885'
+  const imageUrl = ''
+  const numCreador = '5215565238431'
   const ownerJid = numCreador + '@s.whatsapp.net'
   const name = await conn.getName(ownerJid) || 'Alee'
-  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `𝐒𝐨𝐲 𝐌𝐚𝐮, 𝐃𝐮𝐞𝐧̃𝐨 𝐝𝐞𝐥 𝐁𝐨𝐭 𝐌𝐚𝐮 🎭.`
+  const about = (await conn.fetchStatus(ownerJid).catch(() => {}))?.status || `𝐒𝐨𝐲 𝐂𝐫𝐢𝐬𝐭𝐢𝐚𝐧, 𝐃𝐮𝐞𝐧̃𝐨 𝐝𝐞 𝐁𝐔𝐔 𝐁𝐎𝐓 🔮.`
   const empresa = '𝐌𝐚𝐮 - 𝐒𝐞𝐫𝐯𝐢𝐜𝐢𝐨𝐬 𝐭𝐞𝐜𝐧𝐨𝐥𝐨𝐠𝐢𝐜𝐨𝐬'
 
   const vcard = `
@@ -42,8 +42,8 @@ END:VCARD`.trim()
       contextInfo: {
         mentionedJid: [m.sender],
         externalAdReply: {
-          title: '𝐌𝐚𝐮 𝐁𝐨𝐭 𝐎𝐟𝐢𝐜𝐢𝐚𝐥',
-          body: '𝐃𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐚𝐝𝐨 𝐩𝐨𝐫 𝐌𝐚𝐮 🎭',
+          title: '𝐁𝐔𝐔 𝐁𝐎𝐓 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 🔮',
+          body: '𝐃𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐚𝐝𝐨 𝐩𝐨𝐫 𝐂𝐫𝐢𝐬𝐭𝐢𝐚𝐧 🔮',
           thumbnailUrl: imageUrl,
           sourceUrl: '',
           mediaType: 1,
