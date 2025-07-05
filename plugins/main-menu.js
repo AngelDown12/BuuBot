@@ -16,7 +16,7 @@ const handler = async (m, { conn }) => {
 ┗━━━━━━━━━━━━━━┛`.trim()
 
   await conn.sendMessage(m.chat, {
-    image: { url: 'https://files.catbox.moe/2txrtp.jpgp' },
+    image: { url: 'https://files.catbox.moe/2txrtp.jpg' },
     caption: texto
   }, { quoted: m })
 }
