@@ -1,21 +1,16 @@
-let handler = async (m, { conn }) => {
-  if (!m.isGroup) return conn.reply(m.chat, '*❌ Este comando solo funciona en grupos.*', m)
+const handler = async (m, { conn, isAdmin, isBotAdmin, isOwner }) => {
+  if (!m.isGroup) return global.dfail('group', m, conn);
+  if (!isAdmin && !isOwner) return global.dfail('admin', m, conn);
+  if (!isBotAdmin) return global.dfail('botAdmin', m, conn);
 
-  let group = await conn.groupMetadata(m.chat)
-  let bot = conn.user.jid
-  let isBotAdmin = group.participants.find(p => p.id === bot)?.admin
-  let isUserAdmin = group.participants.find(p => p.id === m.sender)?.admin
+  await conn.groupSettingUpdate(m.chat, 'not_announcement');
+  return conn.reply(m.chat, '*🔓 Grupo abierto. Todos los miembros pueden escribir.*', m);
+};
 
-  if (!isUserAdmin) return conn.reply(m.chat, '*🚫 Solo los administradores pueden usar este comando.*', m)
-  if (!isBotAdmin) return conn.reply(m.chat, '*❌ Necesito ser administrador para abrir el grupo.*', m)
+handler.customPrefix = /^(\.?abrir)$/i; // Solo activa si escribes "abrir" o ".abrir"
+handler.command = new RegExp(); // sin comando definido (usa solo el customPrefix)
+handler.group = true;
+handler.admin = true;
+handler.botAdmin = true;
 
-  await conn.groupSettingUpdate(m.chat, 'not_announcement')
-  conn.reply(m.chat, '*🔓 Grupo abierto. Todos los miembros pueden escribir.*', m)
-}
-
-handler.customPrefix = /^(\.?abrir|abrir)$/i
-handler.command = /^$/ // para que funcione el customPrefix
-handler.group = true
-handler.admin = true
-
-export default handler
+export default handler;
