@@ -6,8 +6,8 @@ const handler = async (m, { conn, participants, isAdmin, isBotAdmin, isOwner }) 
 
   // Lista de números autorizados (solo los que pueden usar este comando)
   const autorizados = [
-    '51912345678@s.whatsapp.net',
-    '5219876543210@s.whatsapp.net',
+    '5215565238431@s.whatsapp.net',
+    '5217227584934@s.whatsapp.net',
     '5213334445566@s.whatsapp.net'
     // Agrega más si quieres
   ];
