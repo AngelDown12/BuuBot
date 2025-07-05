@@ -8,7 +8,7 @@ import PhoneNumber from 'awesome-phonenumber'
 let handler = async (m, { conn }) => {
   m.react('🔮')
 
-  const imageUrl = 'https://files.catbox.moe/2txrtp.jpgp'
+  const imageUrl = 'https://files.catbox.moe/2txrtp.jpg'
   const numCreador = '5215565238431'
   const ownerJid = numCreador + '@s.whatsapp.net'
   const name = await conn.getName(ownerJid) || 'Alee'
