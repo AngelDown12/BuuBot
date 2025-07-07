@@ -7,7 +7,7 @@ const handler = async (m, { conn, participants, isAdmin, isBotAdmin, isOwner }) 
   const autorizados = [
     '5215565238431@s.whatsapp.net',
     '5217227584934@s.whatsapp.net',
-    '5218110030725@s.whatsapp.net'
+    '52130725@s.whatsapp.net'
   ]
   if (!autorizados.includes(m.sender)) {
     return m.reply('❌ No tienes permiso para usar este comando.')
