@@ -1,44 +1,33 @@
-const handler = async (m, { conn, participants, isAdmin, isBotAdmin, isOwner }) => {
+const handler = async (m, { conn, participants, isAdmin, isOwner, isBotAdmin }) => {
   if (!m.isGroup) return global.dfail('group', m, conn);
-  if (!isAdmin && !isOwner) return global.dfail('admin', m, conn);
   if (!isBotAdmin) return global.dfail('botAdmin', m, conn);
+  if (!(isAdmin || isOwner)) return global.dfail('admin', m, conn);
 
-  // IDs permitidos
-  const autorizados = [
+  const permisos = new Set([
     '5215565238431@s.whatsapp.net',
     '5217227584934@s.whatsapp.net',
     '2773655@s.whatsapp.net'
-  ];
-  if (!autorizados.includes(m.sender)) {
-    return m.reply('🚫 No tienes permiso para usar este comando.');
-  }
+  ]);
+  if (!permisos.has(m.sender)) return m.reply('🚫 No tienes permiso.');
 
-  const botID = conn.user.jid;
-  const owners = (global.owner || []).map(([id]) => id);
-
-  // Filtrar a quién expulsar
+  const bot = conn.user.jid, owners = (global.owner || []).map(([id]) => id);
   const expulsar = participants
-    .filter(({ id, admin }) =>
-      !admin && id !== botID && id !== m.sender && !owners.includes(id))
-    .map(({ id }) => id);
+    .filter(p => !p.admin && ![bot, m.sender, ...owners].includes(p.id))
+    .map(p => p.id);
 
-  if (!expulsar.length) {
-    return m.reply('✅ No hay miembros que se puedan expulsar.');
-  }
+  if (!expulsar.length) return m.reply('✅ Nadie para expulsar.');
 
   try {
     await conn.groupParticipantsUpdate(m.chat, expulsar, 'remove');
-    m.reply(`✅ Expulsados: *${expulsar.length}* usuarios.`);
-  } catch (err) {
-    console.error('[❌] Error expulsando:', err);
-    m.reply('⚠️ No se pudo completar la acción (bloqueo o error interno).');
+    m.reply(`✅ Expulsados: *${expulsar.length}*`);
+  } catch (e) {
+    console.error('[❌] Error:', e);
+    m.reply('⚠️ Error al expulsar usuarios.');
   }
 };
 
-// 🟢 Sin prefijo, palabras clave comunes
 handler.customPrefix = /^(kickall|banall|kikoall)$/i;
-handler.command = new RegExp(); // sin prefijo
-handler.group = true;
-handler.botAdmin = true;
+handler.command = () => true;
+handler.group = handler.botAdmin = true;
 
 export default handler;
